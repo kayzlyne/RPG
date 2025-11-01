@@ -16,7 +16,7 @@ public class Opening {
         //scanner().nextLine();
 
         System.out.println("+============================================================+");
-        System.out.println("|                     STORY INTRODUCTION                     |");
+        System.out.println("|                          SYNOPSIS                          |"); //changed "story introduction" to "synopsis" -ef
         System.out.println("+============================================================+");
         System.out.println();
         System.out.println("Hidden between the lull of civilization and the thick");
