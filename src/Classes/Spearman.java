@@ -1,0 +1,34 @@
+package Classes;
+
+import Core.Enemy;
+import Core.ClassArchetype;
+import java.util.Random;
+
+public class Spearman implements ClassArchetype {
+    public int getBonusHp() { return 90; }
+    public int getBonusMana() { return 75; }
+    public String getClassName() { return "Spearman"; }
+
+    public void useSkill(String playerName, Enemy target) {
+        System.out.println(playerName + " does Three-strike Stab!");
+        int dmg = new Random().nextInt(11) + 25;
+        int netDmg = Math.max(1, dmg - target.defense);
+        target.hp -= netDmg;
+        System.out.println("Deals "+ netDmg + " piercing damage!");
+    }
+
+    public void useSpecial(String playerName, Enemy target) {
+        System.out.println(playerName + " Transcends! A stab deals greater damage!");
+        int dmg = new Random().nextInt(31) + 55;
+        int netDmg = Math.max(1, dmg - target.defense);
+        target.hp -= netDmg;
+        System.out.println("Deals " + netDmg + " piercing damage!");
+    }
+
+    public int getSkillManaCost() { return 20; }
+    public int getSpecialManaCost() { return 40; }
+    public int getSkillCooldown() { return 2; }
+    public int getSpecialCooldown() { return 3; }
+
+}
+
