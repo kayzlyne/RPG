@@ -7,7 +7,7 @@ public class DialogueUtils {
 
     public static void pause() {
         try {
-            System.out.print(">> Press ENTER to continue...");
+            System.out.println(">> Press ENTER to continue...");
             scanner.nextLine();
         } catch (Exception e) {
             System.out.println("⚠️ Input error. Skipping pause.");

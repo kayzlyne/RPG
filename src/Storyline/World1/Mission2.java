@@ -27,7 +27,7 @@ public class Mission2 {
         System.out.println("His head whips toward you the moment you walk by, and he holds out an open palm.");
         System.out.println();
         DialogueUtils.pause();
-        System.out.println("Beggar: Please, kind stranger, do you have any barya to spare?");
+        System.out.println("\n\nBeggar: Please, kind stranger, do you have any barya to spare?");
         System.out.println("I have been sick for days, but I do not have the twenty pesos needed to pay for medicine.");
         System.out.println("Won’t you spare a poor beggar some mercy?");
         System.out.println();
@@ -77,7 +77,7 @@ public class Mission2 {
             System.out.println("That is when you remember that you had some suman tucked away in your pocket for lunch.");
             System.out.println("You think of the beggar and decide that he needs it more than you do.");
             System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman,");
-            System.out.println("but the feeling of cold, hard coins as well.");
+            System.out.println("but the feeling of cold, hard coins as well.\n");
             System.out.println("Taking it out, you realize there are five pieces of barya—");
             System.out.println("when before you were certain all your money was given away to the beggar.");
             System.out.println("And when you look back at the alley, it now appears completely empty.");
@@ -111,7 +111,7 @@ public class Mission2 {
         System.out.println("where they are carted off like mere cattle and brought to the land of the Aswangs.");
         System.out.println();
         System.out.println("He presses a worn map into your hand, the edges trembling faintly as though the parchment itself feared what it depicted.");
-        System.out.println("\nScribe: If you truly wish to stand against them, then steel yourself. It is not named the Dark Forest for no reason. The forest is alive. And it does not forgive trespassers easily.");
+        System.out.println("\nScribe: If you truly wish to stand against them, then steel yourself. It is not named the Dark Forest for no reason.\nThe forest is alive. And it does not forgive trespassers easily.");
         scan.nextLine();
         System.out.println();
         System.out.println("The chamber grows colder as the candles flicker low.");

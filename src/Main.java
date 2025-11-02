@@ -16,11 +16,11 @@ public class Main {
 
 
         // 👹 Spawn enemies (e.g., 5 Duwendes)
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
+        //List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
 
         // ⚔️ Start battle
-        BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        //BattleManager battle = new BattleManager();
+        //battle.startBattle(player, enemies);
 
         Mission1.mission1(player);
         Mission2.mission2(player);
@@ -38,6 +38,7 @@ public class Main {
         W2Mission4.w2mission4(player);
         W2Mission5.w2mission5(player);
         //insert battle with Tria and her Henchmen
+        W2Mission5P2.w2mission5p2(player);
 
         Intro3.intro3(player);
         W3Mission1.w3mission1(player);

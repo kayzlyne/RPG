@@ -16,7 +16,11 @@ public class W2Mission3 {
         System.out.println();
 
         System.out.println(
-                "The tambalan points you toward the east, where the marshland breaks into cracked stone and sunken ruins.\n The ruins reek of history, but not the noble kind.\nThis was once a settlement before it was swallowed by Mogul centuries ago, its people long since devoured or transformed into grotesque beings.\n");
+                "The tambalan points you toward the east, where the marshland breaks" +
+                        "\ninto cracked stone and sunken ruins. The ruins reek of history," +
+                        "\nbut not the noble kind. This was once a settlement before it was" +
+                        "\nswallowed by Mogul centuries ago, its people long since devoured" +
+                        "\nor transformed into grotesque beings.\n");
         sc.nextLine();
 
         System.out.println(
@@ -33,7 +37,7 @@ public class W2Mission3 {
         System.out.println(player.name + ": How?");
         sc.nextLine();
 
-        System.out.println("The flames whisper to me.\nThey told me that the Tambalan sent you.\nHe wants me to part with the weapon.\nBut it will not be yours—or hers—without proof.\n");
+        System.out.println("Pandai: The flames whisper to me.\nThey told me that the Tambalan sent you.\nHe wants me to part with the weapon.\nBut it will not be yours—or hers—without proof.\n");
         sc.nextLine();
 
         System.out.println("He produces a hammer and strikes the ground with it, the sound echoing like thunder through the silent ruins.\n");

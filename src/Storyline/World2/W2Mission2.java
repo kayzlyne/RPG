@@ -25,9 +25,9 @@ public class W2Mission2 {
                 "Press 2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
         int choice = scan.nextInt();
         if (choice == 1){
-            System.out.println("???: You’ve just brought yourself closer to death.");
+            System.out.println("???: You’ve just brought yourself closer to death.\n");
         } else {
-            System.out.println("???: You have keen eyes and a good survival instinct.");
+            System.out.println("???: You have keen eyes and a good survival instinct.\n");
         }
         scan.nextLine();
         System.out.println(
@@ -52,21 +52,21 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println(player.name + ": Alright, I will. Just please save my friend.\n");
         scan.nextLine();
-        System.out.println("The Tambalan nods, and you take him to the small boulder where you left Andrea. The color of her skin has turned very pale, and her eyes are nearly closed.\n");
+        System.out.println("The Tambalan nods, and you take him to the small boulder where you left Andrea.\nThe color of her skin has turned very pale, and her eyes are nearly closed.\n");
         scan.nextLine();
         System.out.println(player.name + ": Andrea! Stay awake!\n");
         scan.nextLine();
-        System.out.println("You rush to Andrea’s side and make sure she stays awake. The tambalan approaches and kneels down to inspect her condition. He then reaches for a potion in his bag and opens it for Andrea to drink, tilting it against her lips carefully. Andrea swallows weakly, her body trembling.Color slowly returns to her cheeks, though her eyes remain closed.\n");
+        System.out.println("You rush to Andrea’s side and make sure she stays awake. The tambalan approaches and kneels down to inspect her condition.\nHe then reaches for a potion in his bag and opens it for Andrea to drink, tilting it against her lips carefully.\nAndrea swallows weakly, her body trembling. Color slowly returns to her cheeks, though her eyes remain closed.\n");
         scan.nextLine();
         System.out.println("Tambalan: She will live. But your debt begins now.");
         scan.nextLine();
-        System.out.println("A sudden shriek cuts through the marshlands, high and guttural. From the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood. An Aswang, its body shifting grotesquely between forms, crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.\n");
+        System.out.println("A sudden shriek cuts through the marshlands, high and guttural. From the treeline, a shape emerges—elongated limbs,\na mouth split too wide, dripping with black rot and fresh blood. An Aswang, its body shifting grotesquely between forms,\ncrawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.\n");
         scan.nextLine();
-        System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime. If you wish for your friend to live, you must keep me alive.\n");
+        System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime.\nIf you wish for your friend to live, you must keep me alive.\n");
         scan.nextLine();
         System.out.println("The Aswang snarls, wings unfurling with a crack of sinew. It takes to the sky and the shadows unnaturally bend around its sinister form.\n");
         scan.nextLine();
-        System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks. The Tambalan stands his ground, clutching his satchel of herbs, but you know one thing: his fate now lies in your hands.\n");
+        System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks.\nThe Tambalan stands his ground, clutching his satchel of herbs, but you know one thing: his fate now lies in your hands.\n");
         System.out.print(">> Press ENTER to continue...");
         scan.nextLine();
     }
