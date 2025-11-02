@@ -1,6 +1,8 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W2Mission5 {
@@ -14,17 +16,14 @@ public class W2Mission5 {
 
         System.out.println(
                 "The chamber opens wide before you like a cavernous maw, a cathedral of decay.\nJagged pillars rise from the ground, formed from fused bone and dried sinew.\nThe walls are slick with black resin, glistening like tar.\nDim candles burn at uneven intervals, their weak flames dancing atop puddles of wax and congealed blood.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "Hanging from the ceiling are cocoons – live pulsating sacks of flesh that drip thick ichor onto the floor.\nThe air hums faintly, a constant low buzzing that seems to come from everywhere and nowhere.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "And then… a voice.\nSmooth at first, but sickly sweet.\nThe kind of tone that curls around your spine like a whisper from a nightmare.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println("???: Have you come to be my supper? Quite idiotic of you… But well, I don’t mind.\n");
@@ -55,7 +54,6 @@ public class W2Mission5 {
         sc.nextLine();
 
         System.out.println("[You encountered 7 henchmen of Tria. 3 Tiktiks, 2 Abwak, 2 Aswang. Choose a target and an attack]\n{Boss cannot be chosen until henchmen are wiped out}\n");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

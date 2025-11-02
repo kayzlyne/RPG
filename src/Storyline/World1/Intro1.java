@@ -1,18 +1,18 @@
 package Storyline.World1;
 
 import Core.PlayerCharacter;
-import java.util.Scanner;
+import Storyline.DialogueUtils;
+
 
 public class Intro1 {
     public static void intro1(PlayerCharacter player) {
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("With the hero's experience as a " + player.classType.getClassName() +
                 ", he/she starts to\nfind clues in the heart of Biringan City. " +
                 player.name + " is taking the\nfirst step to the battle that will determine the fate of their kind.");
         System.out.println();
-        System.out.print(">> Press ENTER to continue...");
-        scanner.nextLine();
+        DialogueUtils.pause();
+
 
         System.out.println("+------------------------------------------------+");
         System.out.println("|                                                |");
@@ -35,8 +35,7 @@ public class Intro1 {
                 "between the merchants bustling about with their wares. You breathe a sigh of relief\n" +
                 "after you reach a less populated area. But just as you stop to relax, you hear a scream.");
         System.out.println();
-        System.out.print(">> Press ENTER to continue...");
-        scanner.nextLine();
+        DialogueUtils.pause();
 
         //Pre-battle portion of mission 1 (we can also just add this to another class) -ef
 
@@ -54,7 +53,7 @@ public class Intro1 {
         System.out.println();
 
         System.out.println("[You encountered 5 thief duwendes.]");
-        System.out.println(">> Press ENTER to continue...");
-        scanner.nextLine();
+        DialogueUtils.pause();
+
     }
 }

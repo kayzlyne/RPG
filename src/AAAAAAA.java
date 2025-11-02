@@ -19,8 +19,14 @@ public class AAAAAAA {
     Example: println(player.name + "");
     not + name +
 
-
-
-     Alsooo, the getScanner won't work. I'mma fix that next time hahahaha.
+    TO DOOO:
+    -Insert Battles except bosses
+    -Make shop system
+        -items class?
+    -Figure out boss battles and make them
+    -implement story
+        -pauses each dialogue
+        -design and stuff (including alignment
+    -What happens when player dies (Sir Khai event)
      */
 }

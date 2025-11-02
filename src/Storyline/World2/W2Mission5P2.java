@@ -1,6 +1,8 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W2Mission5P2 {
@@ -35,7 +37,6 @@ public class W2Mission5P2 {
         sc.nextLine();
 
         System.out.println("The path ahead stretches into darkness once more. But somewhere beyond it lies Mt. Kanatuan. And with it, the truth behind the Babaylan’s sinister plan.\n");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

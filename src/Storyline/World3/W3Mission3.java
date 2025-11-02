@@ -1,6 +1,8 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W3Mission3 {
@@ -42,7 +44,6 @@ public class W3Mission3 {
         System.out.println("Andrea: Well, that was terrifying.");
         System.out.println("Kheila: The way is open now. Banwa-an Daan awaits below.");
 
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

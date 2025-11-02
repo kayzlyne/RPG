@@ -1,6 +1,8 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W3Mission6 {
@@ -52,7 +54,6 @@ public class W3Mission6 {
         System.out.println("Andrea: Then our war isn’t over. We stopped the Mistress, but the real enemy is still out there.");
         System.out.println(player.name + ": Then we fight them next. For Mogul. For Biringan. For all of us.");
         System.out.println("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war machines rising over the horizon.");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

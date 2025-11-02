@@ -1,6 +1,7 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
 
 import java.util.Scanner;
 
@@ -48,7 +49,6 @@ public class W3Mission2 {
         System.out.println("Kheila: You’ll understand soon enough.");
         System.out.println("She grips your wrist with surprising strength.");
         System.out.println("Kheila: Remember why you fight. Power without purpose will consume you, just like it consumed her.");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

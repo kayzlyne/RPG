@@ -1,6 +1,8 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W3Mission1P2 {
@@ -55,7 +57,6 @@ public class W3Mission1P2 {
         } else {
             System.out.println("Skill issue. Please try again.");
         }
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

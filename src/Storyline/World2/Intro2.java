@@ -1,9 +1,9 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
 import java.util.Scanner;
 
-public class Intro {
+public class Intro2 {
     public static void intro(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively" +

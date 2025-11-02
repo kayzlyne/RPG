@@ -1,6 +1,8 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W2Mission2P2 {
@@ -33,7 +35,6 @@ public class W2Mission2P2 {
         System.out.println("[\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t\t]");
         System.out.println("[\tAndrea joins you on your adventure!\t\t\t\t]");
         System.out.println("[\t\t\t\t\t\t\t\t\t]\n\n");
-        System.out.print(">> Press ENTER to continue...");
-        scan.nextLine();
+        DialogueUtils.pause();
     }
 }

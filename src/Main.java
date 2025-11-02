@@ -1,9 +1,11 @@
 import Core.*;
 import java.util.*;
 
-import Storyline.World1.*;
-import World2.*;
-import World3.*;
+import Storyline.World1.Intro1;
+import Storyline.Opening;
+import Storyline.PlayerSelection;
+import Storyline.World2.*;
+import Storyline.World3.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,12 +22,12 @@ public class Main {
         BattleManager battle = new BattleManager();
         battle.startBattle(player, enemies);
 
-        Mission1.mission1(player);
-        Mission2.mission2(player);
-        Mission3.mission3(player);
+       // Mission1.mission1(player);
+        //Mission2.mission2(player);
+       //    Mission3.mission3(player);
         //insert battle with the bungisngis
 
-        Intro.intro(player);
+        Intro2.intro(player);
         W2Mission1.w2mission1(player);
         W2Mission2.w2mission2(player);
         //insert battle with the aswangs

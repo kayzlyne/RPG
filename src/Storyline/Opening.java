@@ -1,4 +1,4 @@
-package Storyline.World1;
+package Storyline;
 
 public class Opening {
     public static void opening() {
@@ -12,8 +12,7 @@ public class Opening {
         System.out.println("+------------------------------------------------+");
         System.out.println();
         System.out.println("Prepare yourself -- your journey begins now!");
-        System.out.println(">> Press ENTER to continue...");
-        //scanner().nextLine();
+        DialogueUtils.pause();
 
         System.out.println("+============================================================+");
         System.out.println("|                          SYNOPSIS                          |"); //changed "story introduction" to "synopsis" -ef
@@ -36,6 +35,7 @@ public class Opening {
         System.out.println("Out of the ashes... A HERO APPEARS.");
         System.out.println();
         System.out.println("+=============================================================+");
-        System.out.print(">> Press ENTER to continue...");
+        DialogueUtils.pause();
+
     }
 }

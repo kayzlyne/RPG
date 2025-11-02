@@ -1,4 +1,4 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
 import java.util.Scanner;

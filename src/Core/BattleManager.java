@@ -15,17 +15,43 @@ public class BattleManager {
                 System.out.printf("[%d] %s - HP: %d\n", i, e.name, e.hp);
             }
 
-            System.out.print("🎯 Choose target index: ");
-            int targetIndex = scanner.nextInt();
-            if (targetIndex < 0 || targetIndex >= enemies.size()) {
-                System.out.println("Invalid target. Turn skipped.");
-                continue;
+            int targetIndex;
+            while (true) {
+                try {
+                    System.out.print("🎯 Choose target index: ");
+                    targetIndex = scanner.nextInt();
+                    if (targetIndex < 0 || targetIndex >= enemies.size()) {
+                        System.out.println("Invalid target. Try again.");
+                        continue;
+                    }
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a number.");
+                } catch (IndexOutOfBoundsException e) {
+                    System.out.println("Invalid target index or target is already defeated.");
+                }
             }
-
             Enemy target = enemies.get(targetIndex);
 
-            System.out.print("⚡ Choose action: [1] Basic Attack [2] Skill [3] Special: ");
-            int action = scanner.nextInt();
+            int action = 0;
+            boolean validInput = false;
+
+            while (!validInput) {
+                System.out.print("⚡ Choose action: [1] Basic Attack [2] Skill [3] Special: ");
+                try {
+                    action = scanner.nextInt();
+                    scanner.nextLine(); // consume leftover newline
+
+                    if (action < 1 || action > 3) {
+                        System.out.println("❌ Invalid choice. Please enter a number between 1 and 3.");
+                    } else {
+                        validInput = true;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println("❌ Invalid input. Please enter a number.");
+                    scanner.nextLine(); // clear the invalid input
+                }
+            }
 
             if (action == 1) {
                 int dmg = player.dealDamage(target);

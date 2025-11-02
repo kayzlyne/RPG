@@ -1,6 +1,8 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W2Mission4 {
@@ -15,17 +17,14 @@ public class W2Mission4 {
 
         System.out.println(
                 "You make your way back to Andrea and the Tambalan.\nThough pale, Andrea’s eyes open the moment she hears your footsteps.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "Andrea: You’re back. Did you find it?\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "You kneel and present the Pandai’s creation.\nThe blade gleams faintly in the gloom, its edge shimmering like captured moonlight.\nAndrea’s hand trembles as she reaches for it, but the moment her fingers curl around the hilt, the glow steadies.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println("Tambalan: Good. The sword knows its master. She must carry it herself.\n");
@@ -68,7 +67,6 @@ public class W2Mission4 {
         sc.nextLine();
 
         System.out.println("A sick feeling washes over you as you and Andrea come to the same conclusion: you've made it to the Aswang’s lair.\n");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

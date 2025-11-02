@@ -1,6 +1,8 @@
-package World2;
+package Storyline.World2;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W2Mission3 {
@@ -15,17 +17,14 @@ public class W2Mission3 {
 
         System.out.println(
                 "The tambalan points you toward the east, where the marshland breaks into cracked stone and sunken ruins.\n The ruins reek of history, but not the noble kind.\nThis was once a settlement before it was swallowed by Mogul centuries ago, its people long since devoured or transformed into grotesque beings.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "At the center of the ruins, you see it.\nA faint glow inside a crumbling forge, fire still alive where no fire should exist.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println(
                 "An old man steps out from the shadows of the forge.\nHis hair is silver, his arms corded with muscle, his leather apron smeared with soot and blood.\nHis gaze is sharp, unwavering.\nBefore you can voice out your intent, the Pandai beats you to it.\n");
-        //System.out.println(">> Press ENTER to continue...");
         sc.nextLine();
 
         System.out.println("Pandai: I know why you've come.");
@@ -44,7 +43,6 @@ public class W2Mission3 {
         sc.nextLine();
 
         System.out.println("Pandai: Defeat them, and prove you are worthy. Only then will the weapon be forged anew.\n");
-        System.out.print(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

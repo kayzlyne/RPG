@@ -1,6 +1,8 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W3Mission5 {
@@ -60,7 +62,6 @@ public class W3Mission5 {
         System.out.println("Andrea: That must be it. The Mistress’s Lair.");
         System.out.println("Kheila: Be ready. What waits beyond that door is not just Erika, the Mistress, but everything she believes in.");
 
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
     }
 }

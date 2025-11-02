@@ -1,6 +1,7 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
 
 import java.util.Scanner;
 
@@ -21,6 +22,8 @@ public class W3Mission4 {
         System.out.println("Opening the ornate door, you walk into a grand hall where massive moonstone pillars encircle a raised altar. Upon it rests a blade glowing faintly silver: the Blade of Bulan.");
         System.out.println(player.name + ": There it is. The goddess’s weapon.");
         System.out.println("But before you can move closer, shadows stir at the edges of the chamber and Babaylan Sentinels emerge. Twisted humanoid figures cloaked in bone charms, their eyes glowing red with witchfire.");
+        DialogueUtils.pause();
+
         //FIGHT 2 BABAYLAN SENTINELS
     }
 }

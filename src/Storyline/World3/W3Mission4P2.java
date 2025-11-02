@@ -1,6 +1,8 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
+import Storyline.DialogueUtils;
+
 import java.util.Scanner;
 
 public class W3Mission4P2 {
@@ -17,7 +19,7 @@ public class W3Mission4P2 {
         System.out.println("Kheila: This isn’t a map of Banwa-an Daan. This leads to their most guarded chamber: the Sanctum of Eclipse. Only the highest-ranked Babaylan is allowed access to it.");
         System.out.println("Andrea: Then that’s where the Mistress must be.");
         System.out.println("Kheila: And where all their power converges. Be warned, for this isn’t just another temple. It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.");
-        System.out.println(">> Press ENTER to continue...");
-        sc.nextLine();
+        DialogueUtils.pause();
+
     }
 }

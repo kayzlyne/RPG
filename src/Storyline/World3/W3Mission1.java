@@ -1,4 +1,4 @@
-package World3;
+package Storyline.World3;
 
 import Core.PlayerCharacter;
 import java.util.Scanner;
@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class W3Mission1 {
     public static void w3mission1 (PlayerCharacter player){
         Scanner sc = new Scanner(System.in);
-        //Player player = GameManager.getPlayer();
-        //String playerName = player.getName();
         System.out.println();
         System.out.println("================================================");
         System.out.println("       MISSION 1:  KNOWING THE MOUNTAIN ");
