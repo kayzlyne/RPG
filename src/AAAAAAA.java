@@ -21,12 +21,13 @@ public class AAAAAAA {
 
     TO DOOO:
     -Insert Battles except bosses
+        -try catch for skills or try again feature when choosing a skill under cooldown
     -Make shop system
         -items class?
     -Figure out boss battles and make them
     -implement story
         -pauses each dialogue
-        -design and stuff (including alignment
+        -design and stuff (including alignment)
     -What happens when player dies (Sir Khai event)
      */
 }
