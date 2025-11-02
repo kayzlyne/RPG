@@ -3,6 +3,7 @@ import java.util.*;
 
 import Storyline.World1.*;
 import World2.*;
+import World3.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,11 +14,11 @@ public class Main {
 
 
         // 👹 Spawn enemies (e.g., 5 Duwendes)
-        //List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
 
         // ⚔️ Start battle
-        //BattleManager battle = new BattleManager();
-        //battle.startBattle(player, enemies);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies);
 
         Mission1.mission1(player);
         Mission2.mission2(player);
@@ -36,5 +37,17 @@ public class Main {
         W2Mission5.w2mission5(player);
         //insert battle with Tria and her Henchmen
 
+        Intro3.intro3(player);
+        W3Mission1.w3mission1(player);
+        //insert battle with tiyanaks
+        W3Mission1P2.w3mission1p2(player);
+        W3Mission2.w3mission2(player);
+        W3Mission3.w3mission3(player);
+        W3Mission4.w3mission4(player);
+        //insert battle with sentinels
+        W3Mission4P2.w3mission4p2(player);
+        W3Mission5.w3mission5(player);
+        W3Mission6.w3mission6(player);
+        //mission 6 has not been divided between battles yet
     }
 }
