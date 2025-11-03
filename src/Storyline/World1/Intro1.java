@@ -1,7 +1,8 @@
 package Storyline.World1;
 
-import Core.PlayerCharacter;
+import Core.*;
 import Storyline.DialogueUtils;
+import java.util.List;
 
 
 public class Intro1 {
@@ -29,15 +30,13 @@ public class Intro1 {
                 "of your beloved Biringan. With this in mind, you set out to look for clues and\n" +
                 "follow the trail left behind by the ones threatening to devour the light of the\n" +
                 "city. You roam about the place and decide to start your search in the most well-\n" +
-                "populated area of town: the marketplace.\n"); //edited it to match the updated story ver -ef
+                "populated area of town: the marketplace.\n");
 
         System.out.println("Your feet carry you through the crowded streets, expertly maneuvering\n" +
                 "between the merchants bustling about with their wares. You breathe a sigh of relief\n" +
                 "after you reach a less populated area. But just as you stop to relax, you hear a scream.");
         System.out.println();
         DialogueUtils.pause();
-
-        //Pre-battle portion of mission 1 (we can also just add this to another class) -ef
 
         System.out.println();
         System.out.println("================================================");
@@ -55,5 +54,8 @@ public class Intro1 {
         System.out.println("[You encountered 5 thief duwendes.]");
         DialogueUtils.pause();
 
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies);
     }
 }

@@ -84,6 +84,8 @@ public class PlayerCharacter {
         System.out.printf("Mana      : %d\n", mana);
         System.out.printf("Defense   : %d (Passive)\n", defense);
         System.out.println("──────────────────────────────\n");
+        //Insert inventory list
+
     }
 }
 

@@ -1,8 +1,8 @@
 package Storyline.World3;
 
-import Core.PlayerCharacter;
+import Core.*;
 import Storyline.DialogueUtils;
-
+import java.util.List;
 import java.util.Scanner;
 
 public class W3Mission6 {
@@ -26,7 +26,9 @@ public class W3Mission6 {
         System.out.println("There, you see Erika in the middle of the room, surrounded by herbs and the ingredients for a ritual.");
         System.out.println("Kheila: She’s casting the spell! Erika! You must stop this madness.");
         System.out.println("Kheila's shout catches her attention, and Erika looks up, her eyes burning with divine fury.");
+
         //MEET BOSS EVENT FIGHT (ERIKA, THE MISTRESS OF THE BABAYLANS)
+
         System.out.println("Erika: So… you’re the Fool wielding the goddess’s toy. Do you even know whose war you’re fighting?");
         System.out.println("Kheila: You betrayed our kin! You were supposed to protect the balance, not destroy it!");
         System.out.println("Erika: Balance? Do you still believe in that? The humans promised us liberation. A world where we’re no longer feared, no longer hidden!");
@@ -40,7 +42,9 @@ public class W3Mission6 {
         System.out.println("Erika thinks for a moment, then screams.");
         System.out.println("Erika: Then I’ll burn everything this WORLD has!");
         System.out.println("The ritual circle flares, her body absorbing corrupted power. She becomes monstrous. A chimera that's part woman, part shadow flame.");
+
         //[You have angered the leader of the Babaylans. Choose your attack.]
+
         System.out.println("The Blade of Bulan glows fiercely, resonating with your heart. You strike, each blow cutting through layers of darkness.");
         System.out.println("As Erika collapses, the corruption begins to peel away. Her voice trembles.");
         System.out.println("Erika: I… was supposed to rule everything…");
@@ -48,7 +52,11 @@ public class W3Mission6 {
         System.out.println("A sudden voice echoes from above. Cold, mechanical, and human.");
         System.out.println("???: The operation is complete. Terminate all surviving Babaylans and invading mythical creatures. Begin Phase Two.");
         System.out.println("The runes flare. From the walls emerge armored silhouettes. Human soldiers wielding weapons that glow with stolen magic.");
-        //FIGHT 3 HUMANS, EVENT
+
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 3);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies);
+
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees on the ground, tears running like a violent downpour from her eyes.");
         System.out.println("Kheila: The humans played us all. The Babaylans, the creatures of Mogul, even the goddess’s light.");
         System.out.println("Andrea: Then our war isn’t over. We stopped the Mistress, but the real enemy is still out there.");

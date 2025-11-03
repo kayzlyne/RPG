@@ -4,6 +4,9 @@ import java.util.*;
 
 public class ClassMenu {
     public static Map<Integer, String> getRaceOptions() {
+
+        //Insert new lines and adjust spacing between outputs
+
         Map<Integer, String> races = new LinkedHashMap<>();
         races.put(1, "Tikbalang");
         races.put(2, "Kapre");

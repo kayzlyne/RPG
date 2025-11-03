@@ -1,6 +1,9 @@
 package Storyline.World2;
 
-import Core.PlayerCharacter;
+import Core.*;
+import Storyline.DialogueUtils;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Intro2 {
@@ -16,8 +19,7 @@ public class Intro2 {
         System.out.println("Without a second thought, you rush towards Mogul.\n");
 
         System.out.println("[You have entered Mogul, the land of the Aswangs]\n");
-        System.out.print(">> Press ENTER to continue...");
-        scan.nextLine();
+        DialogueUtils.pause();
 
         System.out.println("||___________________________________________________||");
         System.out.println("||         |\\    /| |----| |----  |    | |          ||");
@@ -36,8 +38,7 @@ public class Intro2 {
         System.out.println("Manananggal prowling about with their entrails hanging below them like a perverted bridal train. No warmth reaches you here. ");
         System.out.println("Only the feeling of being watched. \nYour eyes search your immediate surroundings for a trace of the Bungisngis and Andrea.");
         System.out.println("You sense a gust of wind and move to follow the direction from which it came.");
-        System.out.print(">> Press ENTER to continue...");
-        scan.nextLine();
+        DialogueUtils.pause();
 
         System.out.println();
         System.out.println("================================================");
@@ -47,7 +48,10 @@ public class Intro2 {
 
         System.out.println(
                 "You see Andrea heavily injured on the ground, the Bungisngis limping towards her. You rush in to protect her.\n");
-        System.out.println(">> Press ENTER to continue...");
-        scan.nextLine();
+        DialogueUtils.pause();
+
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies);
     }
 }

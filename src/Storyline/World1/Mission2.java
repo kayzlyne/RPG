@@ -2,7 +2,6 @@ package Storyline.World1;
 
 import Core.PlayerCharacter;
 import Storyline.DialogueUtils;
-
 import java.util.Scanner;
 
 public class Mission2 {
@@ -44,7 +43,9 @@ public class Mission2 {
         System.out.println("[Press 0] No");
         System.out.println();
         System.out.println("Enter your choice: ");
-        int choice = -1;
+
+        //try-catch system needed
+        int choice = scan.nextInt();
         if (choice == 0) {
             System.out.println("You have chosen not to help the beggar.");
             System.out.println();

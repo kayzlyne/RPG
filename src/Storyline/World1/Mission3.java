@@ -1,7 +1,9 @@
 package Storyline.World1;
 
-import Core.PlayerCharacter;
+import Core.*;
 import Storyline.DialogueUtils;
+
+import java.util.List;
 
 public class Mission3 {
     public static void mission3(PlayerCharacter player) {
@@ -49,5 +51,13 @@ public class Mission3 {
         System.out.println();
         System.out.println("[You encountered 5 tiyanaks and a Bungisngis.]\n{only tiyanaks can be targeted}\n{Mini boss can only be targeted after wiping out the henchmen}\n");
         DialogueUtils.pause();
+
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 5);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies);
+
+        List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
+        BattleManager battle2 = new BattleManager();
+        battle2.startBattle(player, enemies2);
     }
 }

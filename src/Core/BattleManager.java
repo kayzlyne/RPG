@@ -5,6 +5,10 @@ public class BattleManager {
     Scanner scanner = new Scanner(System.in);
 
     public void startBattle(PlayerCharacter player, List<Enemy> enemies) {
+
+        //Insert new lines and arrange outputs
+        //Add item inventory, too (potion in inventory
+
         System.out.println("⚔️ Battle Begins!");
 
         while (player.isAlive() && !enemies.isEmpty()) {
@@ -40,7 +44,7 @@ public class BattleManager {
                 System.out.print("⚡ Choose action: [1] Basic Attack [2] Skill [3] Special: ");
                 try {
                     action = scanner.nextInt();
-                    scanner.nextLine(); // consume leftover newline
+                    scanner.nextLine();
 
                     if (action < 1 || action > 3) {
                         System.out.println("❌ Invalid choice. Please enter a number between 1 and 3.");
@@ -49,7 +53,7 @@ public class BattleManager {
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("❌ Invalid input. Please enter a number.");
-                    scanner.nextLine(); // clear the invalid input
+                    scanner.nextLine();
                 }
             }
 
