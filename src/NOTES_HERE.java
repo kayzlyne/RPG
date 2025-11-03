@@ -16,6 +16,7 @@ public class NOTES_HERE {
         -fix distance and spacing
         -pauses each dialogue
         -design and stuff (including alignment)
+    -Insert confirmation after name input
     -What happens when player dies (Sir Khai event)
 
 
