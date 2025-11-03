@@ -1,5 +1,8 @@
 package Core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlayerCharacter {
     public String name, race, charClass;
     public int hp, mana, defense = 11;
@@ -87,5 +90,31 @@ public class PlayerCharacter {
         //Insert inventory list
 
     }
+
+    private int barya = 100; // or whatever starting amount
+    private List<Item> inventory = new ArrayList<>();
+
+    public int getBarya() {
+        return barya;
+    }
+    public void setBarya(int barya) {
+        this.barya = barya;
+    }
+
+    public void addItem(Item item) {
+        inventory.add(item);
+    }
+
+    public void showInventory() {
+        System.out.println("\n=== 🎒 Inventory ===");
+        if (inventory.isEmpty()) {
+            System.out.println("You have no items.");
+        } else {
+            for (Item i : inventory) {
+                System.out.println("- " + i.getName());
+            }
+        }
+    }
+
 }
 

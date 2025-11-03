@@ -8,7 +8,7 @@ public class NOTES_HERE {
         -Rest every after fight (recover hp and mana)
         -fix battle system spacing and options
         -add option 4 (drink potion if naay sulod inventory)
-    -Make shop system
+    -Make shop system [✅ DONE -ef]
         -items class?
     -Figure out boss battles and make them
     -Level up system
@@ -16,7 +16,7 @@ public class NOTES_HERE {
         -fix distance and spacing
         -pauses each dialogue
         -design and stuff (including alignment)
-    -Insert confirmation after name input
+    -Insert confirmation after name input [✅ DONE -ef]
     -What happens when player dies (Sir Khai event)
 
 

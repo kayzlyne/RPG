@@ -6,7 +6,7 @@ import java.util.*;
 public class PlayerSelection {
     public static PlayerCharacter createPlayer() {
         Scanner scanner = new Scanner(System.in);
-        int raceChoice = -1, classChoice = -1;
+        int raceChoice = -1, classChoice = -1, choice;
         String name = "";
 
         // 🧬 Race selection
@@ -50,6 +50,38 @@ public class PlayerSelection {
                 break;
             } catch (Exception e) {
                 System.out.println("❌ Name cannot be empty. Try again.\n");
+            }
+        }
+        //name confirmation (won't close loop until player is happy with the name)
+        while (true) {
+            System.out.println("Hello, " + name + "! Are you satisfied with that name?");
+            System.out.println("[Press 1] Yes\n[Press 0] No, change it.");
+
+            try {
+                choice = scanner.nextInt();
+                scanner.nextLine();
+
+                if (choice == 1) {
+                    break;
+                } else if (choice == 0) {
+                    System.out.println();
+                    while (true) {
+                        try {
+                            System.out.print("Enter your character name: ");
+                            name = scanner.nextLine().trim();
+                            if (name.isEmpty()) throw new Exception();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("❌ Name cannot be empty. Try again.\n");
+                        }
+                    }
+                } else {
+                    System.out.println("⚠️ Please enter only 1 or 0.\n");
+                }
+
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("❌ Invalid input. Please enter a number (1 or 0).\n");
+                scanner.nextLine();
             }
         }
 
