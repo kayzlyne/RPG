@@ -11,8 +11,8 @@ public class NOTES_HERE {
     -Make shop system [✅ DONE -ef]
         -items class?
     -Figure out boss battles and make them
-    -Level up system
-    -implement story
+    -Level up system [on going - st]
+    -implement story [on going - st]
         -fix distance and spacing
         -pauses each dialogue
         -design and stuff (including alignment)
