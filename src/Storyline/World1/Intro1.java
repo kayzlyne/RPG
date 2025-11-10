@@ -56,6 +56,7 @@ public class Intro1 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        battle.startBattle(player, enemies, 1);
+
     }
 }

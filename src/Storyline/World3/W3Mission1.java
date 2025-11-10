@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W3Mission1 {
-    public static void w3mission1 (PlayerCharacter player){
+    public static boolean w3mission1 (PlayerCharacter player){
         Scanner sc = new Scanner(System.in);
         System.out.println();
         System.out.println("================================================");
@@ -39,7 +39,11 @@ public class W3Mission1 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 4);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        boolean survived = battle.startBattle(player, enemies, 3);
+
+        if (!survived) {
+            return false;
+        }
 
         if (player.isAlive()) {
             System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\nBut after only a few minutes, your peaceful respite is interrupted by the sound of footsteps from a distance.\n");
@@ -75,7 +79,11 @@ public class W3Mission1 {
 
             List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 4);
             BattleManager battle2 = new BattleManager();
-            battle2.startBattle(player, enemies2);
+            survived = battle2.startBattle(player, enemies2, 3);
+
+            if (!survived) {
+                return false;
+            }
 
             if (player.isAlive()) {
                 System.out.println("You and Andrea finish off the last of the enemies. The remaining Babaylans scatter into the forest.\n");
@@ -97,5 +105,7 @@ public class W3Mission1 {
             System.out.println("Skill issue. Please try again.");
         }
         DialogueUtils.pause();
+
+        return true;
     }
 }

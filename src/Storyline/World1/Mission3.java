@@ -6,7 +6,7 @@ import Storyline.DialogueUtils;
 import java.util.List;
 
 public class Mission3 {
-    public static void mission3(PlayerCharacter player) {
+    public static boolean mission3(PlayerCharacter player) {
         System.out.println();
         System.out.println("================================================");
         System.out.println("          MISSION 3: THE HEART OF DARKNESS      ");
@@ -54,10 +54,20 @@ public class Mission3 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 5);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        boolean survived = battle.startBattle(player, enemies, 1);
+
+        if (!survived) {
+            return false;
+        }
 
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
         BattleManager battle2 = new BattleManager();
-        battle2.startBattle(player, enemies2);
+        survived = battle2.startBattle(player, enemies2, 1);
+
+        if (!survived) {
+            return false;
+        }
+
+        return true;
     }
 }

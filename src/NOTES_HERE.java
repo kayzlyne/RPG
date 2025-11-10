@@ -17,7 +17,7 @@ public class NOTES_HERE {
         -pauses each dialogue
         -design and stuff (including alignment)
     -Insert confirmation after name input [✅ DONE -ef]
-    -What happens when player dies (Sir Khai event)
+    -What happens when player dies (Sir Khai event) (✅ DONE -a) //triggers everytime player dies between World 1 and 2 but will only trigger once in World 3
 
 
     For the story transfer, Make appropriate file/package.

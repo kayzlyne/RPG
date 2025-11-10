@@ -1,10 +1,11 @@
 package Core;
 import java.util.*;
+import Storyline.BeggarEvent;
 
 public class BattleManager {
     Scanner scanner = new Scanner(System.in);
 
-    public void startBattle(PlayerCharacter player, List<Enemy> enemies) {
+    public boolean startBattle(PlayerCharacter player, List<Enemy> enemies, int currentWorld) {
 
         //Insert new lines and arrange outputs
         //Add item inventory, too (potion in inventory
@@ -33,6 +34,9 @@ public class BattleManager {
                     System.out.println("Invalid input. Please enter a number.");
                 } catch (IndexOutOfBoundsException e) {
                     System.out.println("Invalid target index or target is already defeated.");
+                } catch (InputMismatchException e) {
+                    System.out.println("Please input a valid index.");
+                    scanner.nextLine();
                 }
             }
             Enemy target = enemies.get(targetIndex);
@@ -82,12 +86,27 @@ public class BattleManager {
 
             if (!player.isAlive()) {
                 System.out.println("💀 You were defeated...");
+
+                // Attempt to trigger Sir Khai rescue
+                boolean rescued = BeggarEvent.trigger(player, currentWorld);
+
+                if (rescued) {
+                    System.out.println("\n✨ Sir Khai has saved you! You live to fight another day!");
+                    continue;
+                } else {
+
+                    System.out.println("\n☠️ Your journey ends here...");
+                    System.out.println("🔚 Game Over");
+                    return false;
+                }
             }
         }
 
         if (player.isAlive()) {
             System.out.println("🎉" + player.name + " defeated all enemies!");
         }
+
+        return true;
     }
 }
 

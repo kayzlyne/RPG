@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W3Mission4 {
-    public static void w3mission4(PlayerCharacter player) {
+    public static boolean w3mission4(PlayerCharacter player) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("================================================");
@@ -26,7 +26,10 @@ public class W3Mission4 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 2);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        boolean survived = battle.startBattle(player, enemies, 3);
+        if (!survived) {
+            return false;
+        }
 
         System.out.println("The battle is fierce, but the power of Mogul still flows through your veins. When the last guardian falls, silence returns, broken only by the faint hum of the Blade.");
         System.out.println("Andrea: They were protecting this.");
@@ -39,5 +42,7 @@ public class W3Mission4 {
         System.out.println("Andrea: Then that’s where the Mistress must be.");
         System.out.println("Kheila: And where all their power converges. Be warned, for this isn’t just another temple. It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.");
         DialogueUtils.pause();
+
+        return true;
     }
 }

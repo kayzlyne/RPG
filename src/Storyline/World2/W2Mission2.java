@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission2 {
-    public static void w2mission2(PlayerCharacter player) {
+    public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
 
         System.out.println();
@@ -73,7 +73,11 @@ public class W2Mission2 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 1);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        boolean survived = battle.startBattle(player, enemies, 2);
+
+        if (!survived) {
+            return false;
+        }
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.\n");
         scan.nextLine();
@@ -102,5 +106,7 @@ public class W2Mission2 {
         System.out.println("[\tAndrea joins you on your adventure!\t\t\t\t\t\t]");
         System.out.println("[\t                                   \t\t\t\t\t\t]\n\n");
         DialogueUtils.pause();
+
+        return true;
     }
 }

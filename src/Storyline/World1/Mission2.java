@@ -2,9 +2,15 @@ package Storyline.World1;
 
 import Core.PlayerCharacter;
 import Storyline.DialogueUtils;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class Mission2 {
+
+    public static boolean helpedBeggar = false;
+
     public static void mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
         System.out.println();
@@ -38,40 +44,58 @@ public class Mission2 {
         System.out.println("But you know that in this part of the city, it’s every man for himself.");
         System.out.println("If you do not help him, no one else will, and he will be a dead man by tomorrow.");
         System.out.println();
-        System.out.println(">> Do you give away your only money to help a begging stranger?");
-        System.out.println("[Press 1] Yes");
-        System.out.println("[Press 0] No");
-        System.out.println();
-        System.out.println("Enter your choice: ");
+
 
         //try-catch system needed
-        int choice = scan.nextInt();
-        if (choice == 0) {
-            System.out.println("You have chosen not to help the beggar.");
+        while(true) {
+
+            System.out.println(">> Do you give away your only money to help a begging stranger?");
+            System.out.println("[Press 1] Yes");
+            System.out.println("[Press 0] No");
             System.out.println();
-            System.out.println(player.name + ": I’m sorry, friend, but I do not have the money to spare. Best of luck to you.");
-            System.out.println();
-            System.out.println("With those parting words, you walk away. The crestfallen look on the man’s face");
-            System.out.println("stays with you as you make your way towards the Information Guild,");
-            System.out.println("but you quickly put it out of your mind. Great adventures await, after all.");
-        } else {
-            System.out.println("You have chosen to help the beggar.");
-            System.out.println();
-            System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
-            System.out.println();
-            System.out.println("Beggar: You would offer me all the money you have?");
-            System.out.println();
-            System.out.println(player.name + ": Why, of course. You seem to need it more than I do. It’s only the right thing to do.");
-            System.out.println();
-            System.out.println("To your astonishment, the beggar surges upward with surprising strength,");
-            System.out.println("despite his earlier condition, and envelopes you in a hug.");
-            System.out.println();
-            System.out.println("Beggar: Thank you so much! I have been wasting away in this alley for a week,");
-            System.out.println("and you are the first to ever offer me kindness.");
-            System.out.println();
-            System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
-            System.out.println();
-            System.out.println("Beggar: And to you. May the Gods bless you.");
+            System.out.println("Enter your choice: ");
+
+            try {
+                int choice = scan.nextInt();
+                if (choice == 0) {
+                    System.out.println("You have chosen not to help the beggar.");
+                    System.out.println();
+                    System.out.println(player.name + ": I’m sorry, friend, but I do not have the money to spare. Best of luck to you.");
+                    System.out.println();
+                    System.out.println("With those parting words, you walk away. The crestfallen look on the man’s face");
+                    System.out.println("stays with you as you make your way towards the Information Guild,");
+                    System.out.println("but you quickly put it out of your mind. Great adventures await, after all.");
+                    break;
+                } else if (choice == 1){
+                    helpedBeggar = true;
+                    System.out.println("You have chosen to help the beggar.");
+                    System.out.println();
+                    System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    System.out.println();
+                    System.out.println("Beggar: You would offer me all the money you have?");
+                    System.out.println();
+                    System.out.println(player.name + ": Why, of course. You seem to need it more than I do. It’s only the right thing to do.");
+                    System.out.println();
+                    System.out.println("To your astonishment, the beggar surges upward with surprising strength,");
+                    System.out.println("despite his earlier condition, and envelopes you in a hug.");
+                    System.out.println();
+                    System.out.println("Beggar: Thank you so much! I have been wasting away in this alley for a week,");
+                    System.out.println("and you are the first to ever offer me kindness.");
+                    System.out.println();
+                    System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
+                    System.out.println();
+                    System.out.println("Beggar: And to you. May the Gods bless you.");
+                    break;
+                } else {
+                    System.out.println("❌ Invalid choice. Please enter 0 or 1.\n");
+
+                }
+                } catch (InputMismatchException e) {
+                    System.out.println("❌ Invalid input. Please enter 0 or 1.\n");
+                    scan.nextLine(); // clear invalid input
+                }
+        }
+
             DialogueUtils.pause();
             System.out.println();
             System.out.println("Smiling warmly, you walk away from the alley and towards the Information Guild.");
@@ -84,7 +108,7 @@ public class Mission2 {
             System.out.println("And when you look back at the alley, it now appears completely empty.");
             System.out.println("Did you just get played by an encanto?");
             DialogueUtils.pause();
-        }
+
 
         System.out.println();
         System.out.println("You try to put the previous encounter out of your thoughts and instead focus on your mission.\nYou find yourself standing in the looming shadow of the Information Guild. Its heavy oak doors,\ncarved with runes of protection, creak as you push them open.");

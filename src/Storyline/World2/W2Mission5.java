@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission5 {
-    public static void w2mission5(PlayerCharacter player) {
+    public static boolean w2mission5(PlayerCharacter player) {
         Scanner sc = new Scanner(System.in);
         System.out.println();
         System.out.println("================================================");
@@ -61,9 +61,21 @@ public class W2Mission5 {
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.ABWAK, 2);
         List<Enemy> enemies3 = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 2);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
-        battle.startBattle(player, enemies2);
-        battle.startBattle(player, enemies3);
+        boolean survived = battle.startBattle(player, enemies, 2);
+
+        if (!survived) {
+            return false;
+        }
+        survived = battle.startBattle(player, enemies2, 2);
+
+        if (!survived) {
+            return false;
+        }
+        survived = battle.startBattle(player, enemies3, 2);
+
+        if (!survived) {
+            return false;
+        }
 
         //Boss Battle
 
@@ -97,5 +109,7 @@ public class W2Mission5 {
 
         System.out.println("The path ahead stretches into darkness once more. But somewhere beyond it lies Mt. Kanatuan. And with it, the truth behind the Babaylan’s sinister plan.\n");
         DialogueUtils.pause();
+
+        return true;
     }
 }

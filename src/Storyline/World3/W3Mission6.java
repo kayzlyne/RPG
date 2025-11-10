@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W3Mission6 {
-    public static void w3mission6(PlayerCharacter player) {
+    public static boolean w3mission6(PlayerCharacter player) {
         Scanner sc = new Scanner(System.in);
         //UNEDITED
         System.out.println("===============================================");
@@ -55,7 +55,11 @@ public class W3Mission6 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 3);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies);
+        boolean survived = battle.startBattle(player, enemies, 3);
+
+        if (!survived) {
+            return false;
+        }
 
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees on the ground, tears running like a violent downpour from her eyes.");
         System.out.println("Kheila: The humans played us all. The Babaylans, the creatures of Mogul, even the goddess’s light.");
@@ -63,5 +67,7 @@ public class W3Mission6 {
         System.out.println(player.name + ": Then we fight them next. For Mogul. For Biringan. For all of us.");
         System.out.println("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war machines rising over the horizon.");
         DialogueUtils.pause();
+
+        return true;
     }
 }
