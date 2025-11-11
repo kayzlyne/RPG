@@ -14,8 +14,9 @@ public class NOTES_HERE {
     -Level up system [on going - st]
     -implement story [on going - st]
         -fix distance and spacing
-        -pauses each dialogue
+        -pauses each dialogue [✅ DONE -ef]
         -design and stuff (including alignment)
+    -Implement the choices in World 3: Mission 3 & Mission 5
     -Insert confirmation after name input [✅ DONE -ef]
     -What happens when player dies (Sir Khai event) (✅ DONE -a) 
             -> //triggers everytime player dies between World 1 and 2 but will only trigger once in World 3

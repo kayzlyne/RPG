@@ -24,6 +24,7 @@ public class Mission2 {
         System.out.println("It is now time to make your way to the Information Guild");
         System.out.println("in order to get to the bottom of the strange air swirling around Biringan City.");
         System.out.println("You decide to take a shortcut through an empty alley.");
+        scan.nextLine();
         System.out.println();
         System.out.println("But as you round the corner, you see that this alley was not quite as empty");
         System.out.println("as you had thought. There is a man sprawled in a heap on the floor,");
@@ -35,6 +36,7 @@ public class Mission2 {
         System.out.println("\n\nBeggar: Please, kind stranger, do you have any barya to spare?");
         System.out.println("I have been sick for days, but I do not have the twenty pesos needed to pay for medicine.");
         System.out.println("Won’t you spare a poor beggar some mercy?");
+        scan.nextLine();
         System.out.println();
         System.out.println("The man starts coughing halfway through his last sentence,");
         System.out.println("his body shaking violently as he’s overwhelmed by the coughing fit,");
@@ -43,6 +45,7 @@ public class Mission2 {
         System.out.println("than this beggar, either, for you only have twenty pesos to your name.");
         System.out.println("But you know that in this part of the city, it’s every man for himself.");
         System.out.println("If you do not help him, no one else will, and he will be a dead man by tomorrow.");
+        scan.nextLine();
         System.out.println();
 
 
@@ -59,8 +62,10 @@ public class Mission2 {
                 int choice = scan.nextInt();
                 if (choice == 0) {
                     System.out.println("You have chosen not to help the beggar.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println(player.name + ": I’m sorry, friend, but I do not have the money to spare. Best of luck to you.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println("With those parting words, you walk away. The crestfallen look on the man’s face");
                     System.out.println("stays with you as you make your way towards the Information Guild,");
@@ -69,20 +74,27 @@ public class Mission2 {
                 } else if (choice == 1){
                     helpedBeggar = true;
                     System.out.println("You have chosen to help the beggar.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println("Beggar: You would offer me all the money you have?");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println(player.name + ": Why, of course. You seem to need it more than I do. It’s only the right thing to do.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println("To your astonishment, the beggar surges upward with surprising strength,");
                     System.out.println("despite his earlier condition, and envelopes you in a hug.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println("Beggar: Thank you so much! I have been wasting away in this alley for a week,");
                     System.out.println("and you are the first to ever offer me kindness.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
+                    scan.nextLine();
                     System.out.println();
                     System.out.println("Beggar: And to you. May the Gods bless you.");
                     break;
@@ -125,17 +137,21 @@ public class Mission2 {
         System.out.println("Scribe: You carry the scent of the alleyways with you, child.");
         System.out.println("You must have travelled far just to find our humble guild.");
         System.out.println("Tell me, what knowledge do you seek?");
+        scan.nextLine();
         System.out.println();
         System.out.println(player.name + ": I am investigating the recent increase in illicit happenings around the city.");
         System.out.println("My friend Sean told me that there have been rumors of Diwatas and Encantos going missing lately.");
         System.out.println("He told me that you would be able to offer me more information about that.");
+        scan.nextLine();
         System.out.println();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
         System.out.println("These laughing beasts, though dim of wit, are bound by new masters.");
         System.out.println("They work with tiyanaks who drag Enkantos and Diwatas into the Dark Forest,");
         System.out.println("where they are carted off like mere cattle and brought to the land of the Aswangs.");
+        scan.nextLine();
         System.out.println();
         System.out.println("He presses a worn map into your hand, the edges trembling faintly as though the parchment itself feared what it depicted.");
+        scan.nextLine();
         System.out.println("\nScribe: If you truly wish to stand against them, then steel yourself. It is not named the Dark Forest for no reason.\nThe forest is alive. And it does not forgive trespassers easily.");
         scan.nextLine();
         System.out.println();

@@ -4,9 +4,11 @@ import Core.*;
 import Storyline.DialogueUtils;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Mission3 {
     public static boolean mission3(PlayerCharacter player) {
+        Scanner scan = new Scanner(System.in);
         System.out.println();
         System.out.println("================================================");
         System.out.println("          MISSION 3: THE HEART OF DARKNESS      ");
@@ -42,12 +44,16 @@ public class Mission3 {
         System.out.println("Just then, a whirl of wind slices the skin of the giant’s arm, causing it to drop the unconscious diwata back on the wagon.");
         System.out.println("Another diwata from the wagon rises and uses the wind to bring some distance between the wagon and the Bungisngis.");
         System.out.println("You step out of hiding and move yourself between the wagon and the group of the Bungisngis.");
+        scan.nextLine();
         System.out.println();
         System.out.println("Conscious Diwata: Are you here to rescue us?");
+        scan.nextLine();
         System.out.println();
         System.out.println(player.name + ": I am. Wake the others up and head to the city! I’ll stop them.");
+        scan.nextLine();
         System.out.println();
         System.out.println("Conscious Diwata: Alright!");
+        scan.nextLine();
         System.out.println();
         System.out.println("[You encountered 5 tiyanaks and a Bungisngis.]\n{only tiyanaks can be targeted}\n{Mini boss can only be targeted after wiping out the henchmen}\n");
         DialogueUtils.pause();

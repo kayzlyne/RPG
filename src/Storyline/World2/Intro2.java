@@ -11,12 +11,16 @@ public class Intro2 {
         Scanner scan = new Scanner(System.in);
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively" +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");
+        scan.nextLine();
 
         System.out.println("Andrea: Help!\n");
+        scan.nextLine();
 
         System.out.println(player.name + ": Andrea!\n");
+        scan.nextLine();
 
         System.out.println("Without a second thought, you rush towards Mogul.\n");
+        scan.nextLine();
 
         System.out.println("[You have entered Mogul, the land of the Aswangs]\n");
         DialogueUtils.pause();

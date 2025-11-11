@@ -3,10 +3,12 @@ package Storyline.World1;
 import Core.*;
 import Storyline.DialogueUtils;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Intro1 {
     public static void intro1(PlayerCharacter player) {
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("With the hero's experience as a " + player.classType.getClassName() +
                 ", he/she starts to\nfind clues in the heart of Biringan City. " +
@@ -45,10 +47,12 @@ public class Intro1 {
         System.out.println();
 
         System.out.println("???: Someone help! Please! A thief has stolen my merchandise!");
+        scan.nextLine();
         System.out.println();
 
         System.out.println("Without even taking a second to think about it, you bolt after five duwendes\n" +
                 "clearly trying to make a run for it.");
+        scan.nextLine();
         System.out.println();
 
         System.out.println("[You encountered 5 thief duwendes.]");
