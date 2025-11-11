@@ -8,9 +8,11 @@ public class NOTES_HERE {
         -Rest every after fight (recover hp and mana)
         -fix battle system spacing and options
         -add option 4 (drink potion if naay sulod inventory)
+        -adjust enemy attack damage
     -Make shop system [✅ DONE -ef]
-        -items class?
-    -Figure out boss battles and make them
+        -after purchasing pet, pet healing must affect hp count during battles
+        -potions must regenerate mana/hp to full when used
+        -if armor is bought, automatically add 2 defense (if bought again, add 3 defense, and if bought again, add 5 defense)
     -Level up system [on going - st]
     -implement story [on going - st]
         -fix distance and spacing
@@ -24,6 +26,8 @@ public class NOTES_HERE {
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a
         (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
+
+------------------------------------------------------------------
 
     For the story transfer, Make appropriate file/package.
 
@@ -42,7 +46,6 @@ public class NOTES_HERE {
     use player.name
     Example: println(player.name + "");
     not + name +
-
 
     Spawn enemies (e.g., 5 Duwendes):
     List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);

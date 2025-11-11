@@ -3,6 +3,7 @@ package Storyline;
 public class Opening {
     public static void opening() {
 
+        /*
         System.out.println("+------------------------------------------------+");
         System.out.println("|             Welcome, Traveler, to              |");
         System.out.println("|              *  SALAMING LIHIM  *              |");
@@ -11,8 +12,38 @@ public class Opening {
         System.out.println("|        in Biringan's hidden realm...           |");
         System.out.println("+------------------------------------------------+");
         System.out.println();
+         */
+
+        System.out.println("+----------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("|                                                             ___________                                                     |");
+        System.out.println("|  __      __       .__                                      |____   ____|                               .__                  |");
+        System.out.println("| /  \\    /  \\ ____ |  |  _____  ____  _____   _____             |   |  ______  ______ ___     ___ _____ |  |  _____  ______  |");
+        System.out.println("| \\   \\/\\/   // __ \\|  | /  ___\\/  _ \\/     \\_/  __ \\            |   |_/  __  \\/   _   |\\ \\   /  //  __ \\|  | /  __ \\/  __  \\ |");
+        System.out.println("|  \\        /\\  ___/|  |_\\  \\__(  <_> )  Y Y  \\  ___/            |   | |  / \\_/\\  <_>  | \\ \\_/  / \\  ___/|  |_\\  ___/|  / \\_/ |");
+        System.out.println("|   \\__/\\  /  \\___  >____/\\___  >____/|__|_|  /\\___  >           |__ | |_ |     \\___/| |  \\   _/   \\___  >____/\\___ >_  |     |");
+        System.out.println("|         \\/       \\/          \\/            \\/     \\/              \\/   \\/           \\/   \\/          \\/      \\/     \\/      |");
+        System.out.println("|                                                           __                                                                |");
+        System.out.println("|                                                          |  |                                                               |");
+        System.out.println("|                                                        __|  |__                                                             |");
+        System.out.println("|                                                       |__   __|  ____                                                       |");
+        System.out.println("|                                                          |  |  /  _  \\                                                      |");
+        System.out.println("|                                                          |  | (  <->  )                                                     |");
+        System.out.println("|    ____                                /\\               .---   \\_____/                                                      |");
+        System.out.println("|   /    \\        .__                    \\/                   |");
+        System.out.println("|  /  /___/ ______|  |   ______  ______ ___                                     |");
+        System.out.println("| \\___  \\ /   -   |  | /   _   |/      \\| |                          |");
+        System.out.println("|  /  /  /\\  <->  |  |_\\  <->  |   Y Y  | |                                 |");
+        System.out.println("| \\____  > \\___/| |____/\\___/| |__|_|  /|_|                                          |");
+        System.out.println("|      \\/        \\/           \\/     \\/                    |");
+        System.out.println("|                                                                                                                            |");
+        System.out.println("|                                ~------~ WHERE MYTHS BREATHE, AND SHADOWS MOVE ~------~                                     |");
+        System.out.println("|                                     ~------~ IN A MYSTERIOUS HIDDEN REALM ~------~                                         |");
+        System.out.println("|                                                                                                                            |");
+        System.out.println("+----------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println();
         System.out.println("Prepare yourself -- your journey begins now!");
         DialogueUtils.pause();
+
 
         System.out.println("+============================================================+");
         System.out.println("|                          SYNOPSIS                          |"); //changed "story introduction" to "synopsis" -ef
