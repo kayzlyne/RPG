@@ -14,7 +14,8 @@ public class Shop {
         items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) Increases pet's healing power")); */
 
         items.add(new Item("Mana Potion", 100, "Regenerates mana to full", ItemType.MANA));
-        items.add(new Item("Armor Upgrade", 200, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
+        items.add(new Item("Health Potion", 100, "Regenerates HP to full", ItemType.HEALTH));
+        items.add(new Item("Armor Upgrade", 150, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
         items.add(new Item("Pet", 100, "A loyal companion who heals you after every round of battle", ItemType.PET));
         items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) - Increases pet's healing power", ItemType.PET_FOOD));
 
@@ -56,7 +57,7 @@ public class Shop {
             } else if (item.getName().equals("Pet")) {
                 if (!player.hasPet()) {
                     player.setBarya(player.getBarya() - item.getPrice());
-                    player.addItem(item);
+                    //addItem(item);
                     player.setPet(new Pet(5)); // starting heal = 5 HP
                     System.out.println("✅ A loyal companion joins you!\n");
                 } else {
@@ -65,12 +66,16 @@ public class Shop {
             } else if (item.getName().equals("Pet Food")) {
                 if (player.hasPet()) {
                     player.setBarya(player.getBarya() - item.getPrice());
-                    player.addItem(item);
+                    //player.addItem(item);
                     player.getPet().increaseHealingPower(5);
                     System.out.println("🍖 Great! Your pet's healing power has increased by 5!\n");
                 } else {
                     System.out.println("You don't have a pet yet!\n");
                 }
+            } else if (item.getName().equals("Armor Upgrade")){
+                player.setBarya(player.getBarya() - item.getPrice());
+                //player.addItem(item);
+                player.buyArmor();
             } else {
                 player.setBarya(player.getBarya() - item.getPrice());
                 player.addItem(item);

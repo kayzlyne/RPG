@@ -10,6 +10,10 @@ public class PlayerCharacter {
     private Race raceType;
     public ClassArchetype classType;
     private final int manaRegen = 10;
+    private int armorLevel = 0;
+    public int maxHp;
+    public int maxMana;
+
 
     // New fields
     private int barya = 100;
@@ -33,8 +37,10 @@ public class PlayerCharacter {
         this.classType = classType;
         this.race = raceType.getRaceName();
         this.charClass = classType.getClassName();
-        this.hp = raceType.getBaseHp() + classType.getBonusHp();
-        this.mana = raceType.getBaseMana() + classType.getBonusMana();
+        this.maxHp = raceType.getBaseHp() + classType.getBonusHp();
+        this.maxMana = raceType.getBaseMana() + classType.getBonusMana();
+        this.hp = maxHp;
+        this.mana = maxMana;
     }
 
     public boolean isAlive() {
@@ -122,8 +128,23 @@ public class PlayerCharacter {
     }
 
     public void useItem(Item item) {
-        System.out.println("You used " + item.getName() + "... but this feature is not implemented yet.");
-        // You can add healing / buffs later.
+        switch (item.getName()) {
+
+            case "Health Potion":
+                hp = maxHp;
+                inventory.remove(item);
+                System.out.println("🧪 You used a Health Potion -- the elixir of life! HP fully restored.");
+                break;
+
+            case "Mana Potion":
+                mana = maxMana;
+                inventory.remove(item);
+                System.out.println("🔮 You used a Mana Potion -- the elixir of power! Mana fully restored.");
+                break;
+
+            default:
+                System.out.println("❌ You can't use this item.");
+        }
     }
 
     // ----- Barya -----
@@ -168,6 +189,29 @@ public class PlayerCharacter {
             System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
         }
     }
+
+    public void buyArmor() {
+        armorLevel++;
+
+        int addedDefense = 0;
+
+        if (armorLevel == 1) {
+            addedDefense = 2;
+        } else if (armorLevel == 2) {
+            addedDefense = 3;
+        } else if (armorLevel == 3) {
+            addedDefense = 5;
+        } else {
+            // Optional: scale beyond level 3
+            addedDefense = 5; // or any formula you like
+        }
+
+        defense += addedDefense;
+
+        System.out.println("🛡️ Armor upgraded! Defense +" + addedDefense +
+                " (Total Defense: " + defense + ")");
+    }
+
 
 }
 

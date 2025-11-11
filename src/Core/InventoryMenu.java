@@ -37,7 +37,7 @@ public class InventoryMenu {
 
             Item selected = inv.get(choice - 1);
             player.useItem(selected);
-            break; // after using one item, exit or keep repeating if you want
+            break;
         }
     }
 }

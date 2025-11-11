@@ -1,6 +1,7 @@
 package Core;
 
 public enum ItemType {
+    HEALTH,
     MANA,
     ARMOR_UPGRADE,
     PET,

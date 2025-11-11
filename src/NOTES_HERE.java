@@ -10,9 +10,10 @@ public class NOTES_HERE {
         -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
     -Make shop system [✅ DONE -ef]
-        -after purchasing pet, pet healing must affect hp count during battles
-        -potions must regenerate mana/hp to full when used
-        -if armor is bought, automatically add 2 defense (if bought again, add 3 defense, and if bought again, add 5 defense)
+        -after purchasing pet, pet healing must affect hp count during battles [✅ DONE (made it so that hp is added after each enemy is defeated) -ef]
+        -potions must regenerate mana/hp to full when used [✅ DONE -ef] potions can be accessed through the inventory
+        -if armor is bought, automatically add 2 defense (if bought again, add 3 defense, and if bought again, add 5 defense) [✅ DONE -ef]
+    -Implement a reward system so the player can earn barya
     -Level up system [on going - st]
     -implement story [on going - st]
         -fix distance and spacing
