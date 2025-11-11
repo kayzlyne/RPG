@@ -71,9 +71,13 @@ public class BattleManager {
             }
 
             if (!target.isAlive()) {
-                System.out.println("💀 " + target.name + " is defeated!");
+                System.out.println("💀 " + target.name + " is defeated!\n");
                 enemies.remove(targetIndex);
             }
+
+            // Pet heals the player after each enemy is defeated
+            player.petHeal();
+
 
             for (Enemy enemy : enemies) {
                 if (enemy.isAlive()) {
@@ -105,6 +109,7 @@ public class BattleManager {
         if (player.isAlive()) {
             System.out.println("🎉" + player.name + " defeated all enemies!");
         }
+
 
         return true;
     }

@@ -1,7 +1,7 @@
 package Core;
 
 public class Item {
-    private String name;
+    /* private String name;
     private int price;
     private String description;
 
@@ -14,6 +14,28 @@ public class Item {
     public String getName() { return name; }
     public int getPrice() { return price; }
     public String getDescription() { return description; }
+
+    @Override
+    public String toString() {
+        return name + " - " + price + " barya (" + description + ")";
+    } */
+
+    private String name;
+    private int price;
+    private String description;
+    private ItemType type;
+
+    public Item(String name, int price, String description, ItemType type) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.type = type;
+    }
+
+    public String getName() { return name; }
+    public int getPrice() { return price; }
+    public String getDescription() { return description; }
+    public ItemType getType() { return type; }
 
     @Override
     public String toString() {

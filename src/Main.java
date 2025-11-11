@@ -12,10 +12,12 @@ public class Main {
         int currentWorld = 1;
         Opening.opening();
         PlayerCharacter player = PlayerSelection.createPlayer();
+        //Shop.enterShop(player);
         Intro1.intro1(player);
         Mission1.mission1(player);
         Mission2.mission2(player);
         Shop.enterShop(player);
+        //InventoryMenu.open(player);
         if (!Mission3.mission3(player)) return;
         Shop.enterShop(player);
 

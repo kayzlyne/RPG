@@ -7,11 +7,17 @@ public class Shop {
     private static Scanner scanner = new Scanner(System.in);
 
     static {
-        items.add(new Item("Pet", 100, "Healer"));
-        items.add(new Item("Armor Upgrade", 200, "Increases defense"));
-        items.add(new Item("Mana Potion", 100, "idk what this does"));
+        /*items.add(new Item("Pet", 100, "Your life companion who loves you so much and heals you after every round during battles"));
+        items.add(new Item("Armor Upgrade", 200, "Increases defense by 2/3/5"));
+        items.add(new Item("Mana Potion", 100, "Regenerates mana to full"));
         items.add(new Item("Shield", 75, "Increases defense"));
-        items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :)")); //idk what this does either. pls edit nalang
+        items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) Increases pet's healing power")); */
+
+        items.add(new Item("Mana Potion", 100, "Regenerates mana to full", ItemType.MANA));
+        items.add(new Item("Armor Upgrade", 200, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
+        items.add(new Item("Pet", 100, "A loyal companion who heals you after every round of battle", ItemType.PET));
+        items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) - Increases pet's healing power", ItemType.PET_FOOD));
+
     }
 
     public static void enterShop(PlayerCharacter player) {
@@ -47,6 +53,24 @@ public class Shop {
             Item item = items.get(choice - 1);
             if (player.getBarya() < item.getPrice()) {
                 System.out.println("❌ You don’t have enough barya!\n");
+            } else if (item.getName().equals("Pet")) {
+                if (!player.hasPet()) {
+                    player.setBarya(player.getBarya() - item.getPrice());
+                    player.addItem(item);
+                    player.setPet(new Pet(5)); // starting heal = 5 HP
+                    System.out.println("✅ A loyal companion joins you!\n");
+                } else {
+                    System.out.println("You already have a pet!\n");
+                }
+            } else if (item.getName().equals("Pet Food")) {
+                if (player.hasPet()) {
+                    player.setBarya(player.getBarya() - item.getPrice());
+                    player.addItem(item);
+                    player.getPet().increaseHealingPower(5);
+                    System.out.println("🍖 Great! Your pet's healing power has increased by 5!\n");
+                } else {
+                    System.out.println("You don't have a pet yet!\n");
+                }
             } else {
                 player.setBarya(player.getBarya() - item.getPrice());
                 player.addItem(item);
