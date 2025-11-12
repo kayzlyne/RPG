@@ -20,7 +20,7 @@ public class Assassin implements ClassArchetype {
         int dmg = new Random().nextInt(11) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals " + netDmg + " physical damage!");
+        System.out.println(playerName + " deals " + netDmg + " physical damage to " + target.name + "!");
     }
 
     public void useSpecial(String playerName, Enemy target) {
@@ -28,7 +28,7 @@ public class Assassin implements ClassArchetype {
         int dmg = new Random().nextInt(31) + 55;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals " + netDmg + " critical damage!");
+        System.out.println(playerName + " deals " + netDmg + " critical damage to " + target.name + "!");
     }
 
     public int getSkillManaCost() { return 20; }

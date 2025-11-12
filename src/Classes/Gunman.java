@@ -20,7 +20,7 @@ public class Gunman implements ClassArchetype {
         int dmg = new Random().nextInt(11) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals " + netDmg + " lung damage!");
+        System.out.println(playerName + " deals " + netDmg + " lung damage to " + target.name + "!");
     }
 
     public void useSpecial(String playerName, Enemy target) {
@@ -28,7 +28,7 @@ public class Gunman implements ClassArchetype {
         int dmg = new Random().nextInt(31) + 55;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals " + netDmg + " thermal damage!");
+        System.out.println(playerName + " deals " + netDmg + " thermal damage to " + target.name + "!");
     }
     public int getSkillManaCost() { return 20; }
     public int getSpecialManaCost() { return 40; }

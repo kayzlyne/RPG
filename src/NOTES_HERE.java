@@ -4,16 +4,16 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -Rest every after fight (recover hp and mana)
-        -fix battle system spacing and options
+        -Rest every after fight (recover hp and mana) [ongoing - k]
         -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
-    -Implement a reward system so the player can earn barya
+    -Implement a reward system so the player can earn barya [ongoing - k]
     -Level up system [on going - st]
     -implement story [on going - st]
-        -fix distance and spacing [ongoing - k]
-        -design and stuff (including alignment) [ongoing - k]
+    -fix distance and spacing [ongoing for world 1 - k]
+    -design and stuff (including alignment) [ongoing - k]
     -Implement the choices in World 3: Mission 3 & Mission 5
+    -display starting barya as 20
 
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a

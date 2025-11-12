@@ -14,7 +14,7 @@ public class Spearman implements ClassArchetype {
         int dmg = new Random().nextInt(11) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals "+ netDmg + " piercing damage!");
+        System.out.println(playerName + " deals " + netDmg + " piercing damage to " + target.name + "!");
     }
 
     public void useSpecial(String playerName, Enemy target) {
@@ -22,7 +22,7 @@ public class Spearman implements ClassArchetype {
         int dmg = new Random().nextInt(31) + 55;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
-        System.out.println("Deals " + netDmg + " piercing damage!");
+        System.out.println(playerName + " deals " + netDmg + " piercing damage to " + target.name + "!");
     }
 
     public int getSkillManaCost() { return 20; }

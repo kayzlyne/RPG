@@ -151,6 +151,8 @@ public class PlayerCharacter {
 
     public void setBarya(int amount) { this.barya = amount; }
 
+    public void addBarya(int amount) { this.barya += amount; }
+
     // ----- Mana and Defense setters/getters for Shop -----
 
     public int getMaxMana() {
@@ -210,7 +212,12 @@ public class PlayerCharacter {
                 " (Total Defense: " + defense + ")");
     }
 
-
+    public void rest() {
+        hp = maxHp;
+        mana = maxMana;
+        System.out.println(name + " took a long rest.");
+        System.out.println("Health and Mana recovered to full!");
+    }
 }
 
 
