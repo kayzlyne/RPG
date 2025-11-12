@@ -1,13 +1,37 @@
 package Storyline.World1;
 
-import Core.PlayerCharacter;
+import Core.*;
 import Storyline.DialogueUtils;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class Mission1 {
     public static void mission1(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("\n\nSean: Thank you so much. I owe you my livelihood. I wouldn’t\nhave made it through the end of this month without that merchandise. Especially\nwith the darkening atmosphere of the city– oop! Ishouldn’thavesaidthat.\n");
+
+        //System.out.println();
+        System.out.println("================================================");
+        System.out.println("         MISSION 1: THE HEART OF A HERO         ");
+        System.out.println("================================================");
+        System.out.println();
+
+        System.out.println("???: Someone help! Please! A thief has stolen my merchandise!");
+        scan.nextLine();
+
+        //System.out.println();
+        System.out.println("Without even taking a second to think about it, you bolt after five duwendes clearly trying to make a run for it.");
+        scan.nextLine();
+
+        System.out.println("[You encountered 5 thief duwendes.]");
+        System.out.println();
+        DialogueUtils.pause();
+
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
+        BattleManager battle = new BattleManager();
+        battle.startBattle(player, enemies, 1);
+
+        System.out.println("\n\nSean: Thank you so much. I owe you my livelihood. I wouldn’t have made it through\n the end of this month without that merchandise. Especially with\n the darkening atmosphere of the city– oop! Ishouldn’thavesaidthat.\n");
         scan.nextLine();
 
         System.out.println(player.name + ": I’m actually investigating that. If you want to repay me, tell me everything you know.\n");

@@ -14,7 +14,7 @@ public class BattleManager {
 
         while (player.isAlive() && !enemies.isEmpty()) {
             System.out.println("\n🧍 Your HP: " + player.hp + " | Mana: " + player.mana);
-            System.out.println("👹 Enemies:");
+            System.out.println("\n👹 Enemies:");
             for (int i = 0; i < enemies.size(); i++) {
                 Enemy e = enemies.get(i);
                 System.out.printf("[%d] %s - HP: %d\n", i, e.name, e.hp);
@@ -45,10 +45,12 @@ public class BattleManager {
             boolean validInput = false;
 
             while (!validInput) {
-                System.out.print("⚡ Choose action: [1] Basic Attack [2] Skill [3] Special: ");
+                System.out.print("\n⚡ Choose action:\n[1] Basic Attack\n[2] Skill\n[3] Special Skill: ");
                 try {
+                    System.out.print("\nYou've chosen to use: ");
                     action = scanner.nextInt();
                     scanner.nextLine();
+                    System.out.println();
 
                     if (action < 1 || action > 3) {
                         System.out.println("❌ Invalid choice. Please enter a number between 1 and 3.");
@@ -62,8 +64,7 @@ public class BattleManager {
             }
 
             if (action == 1) {
-                int dmg = player.dealDamage(target);
-                System.out.println("You deal " + dmg + " damage to " + target.name + "!");
+                player.dealDamage(target);
             } else if (action == 2) {
                 player.useSkill(target);
             } else {
@@ -96,6 +97,8 @@ public class BattleManager {
 
                 if (rescued) {
                     System.out.println("\n✨ Sir Khai has saved you! You live to fight another day!");
+
+                    //Insert small Sir khai interaction
                     continue;
                 } else {
 

@@ -9,7 +9,7 @@ public class PlayerSelection {
         int raceChoice = -1, classChoice = -1, choice;
         String name = "";
 
-        // 🧬 Race selection
+        // Race selection
         while (true) {
             try {
                 System.out.println("Choose your race:");
@@ -17,7 +17,9 @@ public class PlayerSelection {
                 for (Map.Entry<Integer, String> entry : races.entrySet()) {
                     System.out.printf("[%d] %s\n", entry.getKey(), entry.getValue());
                 }
+                System.out.print("You've chosen: ");
                 raceChoice = Integer.parseInt(scanner.nextLine());
+                System.out.println();
                 if (!races.containsKey(raceChoice)) throw new Exception();
                 break;
             } catch (Exception e) {
@@ -25,7 +27,7 @@ public class PlayerSelection {
             }
         }
 
-        // 🛡️ Class selection
+        // Class selection
         while (true) {
             try {
                 System.out.println("Choose your class:");
@@ -33,7 +35,9 @@ public class PlayerSelection {
                 for (Map.Entry<Integer, String> entry : classes.entrySet()) {
                     System.out.printf("[%d] %s\n", entry.getKey(), entry.getValue());
                 }
+                System.out.print("You've chosen: ");
                 classChoice = Integer.parseInt(scanner.nextLine());
+                System.out.println();
                 if (!classes.containsKey(classChoice)) throw new Exception();
                 break;
             } catch (Exception e) {
@@ -41,7 +45,7 @@ public class PlayerSelection {
             }
         }
 
-        // 📝 Name input
+        // Name input
         while (true) {
             try {
                 System.out.print("Enter your character name: ");
@@ -49,15 +53,16 @@ public class PlayerSelection {
                 if (name.isEmpty()) throw new Exception();
                 break;
             } catch (Exception e) {
-                System.out.println("❌ Name cannot be empty. Try again.\n");
+                System.out.println("⚠️ Name cannot be empty. Try again.\n");
             }
         }
         //name confirmation (won't close loop until player is happy with the name)
         while (true) {
             System.out.println("Hello, " + name + "! Are you satisfied with that name?");
-            System.out.println("[Press 1] Yes\n[Press 0] No, change it.");
+            System.out.println("[1] Yes\n[0] No, change it.");
 
             try {
+                System.out.print("You've chosen: ");
                 choice = scanner.nextInt();
                 scanner.nextLine();
 
@@ -72,7 +77,7 @@ public class PlayerSelection {
                             if (name.isEmpty()) throw new Exception();
                             break;
                         } catch (Exception e) {
-                            System.out.println("❌ Name cannot be empty. Try again.\n");
+                            System.out.println("⚠️ Name cannot be empty. Try again.\n");
                         }
                     }
                 } else {
@@ -80,7 +85,7 @@ public class PlayerSelection {
                 }
 
             } catch (java.util.InputMismatchException e) {
-                System.out.println("❌ Invalid input. Please enter a number (1 or 0).\n");
+                System.out.println("⚠️ Invalid input. Please enter a number (1 or 0).\n");
                 scanner.nextLine();
             }
         }

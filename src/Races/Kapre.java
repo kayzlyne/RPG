@@ -1,7 +1,6 @@
 package Races;
 
 import Core.Race;
-
 import java.util.Random;
 
 public class Kapre implements Race {

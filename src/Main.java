@@ -15,9 +15,9 @@ public class Main {
         //Shop.enterShop(player);
         //InventoryMenu.open(player);
         Intro1.intro1(player);
+        Mission1.mission1(player);
         Shop.enterShop(player);
         InventoryMenu.open(player);
-        Mission1.mission1(player);
         Mission2.mission2(player);
         Shop.enterShop(player);
         InventoryMenu.open(player);

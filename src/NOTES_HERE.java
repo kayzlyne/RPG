@@ -4,25 +4,16 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -try catch for skills or try again feature when choosing a skill under cooldown
         -Rest every after fight (recover hp and mana)
         -fix battle system spacing and options
         -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
-    -Make shop system [✅ DONE -ef]
-        -after purchasing pet, pet healing must affect hp count during battles [✅ DONE (made it so that hp is added after each enemy is defeated) -ef]
-        -potions must regenerate mana/hp to full when used [✅ DONE -ef] potions can be accessed through the inventory
-        -if armor is bought, automatically add 2 defense (if bought again, add 3 defense, and if bought again, add 5 defense) [✅ DONE -ef]
     -Implement a reward system so the player can earn barya
     -Level up system [on going - st]
     -implement story [on going - st]
-        -fix distance and spacing
-        -pauses each dialogue [✅ DONE -ef]
-        -design and stuff (including alignment)
+        -fix distance and spacing [ongoing - k]
+        -design and stuff (including alignment) [ongoing - k]
     -Implement the choices in World 3: Mission 3 & Mission 5
-    -Insert confirmation after name input [✅ DONE -ef]
-    -What happens when player dies (Sir Khai event) (✅ DONE -a) 
-            -> //triggers everytime player dies between World 1 and 2 but will only trigger once in World 3
 
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a

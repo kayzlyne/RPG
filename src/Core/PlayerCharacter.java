@@ -2,7 +2,6 @@ package Core;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class PlayerCharacter {
     public String name, race, charClass;
@@ -47,13 +46,12 @@ public class PlayerCharacter {
         return hp > 0;
     }
 
-    public int dealDamage(Enemy target) {
-        System.out.println(raceType.getAttackDesc());
+    public void dealDamage(Enemy target) {
+        System.out.println(name + " " + raceType.getAttackDesc());
         int rawDamage = raceType.attack();
         int netDamage = Math.max(1, rawDamage - target.defense);
         target.hp -= netDamage;
         System.out.println(name + " deals " + netDamage + " damage to " + target.name + "!");
-        return netDamage;
     }
 
     public void useSkill(Enemy target) {
@@ -102,7 +100,7 @@ public class PlayerCharacter {
         System.out.printf("Race      : %s\n", race);
         System.out.printf("Class     : %s\n", charClass);
         System.out.println("──────────────────────────────");
-        System.out.printf("HP        : %d\n", hp);
+        System.out.printf("HP        : %d/%d\n", hp, maxHp);
         System.out.printf("Mana      : %d/%d\n", mana, getMaxMana());
         System.out.printf("Defense   : %d (Passive)\n", defense);
         System.out.println("──────────────────────────────\n");

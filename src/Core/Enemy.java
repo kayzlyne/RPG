@@ -18,6 +18,7 @@ public class Enemy {
         return hp > 0;
     }
 
+    //adjust enemy damage since I noticed constant 1 ra siya, something might be wrong sa rawDamage - target.defense sa netDamage
     public int dealDamage(PlayerCharacter target) {
         System.out.println(name + " " + type.attackDescription + "!");
         int rawDamage = new Random().nextInt(type.maxDamage - type.minDamage + 1) + type.minDamage;
