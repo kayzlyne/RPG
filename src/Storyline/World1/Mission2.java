@@ -17,7 +17,6 @@ public class Mission2 {
         System.out.println("================================================");
         System.out.println("          MISSION 2: A QUESTION OF HONOR        ");
         System.out.println("================================================");
-        System.out.println();
         scan.nextLine();
 
         System.out.println("After your encounter with Sean, your spirits are high.");

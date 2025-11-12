@@ -4,7 +4,7 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it every after fight)
+        -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it after every fight)
         -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
     -Implement a reward system so the player can earn barya [ongoing - k] (I made a method addBarya, just need to add it after missions/battles)
@@ -14,6 +14,7 @@ public class NOTES_HERE {
     -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
     -Implement the choices in World 3: Mission 3 & Mission 5
     -display starting barya as 20
+    -display barya every reward event
 
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a
