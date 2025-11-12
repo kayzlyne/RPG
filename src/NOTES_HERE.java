@@ -4,14 +4,14 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -Rest every after fight (recover hp and mana) [ongoing - k]
+        -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it every after fight)
         -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
-    -Implement a reward system so the player can earn barya [ongoing - k]
+    -Implement a reward system so the player can earn barya [ongoing - k] (I made a method addBarya, just need to add it after missions/battles)
     -Level up system [on going - st]
     -implement story [on going - st]
     -fix distance and spacing [ongoing for world 1 - k]
-    -design and stuff (including alignment) [ongoing - k]
+    -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
     -Implement the choices in World 3: Mission 3 & Mission 5
     -display starting barya as 20
 

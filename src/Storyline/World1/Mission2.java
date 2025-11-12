@@ -25,28 +25,24 @@ public class Mission2 {
         System.out.println("It is now time to make your way to the Information Guild, in order to get to the bottom of the strange air swirling around Biringan City.");
         System.out.println("You decide to take a shortcut through an empty alley.");
         scan.nextLine();
-        System.out.println();
         System.out.println("But as you round the corner, you see that this alley was not quite as empty as you had thought.");
         System.out.println("There is a man sprawled in a heap on the floor, seemingly down on his luck.");
         System.out.println("You wrinkle your nose as the stains and the stench of the grimy streets have seemingly merged with the tattered clothing the man wears.");
         System.out.println("His head whips toward you the moment you walk by, and he holds out an open palm.");
-        System.out.println();
         DialogueUtils.pause();
 
         System.out.println("\nBeggar: Please, kind stranger, do you have any barya to spare?");
         scan.nextLine();
-        System.out.println("Beggar: I have been sick for days, but I do not have the twenty pesos needed to pay for medicine.");
+        System.out.println("Beggar: I have been sick for days, but I do not have the twenty barya needed to pay for medicine.");
         scan.nextLine();
         System.out.println("Beggar: Won’t you spare a poor beggar some mercy?");
         scan.nextLine();
 
-        System.out.println();
         System.out.println("The man starts coughing halfway through his last sentence, his body shaking violently as he’s overwhelmed by the coughing fit,");
         System.out.println("and you fight the urge to say yes to him immediately. You may not be stricken with a terrible illness, but you are not much better off");
         System.out.println("than this beggar, either, for you only have twenty pesos to your name. But you know that in this part of the city, it’s every man for himself.");
         System.out.println("If you do not help him, no one else will, and he will be a dead man by tomorrow.");
         scan.nextLine();
-        System.out.println();
 
         while(true) {
 
@@ -59,9 +55,9 @@ public class Mission2 {
             try {
                 int choice = scan.nextInt();
                 if (choice == 0) {
+                    System.out.println();
                     System.out.println("You have chosen not to help the beggar.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println(player.name + ": I’m sorry, friend, but I do not have the money to spare. Best of luck to you.");
                     scan.nextLine();
                     System.out.println("With those parting words, you walk away. The crestfallen look on the man’s face stays with you as you make your way towards the Information Guild,");
@@ -69,27 +65,21 @@ public class Mission2 {
                     break;
                 } else if (choice == 1){
                     helpedBeggar = true;
-                    System.out.println("You have chosen to help the beggar.");
                     System.out.println();
+                    System.out.println("You have chosen to help the beggar.");
                     scan.nextLine();
                     System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println("Beggar: You would offer me all the money you have?");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println(player.name + ": Why, of course. You seem to need it more than I do. It’s only the right thing to do.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println("To your astonishment, the beggar surges upward with surprising strength, despite his earlier condition, and envelopes you in a hug.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println("Beggar: Thank you so much! I have been wasting away in this alley for a week, and you are the first to ever offer me kindness.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
                     scan.nextLine();
-                    System.out.println();
                     System.out.println("Beggar: And to you. May the Gods bless you.");
                     break;
                 } else {
@@ -103,11 +93,10 @@ public class Mission2 {
         }
 
         DialogueUtils.pause();
-        System.out.println();
         System.out.println("Smiling warmly, you walk away from the alley and towards the Information Guild.");
         System.out.println("That is when you remember that you had some suman tucked away in your pocket for lunch.");
         System.out.println("You think of the beggar and decide that he needs it more than you do.");
-        System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.\n");
+        System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
         System.out.println();
         System.out.println("Taking it out, you realize there are fifty pieces of barya—");
         System.out.println("when before you were certain all your money was given away to the beggar.");
@@ -125,52 +114,40 @@ public class Mission2 {
         System.out.println("Watchful slitted eyes follow you as you step forward.");
         System.out.println();
         System.out.println("An elderly Tamawo scribe greets you. Despite his age, his pale, handsome face and sparkling skin radiate a disarming allure.");
-        System.out.println();
+        scan.nextLine();
         System.out.println("Scribe: You carry the scent of the alleyways with you, child.");
         scan.nextLine();
         System.out.println("Scribe: You must have travelled far just to find our humble guild.");
         scan.nextLine();
         System.out.println("Scribe: Tell me, what knowledge do you seek?");
         scan.nextLine();
-        System.out.println();
         System.out.println(player.name + ": I am investigating the recent increase in illicit happenings around the city.");
         scan.nextLine();
         System.out.println(player.name + ": My friend Sean told me that there have been rumors of Diwatas and Encantos going missing lately.");
         scan.nextLine();
         System.out.println(player.name + ": He told me that you would be able to offer me more information about that.");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: Oh, you know Sean?");
         scan.nextLine();
-        System.out.println();
         System.out.println(player.name + ": I kinda saved him from being robbed in daylight just before coming here.");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: Oh, wow. Then, let me give you this as thanks.");
         scan.nextLine();
-        System.out.println();
         System.out.println("You have received 50 barya!");
         player.addBarya(50);
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: These laughing beasts, though dim of wit, are bound by new masters.");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: They work with tiyanaks who drag Enkantos and Diwatas into the Dark Forest, where they are carted off like mere cattle ");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: and brought to the land of the Aswangs. He presses a worn map into your hand, the edges trembling faintly as though");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: the parchment itself feared what it depicted. If you truly wish to stand against them, then steel yourself.");
         scan.nextLine();
-        System.out.println();
         System.out.println("Scribe: It is not named the Dark Forest for no reason. The forest is alive. And it does not forgive trespassers easily.");
         scan.nextLine();
-        System.out.println();
         System.out.println("The chamber grows colder as the candles flicker low.");
         System.out.println("Outside, the wind howls, carrying with it faint echoes of laughter—low, booming, and unending.");
         System.out.println();
