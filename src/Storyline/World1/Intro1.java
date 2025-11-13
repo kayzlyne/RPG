@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Intro1 {
     public static void intro1(PlayerCharacter player) {
-        Scanner scan = new Scanner(System.in);
 
         System.out.println("With the hero's experience as a(n) " + player.classType.getClassName() +
                 ", he/she starts to find clues in the heart of Biringan City.\n" +

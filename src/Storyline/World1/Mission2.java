@@ -64,6 +64,7 @@ public class Mission2 {
                     break;
                 } else if (choice == 1){
                     helpedBeggar = true;
+                    player.setBarya(0);
                     System.out.println();
                     System.out.println("You have chosen to help the beggar.");
                     scan.nextLine();
@@ -132,8 +133,9 @@ public class Mission2 {
         scan.nextLine();
         System.out.println("Scribe: Oh, wow. Then, let me give you this as thanks.");
         scan.nextLine();
-        System.out.println("You have received 50 barya!");
+        System.out.println("\uD83D\uDCB0 You have received 50 barya!");
         player.addBarya(50);
+
         scan.nextLine();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
         scan.nextLine();

@@ -52,6 +52,12 @@ public class W3Mission1 {
             return false;
         }
 
+        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        sc.nextLine();
+        player.addBarya(15);
+
+        player.rest();
+
         if (player.isAlive()) {
             System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\nBut after only a few minutes, your peaceful respite is interrupted by the sound of footsteps from a distance.\n");
             sc.nextLine();

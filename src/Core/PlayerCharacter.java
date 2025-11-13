@@ -15,7 +15,7 @@ public class PlayerCharacter {
 
 
     // New fields
-    private int barya = 100;
+    private int barya = 20;
     private List<Item> inventory = new ArrayList<>();
 
     public List<Item> getInventory() {
