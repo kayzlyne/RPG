@@ -59,21 +59,21 @@ public class W3Mission3 {
         //if KAPRE, result; if TIKBALANG, result; if MANANGGAL, result;
 
         System.out.println("White Lady whispers: No longer shall you soar above the world. Instead, you will move within its silence.");
-
+        sc.nextLine();
         System.out.println("After the choice is made:");
-
+        sc.nextLine();
         System.out.println("The White Lady extends her hand. A pale light flows from your chest into her palm. You feel your essence torn away, leaving a hole in your heart.");
-
+        sc.nextLine();
         System.out.println("The ground trembles as the Balete’s roots part, revealing a spiral staircase of stone leading downward, glowing faintly in silver light.");
-
+        sc.nextLine();
         System.out.println("White Lady: The path opens only to those who understand loss. Step carefully, for the moon remembers all who bleed for its light.");
-
+        sc.nextLine();
         System.out.println("She disappears into the mist, leaving only the echo of her final words.");
-
+        sc.nextLine();
         System.out.println("Andrea: Well, that was terrifying.");
-
+        sc.nextLine();
         System.out.println("Kheila: The way is open now. Banwa-an Daan awaits below.");
-
+        sc.nextLine();
         DialogueUtils.pause();
     }
 }

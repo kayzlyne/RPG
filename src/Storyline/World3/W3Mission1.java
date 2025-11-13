@@ -2,6 +2,8 @@ package Storyline.World3;
 
 import Core.*;
 import Storyline.DialogueUtils;
+
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -92,17 +94,34 @@ public class W3Mission1 {
             sc.nextLine();
             System.out.println("Commander: Tighten her bonds! The Mistress will be pleased once we drag this traitor back to the altar.\n");
 
-            System.out.println("MISSION CHOICE");
-            System.out.println("[Press 1] Create a distraction while Andrea frees Kheila");
-            System.out.println("[Press 2] Stealth attack the Babaylans before they notice you");
-            //System.out.println("#1 Create a distraction while Andrea frees Kheila or #2 Stealth attack the Babaylans before they notice you");
-            int choice = sc.nextInt();
+            while (true) {
+                try {
+                    System.out.println("MISSION CHOICE");
+                    System.out.println("[Press 1] Create a distraction while Andrea frees Kheila");
+                    System.out.println("[Press 2] Stealth attack the Babaylans before they notice you");
+                    System.out.print("Enter your choice: ");
 
-            if (choice == 1){
-                System.out.println("You throw a stone to the far side of the camp. A few Babaylans turn to investigate the noise. Andrea slips through the shadows toward Kheila, cutting the ropes binding her wrists.");
-            } else if (choice == 2){
-                System.out.println("You and Andrea move in silently, striking fast. The nearest Babaylan falls before he can even shout. Kheila’s eyes widen in shock as Andrea slices through her bindings.");
+                    int choice = sc.nextInt();
+
+                    if (choice == 1) {
+                        System.out.println("You throw a stone to the far side of the camp. A few Babaylans turn to investigate the noise. Andrea slips through the shadows toward Kheila, cutting the ropes binding her wrists.");
+                        break;
+                    } else if (choice == 2) {
+                        System.out.println("You and Andrea move in silently, striking fast. The nearest Babaylan falls before he can even shout. Kheila’s eyes widen in shock as Andrea slices through her bindings.");
+                        break;
+                    } else {
+                        System.out.println("⚠️ Invalid choice. Please enter 1 or 2.\n");
+                    }
+
+                } catch (InputMismatchException e) {
+                    System.out.println("❌ Invalid input. Please enter a number (1 or 2).\n");
+                    sc.nextLine();
+                } catch (Exception e) {
+                    System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                    sc.nextLine();
+                }
             }
+
 
             System.out.println("Commander: Intruders! Stop them!\n");
             sc.nextLine();
