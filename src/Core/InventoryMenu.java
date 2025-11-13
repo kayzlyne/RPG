@@ -16,7 +16,7 @@ public class InventoryMenu {
         while (true) {
             System.out.println("\n=== 🎒 Inventory ===");
             for (int i = 0; i < inv.size(); i++) {
-                System.out.println("[" + (i + 1) + "] " + inv.get(i));
+                System.out.println("[" + (i + 1) + "] " + inv.get(i).getName());
             }
             System.out.println("[0] Exit");
             System.out.print("Choose an item to use: ");

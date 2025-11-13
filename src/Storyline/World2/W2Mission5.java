@@ -61,17 +61,17 @@ public class W2Mission5 {
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.ABWAK, 2);
         List<Enemy> enemies3 = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 2);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 2);
+        boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
         }
-        survived = battle.startBattle(player, enemies2, 2);
+        survived = battle.startBattle(player, enemies2, 2, false);
 
         if (!survived) {
             return false;
         }
-        survived = battle.startBattle(player, enemies3, 2);
+        survived = battle.startBattle(player, enemies3, 2, false);
 
         if (!survived) {
             return false;

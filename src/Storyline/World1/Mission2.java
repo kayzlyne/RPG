@@ -32,14 +32,14 @@ public class Mission2 {
 
         System.out.println("\nBeggar: Please, kind stranger, do you have any barya to spare?");
         scan.nextLine();
-        System.out.println("Beggar: I have been sick for days, but I do not have the twenty barya needed to pay for medicine.");
+        System.out.println("Beggar: I have been sick for days, but I do not have the fifty barya needed to pay for medicine.");
         scan.nextLine();
         System.out.println("Beggar: Won’t you spare a poor beggar some mercy?");
         scan.nextLine();
 
         System.out.println("The man starts coughing halfway through his last sentence, his body shaking violently as he’s overwhelmed by the coughing fit,");
         System.out.println("and you fight the urge to say yes to him immediately. You may not be stricken with a terrible illness, but you are not much better off");
-        System.out.println("than this beggar, either, for you only have twenty pesos to your name. But you know that in this part of the city, it’s every man for himself.");
+        System.out.println("than this beggar, either, for you only have fifty pesos to your name. But you know that in this part of the city, it’s every man for himself.");
         System.out.println("If you do not help him, no one else will, and he will be a dead man by tomorrow.");
         scan.nextLine();
 
@@ -67,7 +67,7 @@ public class Mission2 {
                     System.out.println();
                     System.out.println("You have chosen to help the beggar.");
                     scan.nextLine();
-                    System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    System.out.println(player.name + ": Here’s fifty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
                     System.out.println("Beggar: You would offer me all the money you have?");
                     scan.nextLine();
@@ -80,6 +80,23 @@ public class Mission2 {
                     System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
                     scan.nextLine();
                     System.out.println("Beggar: And to you. May the Gods bless you.");
+
+                    DialogueUtils.pause();
+                    System.out.println("Smiling warmly, you walk away from the alley and towards the Information Guild.");
+                    System.out.println("That is when you remember that you had some suman tucked away in your pocket for lunch.");
+                    System.out.println("You think of the beggar and decide that he needs it more than you do.");
+                    System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
+                    System.out.println();
+                    System.out.println("Taking it out, you find coins worth 100 barya — ");
+                    System.out.println("when before you were certain all your money was given away to the beggar.");
+                    System.out.println("And when you look back at the alley, it now appears completely empty.");
+                    System.out.println("Did you just get played by an encanto?");
+                    System.out.println("Shaking your head, you try to put the previous encounter out of your thoughts and instead focus on your mission.");
+                    DialogueUtils.pause();
+
+                    player.setBarya(player.getBarya() + 50);
+                    System.out.println("💰 You received 100 barya!");
+                    System.out.println("🏦 Total barya: " + player.getBarya());
                     break;
                 } else {
                     System.out.println("❌ Invalid choice. Please enter 0 or 1.\n");
@@ -91,20 +108,8 @@ public class Mission2 {
             }
         }
 
-        DialogueUtils.pause();
-        System.out.println("Smiling warmly, you walk away from the alley and towards the Information Guild.");
-        System.out.println("That is when you remember that you had some suman tucked away in your pocket for lunch.");
-        System.out.println("You think of the beggar and decide that he needs it more than you do.");
-        System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
-        System.out.println();
-        System.out.println("Taking it out, you realize there are fifty pieces of barya—");
-        System.out.println("when before you were certain all your money was given away to the beggar.");
-        System.out.println("And when you look back at the alley, it now appears completely empty.");
-        System.out.println("Did you just get played by an encanto?");
-        DialogueUtils.pause();
 
-        System.out.println("You try to put the previous encounter out of your thoughts and instead focus on your mission.");
-        System.out.println("You find yourself standing in the looming shadow of the Information Guild.");
+        System.out.println("An hour later, you find yourself standing in the looming shadow of the Information Guild.");
         System.out.println("Its heavy oak doors, carved with runes of protection, creak as you push them open.");
         System.out.println();
         System.out.println("Inside, the air hums with the thick scent of ink, parchment, and candlewax.");
@@ -128,12 +133,15 @@ public class Mission2 {
         scan.nextLine();
         System.out.println("Scribe: Oh, you know Sean?");
         scan.nextLine();
-        System.out.println(player.name + ": I kinda saved him from being robbed in daylight just before coming here.");
+        System.out.println(player.name + ": I kinda saved him from being robbed in broad daylight just before coming here.");
         scan.nextLine();
-        System.out.println("Scribe: Oh, wow. Then, let me give you this as thanks.");
+        System.out.println("Scribe: Thank you! Sean is a valued member of our guild. Here, have this as a small token of our gratitude.");
         scan.nextLine();
-        System.out.println("You have received 50 barya!");
-        player.addBarya(50);
+        player.setBarya(player.getBarya() + 50);
+        System.out.println("💰 You received 50 barya!");
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        //System.out.println("You have received 50 barya!");
+        //player.addBarya(50);
         scan.nextLine();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
         scan.nextLine();

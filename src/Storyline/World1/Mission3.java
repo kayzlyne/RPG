@@ -55,7 +55,7 @@ public class Mission3 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 5);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 1);
+        boolean survived = battle.startBattle(player, enemies, 1, false);
 
         if (!survived) {
             return false;
@@ -63,7 +63,7 @@ public class Mission3 {
 
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
         BattleManager battle2 = new BattleManager();
-        survived = battle2.startBattle(player, enemies2, 1);
+        survived = battle2.startBattle(player, enemies2, 1, false);
 
         if (!survived) {
             return false;

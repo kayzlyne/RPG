@@ -53,7 +53,9 @@ public class W3Mission2 {
         System.out.println("Andrea: She’s been through too much. We should rest for tonight and search for clues when daylight comes.");
         sc.nextLine();
         System.out.println(player.name + ": Agreed. We’ll take turns watching her. She risked her life to bring us this far. The least we can do is protect her while she recovers.");
-        sc.nextLine();
+        DialogueUtils.pause();
+        player.rest();
+        DialogueUtils.pause();
         System.out.println("Soft morning light filters through the waterfall curtain of the hideout. The sound of rushing water blends with the rustle of parchment as you and Andrea sift through Kheila’s notes.");
         sc.nextLine();
         System.out.println("Kheila, pale but awake, notices you finding clues about the “Origin of Babaylans”. After a while of searching, you found a parchment that resembles the ancient scroll you had. Something in you clicked. This is it, the clue you’ve been searching for.");

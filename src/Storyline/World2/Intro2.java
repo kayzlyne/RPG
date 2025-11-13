@@ -56,7 +56,7 @@ public class Intro2 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 2);
+        boolean survived = battle.startBattle(player, enemies, 2, true);
 
         if (!survived) {
             return false;

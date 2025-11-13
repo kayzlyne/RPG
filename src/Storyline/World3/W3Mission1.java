@@ -22,6 +22,12 @@ public class W3Mission1 {
         System.out.println("Even the snakes, their scales glistening like ribbons of silk, coil peacefully among dew-kissed branches, basking in the warmth of the newborn sun.");
         sc.nextLine();
 
+        System.out.println("Tired from the journey, you and Andrea sit down for a while, savoring the rare peace.");
+        sc.nextLine();
+
+        player.rest();
+        DialogueUtils.pause();
+
         System.out.println("You breathe deeply, and for a fleeting moment, the pain, exhaustion, and fear of Mogul seem to melt away.");
         sc.nextLine();
 
@@ -46,14 +52,20 @@ public class W3Mission1 {
         sc.nextLine();
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 4);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 3);
+        boolean survived = battle.startBattle(player, enemies, 3, false);
 
         if (!survived) {
             return false;
         }
 
         if (player.isAlive()) {
-            System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\nBut after only a few minutes, your peaceful respite is interrupted by the sound of footsteps from a distance.\n");
+            System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\n");
+            sc.nextLine();
+
+            player.rest();
+            DialogueUtils.pause();
+
+            System.out.println("But after only an hour or two, your peaceful respite is interrupted by the sound of footsteps from a distance.\n");
             sc.nextLine();
             System.out.println("???: Over there!!! Spread out and search the area. That traitor couldn't have gone far.\n");
             sc.nextLine();
@@ -103,7 +115,7 @@ public class W3Mission1 {
 
             List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 4);
             BattleManager battle2 = new BattleManager();
-            survived = battle2.startBattle(player, enemies2, 3);
+            survived = battle2.startBattle(player, enemies2, 3, false);
 
             if (!survived) {
                 return false;

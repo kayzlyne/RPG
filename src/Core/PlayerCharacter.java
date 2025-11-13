@@ -15,7 +15,7 @@ public class PlayerCharacter {
 
 
     // New fields
-    private int barya = 100;
+    private int barya = 0;
     private List<Item> inventory = new ArrayList<>();
 
     public List<Item> getInventory() {
@@ -106,15 +106,13 @@ public class PlayerCharacter {
         System.out.println("──────────────────────────────\n");
     }
 
-    // NEW METHODS BELOW THIS LINE -ef
-
     // ----- Inventory -----
 
     public void addItem(Item item) {
         inventory.add(item);
     }
 
-    public void showInventory() {
+    /* public void showInventory() {
         System.out.println("\n=== 🎒 Inventory ===");
         if (inventory.isEmpty()) {
             System.out.println("You have no items.");
@@ -123,7 +121,7 @@ public class PlayerCharacter {
                 System.out.println((i + 1) + ". " + inventory.get(i).getName());
             }
         }
-    }
+    } */
 
     public void useItem(Item item) {
         switch (item.getName()) {
@@ -131,17 +129,17 @@ public class PlayerCharacter {
             case "Health Potion":
                 hp = maxHp;
                 inventory.remove(item);
-                System.out.println("🧪 You used a Health Potion -- the elixir of life! HP fully restored.");
+                System.out.println("\n🧪 You used a Health Potion -- the elixir of life! HP fully restored.\n");
                 break;
 
             case "Mana Potion":
                 mana = maxMana;
                 inventory.remove(item);
-                System.out.println("🔮 You used a Mana Potion -- the elixir of power! Mana fully restored.");
+                System.out.println("\n🔮 You used a Mana Potion -- the elixir of power! Mana fully restored.\n");
                 break;
 
             default:
-                System.out.println("❌ You can't use this item.");
+                System.out.println("\n❌ You can't use this item.\n");
         }
     }
 
@@ -203,7 +201,7 @@ public class PlayerCharacter {
             addedDefense = 5;
         } else {
             // Optional: scale beyond level 3
-            addedDefense = 5; // or any formula you like
+            addedDefense = 5;
         }
 
         defense += addedDefense;
@@ -215,7 +213,7 @@ public class PlayerCharacter {
     public void rest() {
         hp = maxHp;
         mana = maxMana;
-        System.out.println(name + " took a long rest.");
+        System.out.println(name + " was able to get some rest.");
         System.out.println("Health and Mana recovered to full!");
     }
 }

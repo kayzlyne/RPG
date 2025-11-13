@@ -4,17 +4,14 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it after every fight)
-        -add option 4 (drink potion if naay sulod inventory)
         -adjust enemy attack damage
-    -Implement a reward system so the player can earn barya [ongoing - k] (I made a method addBarya, just need to add it after missions/battles)
+
     -Level up system [on going - st]
     -implement story [on going - st]
     -fix distance and spacing [ongoing for world 1 - k]
     -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
     -Implement the choices in World 3: Mission 3 & Mission 5
-    -display starting barya as 20
-    -display barya every reward event
+
 
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a
@@ -46,6 +43,14 @@ public class NOTES_HERE {
     Start battle:
     BattleManager battle = new BattleManager();
     battle.startBattle(player, enemies);
+
+    ✅ DONE !!!
+    -display starting barya as 20 [changed it to 0 to add more sentimental weight to the beggar dilemma -ef]
+    -Implement a reward system so the player can earn barya [-ef]
+    -display barya every reward event [-ef]
+    -add option 4 (drink potion if naay sulod inventory) [-ef]
+    -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it after every fight)
+            [added some dialogue and inserted the method rest into areas where i think it would make sense -ef]
 
      */
 }

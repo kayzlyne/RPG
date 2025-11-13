@@ -5,10 +5,9 @@ import Storyline.BeggarEvent;
 public class BattleManager {
     Scanner scanner = new Scanner(System.in);
 
-    public boolean startBattle(PlayerCharacter player, List<Enemy> enemies, int currentWorld) {
-
+    public boolean startBattle(PlayerCharacter player, List<Enemy> enemies, int currentWorld, boolean isBossBattle) {
+        //added isBossBattle for rewards system -ef
         //Insert new lines and arrange outputs
-        //Add item inventory, too (potion in inventory
 
         System.out.println("⚔️ Battle Begins!");
 
@@ -45,15 +44,15 @@ public class BattleManager {
             boolean validInput = false;
 
             while (!validInput) {
-                System.out.print("\n⚡ Choose action:\n[1] Basic Attack\n[2] Skill\n[3] Special Skill: ");
+                System.out.print("\n⚡ Actions:\n[1] Basic Attack\n[2] Skill\n[3] Special Skill\n[4] Use Item: ");
                 try {
-                    System.out.print("\nYou've chosen to use: ");
+                    System.out.print("\nChoose action: ");
                     action = scanner.nextInt();
                     scanner.nextLine();
                     System.out.println();
 
-                    if (action < 1 || action > 3) {
-                        System.out.println("❌ Invalid choice. Please enter a number between 1 and 3.");
+                    if (action < 1 || action > 4) {
+                        System.out.println("❌ Invalid choice. Please enter a number between 1 and 4.");
                     } else {
                         validInput = true;
                     }
@@ -67,8 +66,10 @@ public class BattleManager {
                 player.dealDamage(target);
             } else if (action == 2) {
                 player.useSkill(target);
-            } else {
+            } else if (action == 3){
                 player.useSpecial(target);
+            } else {
+                InventoryMenu.open(player);
             }
 
             if (!target.isAlive()) {
@@ -111,6 +112,10 @@ public class BattleManager {
 
         if (player.isAlive()) {
             System.out.println("🎉" + player.name + " defeated all enemies!");
+            int reward = isBossBattle ? 100 : 50;
+            player.setBarya(player.getBarya() + reward);
+            System.out.println("💰 You received " + reward + " barya!");
+            System.out.println("🏦 Total barya: " + player.getBarya());
         }
 
 

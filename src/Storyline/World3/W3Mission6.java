@@ -97,7 +97,7 @@ public class W3Mission6 {
         sc.nextLine();
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 3);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 3);
+        boolean survived = battle.startBattle(player, enemies, 3, false);
 
         if (!survived) {
             return false;

@@ -62,7 +62,10 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("Tambalan: She will live. But your debt begins now.");
         scan.nextLine();
-        System.out.println("A sudden shriek cuts through the marshlands, high and guttural. From the treeline, a shape emerges—elongated limbs,\na mouth split too wide, dripping with black rot and fresh blood. An Aswang, its body shifting grotesquely between forms,\ncrawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.\n");
+        System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
+        scan.nextLine();
+        player.rest();
+        System.out.println("A few moments later, your brief respite is interrupted as a sudden shriek cuts through the marshlands, high and guttural. From the treeline, a shape emerges—elongated limbs,\na mouth split too wide, dripping with black rot and fresh blood. An Aswang, its body shifting grotesquely between forms,\ncrawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.\n");
         scan.nextLine();
         System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime.\nIf you wish for your friend to live, you must keep me alive.\n");
         scan.nextLine();
@@ -73,7 +76,7 @@ public class W2Mission2 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 1);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 2);
+        boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
@@ -81,7 +84,9 @@ public class W2Mission2 {
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.\n");
         scan.nextLine();
-        System.out.println("The silence after the Aswang’s defeat lingers like a festering wound. Andrea leans against the boulder,\nher breath steady but weak, her eyes barely open. You feel relief wash over you, but it’s cut short by the Tambalan’s voice.\n");
+        System.out.println("The silence after the Aswang’s defeat lingers like a festering wound. You lower yourself to the ground, giving your tired legs a moment of rest");
+        scan.nextLine();
+        System.out.println("Andrea leans against the boulder,\nher breath steady but weak, her eyes barely open. You feel relief wash over you, but it’s cut short by the Tambalan’s voice.\n");
         scan.nextLine();
         System.out.println("Tambalan: Saving her life was only the first step. If you intend for your friend to survive Mogul, she cannot face it unarmed.\n");
         scan.nextLine();
@@ -93,13 +98,17 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("The Tambalan’s eyes narrow, the wrinkles on his face tightening like carved stone.\n");
         scan.nextLine();
-        System.out.println("Tambalan: Find him, and convince him. Only then will Andrea wield a weapon strong enough to cut through Mogul’s nightmares.\n");
+        System.out.println("Tambalan: Find him, and convince him. Only then will Andrea wield a weapon strong enough to cut through Mogul’s nightmares.\n Get some rest first. You must set out at the break of dawn.\n");
+        DialogueUtils.pause();
+        player.rest();
+        DialogueUtils.pause();
+        System.out.println("You're up at the first hint of bleak light across the dreary sky, wincing as your weary bones protest the endeavour.\n");
         scan.nextLine();
-        System.out.println("Andrea forces herself to sit up, wincing in pain.\n");
+        System.out.println("Andrea forces herself to sit up, grimacing in pain.\n");
         scan.nextLine();
         System.out.println("Andrea: Don’t… don’t go alone. I’ll catch up… once I can stand.\n");
         scan.nextLine();
-        System.out.println("You nod, tightening your grip on your weapon before setting out.\n");
+        System.out.println("You nod, tightening your grip on your weapon before setting out to find the Pandai.\n");
         scan.nextLine();
         System.out.println("[\t                                   \t\t\t\t\t\t]");
         System.out.println("[\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");

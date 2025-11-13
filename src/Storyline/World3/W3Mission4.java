@@ -34,7 +34,7 @@ public class W3Mission4 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 2);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 3);
+        boolean survived = battle.startBattle(player, enemies, 3, false);
         if (!survived) {
             return false;
         }
@@ -61,9 +61,21 @@ public class W3Mission4 {
         sc.nextLine();
         System.out.println("Andrea: Then that’s where the Mistress must be.\n");
         sc.nextLine();
-        System.out.println("Kheila: And where all their power converges. Be warned, for this isn’t just another temple.\n" +
-                "It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.\n");
+        System.out.println("Kheila: And where all their power converges.\n");
+        sc.nextLine();
+        System.out.println(player.name + ": It's where we must go to end this once and for all.\n");
+        sc.nextLine();
+        System.out.println("Exhausted but determined, the three of you pause to take a breather and come up with a plan.\n");
+
         DialogueUtils.pause();
+        player.rest();
+        DialogueUtils.pause();
+
+        System.out.println("You move to set out for the Sanctum of the Eclipse, and Kheila's voice rings in the quiet.\n");
+        sc.nextLine();
+
+        System.out.println("Kheila: Be warned, for this isn’t just another temple.\n" +
+                "It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.\n");
 
         return true;
     }

@@ -51,7 +51,7 @@ public class W2Mission3 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
         BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 2);
+        boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
