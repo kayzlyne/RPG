@@ -142,6 +142,7 @@ public class Mission2 {
         System.out.println("🏦 Total barya: " + player.getBarya());
         //System.out.println("You have received 50 barya!");
         //player.addBarya(50);
+
         scan.nextLine();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
         scan.nextLine();

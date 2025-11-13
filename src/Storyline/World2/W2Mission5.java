@@ -78,6 +78,9 @@ public class W2Mission5 {
         }
 
         //Boss Battle
+        System.out.println("\uD83D\uDCB0 You earned 30 barya for winning the battle!");
+        sc.nextLine();
+        player.addBarya(30);
 
 
         System.out.println("Tria: I… lost? I… I can’t believe you defeated me… But you… You won’t get far. The Babaylan’s plan is already halfway.\n");
@@ -108,7 +111,11 @@ public class W2Mission5 {
         sc.nextLine();
 
         System.out.println("The path ahead stretches into darkness once more. But somewhere beyond it lies Mt. Kanatuan. And with it, the truth behind the Babaylan’s sinister plan.\n");
+        sc.nextLine();
+
+        player.rest();
         DialogueUtils.pause();
+
 
         return true;
     }

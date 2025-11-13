@@ -57,6 +57,10 @@ public class W2Mission3 {
             return false;
         }
 
+        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        sc.nextLine();
+        player.addBarya(15);
+
         System.out.println("Once the battle is won, the Pandai approaches you, impressed.\n");
         sc.nextLine();
 
@@ -82,7 +86,11 @@ public class W2Mission3 {
         sc.nextLine();
 
         System.out.println("Pandai: Very good. Mogul is a place that cannot be navigated, but the tambalan can\npoint you to the right direction, and the blessed bolo will lead the way.\nGood luck, young hero.\n");
+        sc.nextLine();
+        player.rest();
+
         DialogueUtils.pause();
+
 
         return true;
     }

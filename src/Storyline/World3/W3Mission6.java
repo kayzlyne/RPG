@@ -103,6 +103,10 @@ public class W3Mission6 {
             return false;
         }
 
+        System.out.println("\uD83D\uDCB0  You earned 30 barya for winning the battle!");
+        sc.nextLine();
+        player.addBarya(30);
+
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees\n" +
                 "on the ground, tears running like a violent downpour from her eyes.\n");
         sc.nextLine();

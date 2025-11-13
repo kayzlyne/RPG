@@ -62,6 +62,11 @@ public class Intro2 {
             return false;
         }
 
+        System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
+        scan.nextLine();
+        player.addBarya(10);
+
+        player.rest();
         return true;
     }
 }

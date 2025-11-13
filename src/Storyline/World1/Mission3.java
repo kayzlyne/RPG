@@ -69,6 +69,11 @@ public class Mission3 {
             return false;
         }
 
+        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        scan.nextLine();
+        player.addBarya(20);
+
+        player.rest();
         return true;
     }
 }

@@ -3,6 +3,7 @@ package Storyline.World3;
 import Core.PlayerCharacter;
 import Storyline.DialogueUtils;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class W3Mission5 {
@@ -27,32 +28,73 @@ public class W3Mission5 {
         sc.nextLine();
         System.out.println("As you step deeper, voices echo around you. Some sound like lost loved ones, while others sound like the\n" +
                 "vengeful screams of enemies you’ve slain.\n");
-        sc.nextLine();
-        System.out.println("Press 1: Follow the voices.\nPress 2: Ignore them and keep going.");
-        choice = sc.nextInt();
-        if (choice == 1){
-            System.out.println("You see your past painful memories until Kheila snaps you out of it.\n"); //changed sentence a bit
-            sc.nextLine();
-            System.out.println("Kheila: Don’t listen! The maze feeds on regret!\n");
-            sc.nextLine();
-            System.out.println("(You lose time, but gain awareness of illusions.)\n");
-        } else if (choice == 2){
-            System.out.println("The whispers fade. You find a faint trail of glowing dust that marks the safe path.\n");
-            sc.nextLine();
+        while (true) {
+            try {
+                sc.nextLine();
+                System.out.println("Press 1: Follow the voices.\nPress 2: Ignore them and keep going.");
+                System.out.print("Enter your choice: ");
+                choice = sc.nextInt();
+
+                if (choice == 1) {
+                    System.out.println("You see your past painful memories until Kheila snaps you out of it.\n");
+                    sc.nextLine();
+                    System.out.println("Kheila: Don’t listen! The maze feeds on regret!\n");
+                    sc.nextLine();
+                    System.out.println("(You lose time, but gain awareness of illusions.)\n");
+                    break;
+                } else if (choice == 2) {
+                    System.out.println("The whispers fade. You find a faint trail of glowing dust that marks the safe path.\n");
+                    sc.nextLine();
+                    break;
+                } else {
+                    System.out.println("⚠️ Invalid choice. Try again.\n");
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number (1 or 2).");
+            } catch (InputMismatchException e) {
+                System.out.println("Please input a valid number (1 or 2).");
+                sc.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                sc.nextLine();
+            }
         }
-        System.out.println("Section 2: The Split Passage");
-        System.out.println("Three tunnels stretch ahead, each marked with symbols carved into the stone: a moon, a sun, and a star.");
-        System.out.println("Press 1: Enter the Moon path.");
-        System.out.println("Press 2: Enter the Sun path");
-        System.out.println("Press 3: Enter the Star path.");
-        choice = sc.nextInt();
-        if(choice == 1){
-            System.out.println("Moon Path: The Blade of Bulan hums and glows faintly. You’re on the right path.\n");
-        } else if(choice == 2){
-            System.out.println("Sun Path: The walls begin to burn with light. You retreat.\n");
-        } else if(choice == 3){
-            System.out.println("Star Path: The tunnel collapses behind you. You barely escape.\n");
+
+
+        while (true) {
+            try {
+                System.out.println("Section 2: The Split Passage");
+                System.out.println("Three tunnels stretch ahead, each marked with symbols carved into the stone: a moon, a sun, and a star.");
+                System.out.println("Press 1: Enter the Moon path.");
+                System.out.println("Press 2: Enter the Sun path.");
+                System.out.println("Press 3: Enter the Star path.");
+                System.out.print("Enter your choice: ");
+
+                choice = sc.nextInt();
+
+                if (choice == 1) {
+                    System.out.println("Moon Path: The Blade of Bulan hums and glows faintly. You’re on the right path.\n");
+                    break;
+                } else if (choice == 2) {
+                    System.out.println("Sun Path: The walls begin to burn with light. You retreat.\n");
+                    break;
+                } else if (choice == 3) {
+                    System.out.println("Star Path: The tunnel collapses behind you. You barely escape.\n");
+                    break;
+                } else {
+                    System.out.println("⚠️ Invalid choice. Please enter 1, 2, or 3.\n");
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("❌ Invalid input. Please enter a number (1, 2, or 3).\n");
+                sc.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                sc.nextLine();
+            }
         }
+
         System.out.println("Section 3: The Door of Sacrifice\n");
         sc.nextLine();
         System.out.println("At the heart of the maze stands a massive stone door carved with lunar sigils.\n" +

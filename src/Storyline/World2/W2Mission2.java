@@ -81,6 +81,9 @@ public class W2Mission2 {
         if (!survived) {
             return false;
         }
+        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        scan.nextLine();
+        player.addBarya(15);
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.\n");
         scan.nextLine();
@@ -109,6 +112,8 @@ public class W2Mission2 {
         System.out.println("Andrea: Don’t… don’t go alone. I’ll catch up… once I can stand.\n");
         scan.nextLine();
         System.out.println("You nod, tightening your grip on your weapon before setting out to find the Pandai.\n");
+        scan.nextLine();
+        player.rest();
         scan.nextLine();
         System.out.println("[\t                                   \t\t\t\t\t\t]");
         System.out.println("[\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");

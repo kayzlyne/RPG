@@ -12,6 +12,8 @@ public class NOTES_HERE {
     -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
     -Implement the choices in World 3: Mission 3 & Mission 5
 
+    - Test Run Game (I think Player is too op) maybe need i buff ang enemies
+
 
         (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
         only revive once, but unli sa world 1 and 2) -a
@@ -51,6 +53,13 @@ public class NOTES_HERE {
     -add option 4 (drink potion if naay sulod inventory) [-ef]
     -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it after every fight)
             [added some dialogue and inserted the method rest into areas where i think it would make sense -ef]
+
+    -display starting barya as 20 [done - a]
+    -display barya every reward event [done - a]
+    - minus barya after player agrees to give sir khai money [done - a]
+    - HP recovery [done - a]
+
+    note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 
      */
 }

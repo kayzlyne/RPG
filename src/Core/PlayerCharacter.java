@@ -106,13 +106,15 @@ public class PlayerCharacter {
         System.out.println("──────────────────────────────\n");
     }
 
+    // NEW METHODS BELOW THIS LINE -ef
+
     // ----- Inventory -----
 
     public void addItem(Item item) {
         inventory.add(item);
     }
 
-    /* public void showInventory() {
+    public void showInventory() {
         System.out.println("\n=== 🎒 Inventory ===");
         if (inventory.isEmpty()) {
             System.out.println("You have no items.");
@@ -121,7 +123,7 @@ public class PlayerCharacter {
                 System.out.println((i + 1) + ". " + inventory.get(i).getName());
             }
         }
-    } */
+    }
 
     public void useItem(Item item) {
         switch (item.getName()) {
