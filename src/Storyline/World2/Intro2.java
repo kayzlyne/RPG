@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Intro2 {
-    public static boolean intro(PlayerCharacter player){
+    public static void intro2(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");

@@ -23,7 +23,7 @@ public class Main {
         Shop.enterShop(player);
 
         currentWorld = 2;
-        if (!Intro2.intro(player)) return;
+        Intro2.intro2(player);
         W2Mission1.w2mission1(player);
         Shop.enterShop(player);
         if (!W2Mission2.w2mission2(player)) return;
