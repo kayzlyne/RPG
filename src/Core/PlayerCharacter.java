@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PlayerCharacter {
     public String name, race, charClass;
-    public int hp, mana, defense = 11;
+    public int hp, mana, defense = 7;
     private Race raceType;
     public ClassArchetype classType;
     private final int manaRegen = 10;
