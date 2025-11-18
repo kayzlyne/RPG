@@ -46,24 +46,24 @@ public class W3Mission4 {
         player.rest();
 
         System.out.println("The battle is fierce, but the power of Mogul still flows through your veins.\n" +
-                "When the last guardian falls, silence returns, broken only by the faint hum of the Blade.\n");
+                           "When the last guardian falls, silence returns, broken only by the faint hum of the Blade.\n");
         sc.nextLine();
         System.out.println("Andrea: They were protecting this.\n");
         sc.nextLine();
         System.out.println("Kheila: And for good reason. This is the only weapon that can stand a chance against the Mistress.\n");
         sc.nextLine();
         System.out.println("You step forward. The Blade of Bulan seems to breathe, silver light rippling across its edge.\n" +
-                "As your hand touches the hilt, a surge of divine power courses through your arm, searing your veins with radiant energy.\n");
+                           "As your hand touches the hilt, a surge of divine power courses through your arm, searing your veins with radiant energy.\n");
         sc.nextLine();
         System.out.println("[New Ability Unlocked – Moonstrike: Channels lunar energy to purify corrupted magic.]\n");
         sc.nextLine();
         System.out.println("The chamber trembles. The moonlight shifts, revealing a hidden compartment beneath the altar.\n" +
-                "Inside lies a charred, folded map.\n");
+                           "Inside lies a charred, folded map.\n");
         sc.nextLine();
         System.out.println("You unfurl the ancient parchment. Strange runes and shifting lines mark a region deep within Mt. Kanatuan — the heart of the Babaylan fortress.\n");
         sc.nextLine();
         System.out.println("Kheila: This isn’t a map of Banwa-an Daan. This leads to their most guarded chamber:\n" +
-                "the Sanctum of Eclipse. Only the highest-ranked Babaylan is allowed access to it.\n");
+                           "the Sanctum of Eclipse. Only the highest-ranked Babaylan is allowed access to it.\n");
         sc.nextLine();
         System.out.println("Andrea: Then that’s where the Mistress must be.\n");
         sc.nextLine();
@@ -81,7 +81,7 @@ public class W3Mission4 {
         sc.nextLine();
 
         System.out.println("Kheila: Be warned, for this isn’t just another temple.\n" +
-                "It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.\n");
+                           "It’s where the boundaries between Mogul, the mortal world, and Biringan City begin to blur.\n");
 
         return true;
     }

@@ -157,7 +157,7 @@ public class W3Mission1 {
                 System.out.println("Andrea: Let them. We’re looking for them anyway. Why were they after you?\n");
                 sc.nextLine();
                 System.out.println("Kheila: I was one of them. I helped with their rituals until I learned what they were truly planning.\n" +
-                        "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
+                                   "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
                 sc.nextLine();
                 System.out.println(player.name + ": Tria mentioned something. A “Babaylan’s plan.” So it’s true, then?\n");
                 sc.nextLine();
