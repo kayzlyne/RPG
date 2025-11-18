@@ -3,15 +3,15 @@ public class NOTES_HERE {
     /*
 
     TO DO!!!:
-    -Insert Boss Battles
-    -adjust enemy attack damage (need jud ni ifix cuz nabantayan nko dli siya ranged, it's constant - k)
-    -in rest, cooldown of skills must also reset
-    -pet healing must be after enemies' turn
+    -Insert Boss Battles (tria and erika)
+    -adjust enemy attack damage
+    -make new method for resetting cooldown of skills
+    -pet healing must be after enemies' turn every after 2 rounds
     -Level up system [on going - st]
     -world1 mission3 missing some story parts, need to recover
     -fix distance and spacing [ongoing for world 1 - k]
     -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
-    -Implement the choices in World 3: Mission 3 & Mission 5
+    -Implement the choices in World 3: Mission 3 & Mission 5 (sacrifice barya and hp)
     -implement try-catch in decision moment in world2, mission 2
     -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight)
     -show race stats and class stats during player selection
