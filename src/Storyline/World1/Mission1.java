@@ -26,7 +26,7 @@ public class Mission1 {
         System.out.println();
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 3);
         BattleManager battle = new BattleManager();
         battle.startBattle(player, enemies, 1, false);
 

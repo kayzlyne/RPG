@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission1 {
-    public static void w2mission1(PlayerCharacter player){
+    public static boolean w2mission1(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
 
         System.out.println();
@@ -34,7 +34,7 @@ public class W2Mission1 {
         player.addBarya(10);
 
         player.rest();
-        return true;
+
 
         System.out.println("Andrea: Finally, you took it down, friend.\n");
         scan.nextLine();
@@ -49,5 +49,6 @@ public class W2Mission1 {
 
         System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.\n");
         DialogueUtils.pause();
+        return true;
     }
 }

@@ -52,7 +52,7 @@ public class W3Mission1 {
         System.out.println("But your blood runs cold when you hear the chilling wails of infants behind you.\nThe crying soon morphs into cruel, mischievous laughter, and you come face-to-face with the bane of your kind's existence: a tiyanak.");
         System.out.println("Backing away, you hiss when the mist comes into contact with just a small patch of your skin.\nThe tiyanak's laughter rises in pitch when more of its friends come out of the bushes to join it.\nFour of them now stand before you, their sharp black teeth glinting with viscera. Andrea raises her blessed steel,\nand you know exactly what she's thinking: you have no choice but to fight these creatures.");
         sc.nextLine();
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 4);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 2);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
 
@@ -138,7 +138,7 @@ public class W3Mission1 {
             System.out.println("Commander: Intruders! Stop them!\n");
             sc.nextLine();
 
-            List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 4);
+            List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 2);
             BattleManager battle2 = new BattleManager();
             survived = battle2.startBattle(player, enemies2, 3, false);
 

@@ -95,7 +95,7 @@ public class W3Mission6 {
         sc.nextLine();
         System.out.println("The runes flare. From the walls emerge armored silhouettes. Human soldiers wielding weapons that glow with stolen magic.\n");
         sc.nextLine();
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 3);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 2);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
 
@@ -116,7 +116,8 @@ public class W3Mission6 {
         sc.nextLine();
         System.out.println(player.name + ": Then we fight them next. For Mogul. For Biringan. For all of us.\n");
         sc.nextLine();
-        System.out.println("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war\n" +
+        System.out.prin
+    tln("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war\n" +
                 "machines rising over the horizon.\n");
         DialogueUtils.pause();
 

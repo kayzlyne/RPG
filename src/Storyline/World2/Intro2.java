@@ -46,6 +46,6 @@ public class Intro2 {
         System.out.println("You sense a gust of wind and move to follow the direction from which it came.");
         DialogueUtils.pause();
 
-        return true;
+
     }
 }
