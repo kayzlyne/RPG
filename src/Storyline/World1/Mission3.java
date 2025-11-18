@@ -13,7 +13,8 @@ public class Mission3 {
         System.out.println("================================================");
         System.out.println("          MISSION 3: THE HEART OF DARKNESS      ");
         System.out.println("================================================");
-        System.out.println();
+        scan.nextLine();
+        //System.out.println();
         System.out.println("Enlightened with the clues from the Information Guild, you hurry to the Dark Forest.");
         System.out.println("The path becomes rough, bushes thick and thorny, leaving scratches on whoever is unlucky enough to come into contact with it.");
         System.out.println("The grass gradually becomes taller, and trees start to cluster as you enter the forest.");
@@ -69,7 +70,7 @@ public class Mission3 {
             return false;
         }
 
-        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        System.out.println("\uD83D\uDCB0 You earned 20 barya for winning the battle!");
         scan.nextLine();
         player.addBarya(20);
 

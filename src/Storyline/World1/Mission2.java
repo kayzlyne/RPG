@@ -30,7 +30,7 @@ public class Mission2 {
         System.out.println("His head whips toward you the moment you walk by, and he holds out an open palm.");
         DialogueUtils.pause();
 
-        System.out.println("\nBeggar: Please, kind stranger, do you have any barya to spare?");
+        System.out.println("Beggar: Please, kind stranger, do you have any barya to spare?");
         scan.nextLine();
         System.out.println("Beggar: I have been sick for days, but I do not have the fifty barya needed to pay for medicine.");
         scan.nextLine();
@@ -56,6 +56,7 @@ public class Mission2 {
                 if (choice == 0) {
                     System.out.println();
                     System.out.println("You have chosen not to help the beggar.");
+                    System.out.println();
                     scan.nextLine();
                     System.out.println(player.name + ": I’m sorry, friend, but I do not have the money to spare. Best of luck to you.");
                     scan.nextLine();
@@ -66,6 +67,7 @@ public class Mission2 {
                     helpedBeggar = true;
                     System.out.println();
                     System.out.println("You have chosen to help the beggar.");
+                    System.out.println();
                     scan.nextLine();
                     System.out.println(player.name + ": Here’s fifty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();

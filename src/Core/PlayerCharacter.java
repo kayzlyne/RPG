@@ -145,6 +145,10 @@ public class PlayerCharacter {
         }
     }
 
+    public void modifyHp(int hp) {
+        this.hp -= hp;
+    }
+
     // ----- Barya -----
 
     public int getBarya() { return barya; }
@@ -215,8 +219,11 @@ public class PlayerCharacter {
     public void rest() {
         hp = maxHp;
         mana = maxMana;
+        //reset cooldowns
+
         System.out.println(name + " was able to get some rest.");
         System.out.println("Health and Mana recovered to full!");
+        System.out.println();
     }
 }
 

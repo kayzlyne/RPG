@@ -1,20 +1,52 @@
 package Storyline.World2;
 
-import Core.PlayerCharacter;
+import Core.*;
 import Storyline.DialogueUtils;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission1 {
     public static void w2mission1(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
 
+        System.out.println();
+        System.out.println("================================================");
+        System.out.println("          MISSION 1:  THE LAST LAUGH ");
+        System.out.println("================================================");
+        //System.out.println();
+        scan.nextLine();
+
+        System.out.println(
+                "You see Andrea heavily injured on the ground, the Bungisngis limping towards her. You rush in to protect her.\n");
+        DialogueUtils.pause();
+
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
+        BattleManager battle = new BattleManager();
+        boolean survived = battle.startBattle(player, enemies, 2, true);
+
+        if (!survived) {
+            return false;
+        }
+
+        System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
+        scan.nextLine();
+        player.addBarya(10);
+
+        player.rest();
+        return true;
+
         System.out.println("Andrea: Finally, you took it down, friend.\n");
         scan.nextLine();
-        System.out.println(player.name + ": Andrea, you’re heavily injured. " +
-                "We need to get you treated immediately. " +
-                "\nIt’ll be too late if we go to the city." +
-                "Stay conscious, I’ll find something to treat you.\n");
+        System.out.println(player.name + ": Andrea, you’re heavily injured.");
+        scan.nextLine();
+        System.out.println(player.name + ": We need to get you treated immediately.");
+        scan.nextLine();
+        System.out.println(player.name + ": It’ll be too late if we go to the city.");
+        scan.nextLine();
+        System.out.println(player.name + ": Stay conscious, I’ll find something to treat you.");
+        scan.nextLine();
+
         System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.\n");
         DialogueUtils.pause();
     }

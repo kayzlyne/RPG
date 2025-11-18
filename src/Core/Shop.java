@@ -59,9 +59,7 @@ public class Shop {
                     player.setBarya(player.getBarya() - item.getPrice());
                     //addItem(item);
                     player.setPet(new Pet(5)); // starting heal = 5 HP
-                    System.out.println("✅ \n" +
-                            "You sent\n" +
-                            "✧\u2060◝\u2060(\u2060⁰\u2060▿\u2060⁰\u2060)\u2060◜\u2060✧ A loyal companion joins you!\n");
+                    System.out.println("✧\u2060◝\u2060(\u2060⁰\u2060▿\u2060⁰\u2060)\u2060◜\u2060✧ A loyal companion joins you!\n");
                 } else {
                     System.out.println("You already have a pet!\n");
                 }

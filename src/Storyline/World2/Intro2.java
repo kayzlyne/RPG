@@ -9,19 +9,15 @@ import java.util.Scanner;
 public class Intro2 {
     public static boolean intro(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
-        System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively" +
+        System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");
         scan.nextLine();
-
         System.out.println("Andrea: Help!\n");
         scan.nextLine();
-
         System.out.println(player.name + ": Andrea!\n");
         scan.nextLine();
-
         System.out.println("Without a second thought, you rush towards Mogul.\n");
         scan.nextLine();
-
         System.out.println("[You have entered Mogul, the land of the Aswangs]\n");
         DialogueUtils.pause();
 
@@ -30,6 +26,19 @@ public class Intro2 {
         System.out.println("||         | \\  / | |    | |  ___ |    | |          ||");
         System.out.println("||         |  \\/  | |____| |____| |____| |____      ||");
         System.out.println("||___________________________________________________||");
+        System.out.println();
+
+        System.out.println("+------------------------------------------------------------------------------------------------+");
+        System.out.println("|   ____  ___ ____    ___ _     _  ______     _      _     _      _____   ___ _______ _     _    |");
+        System.out.println("|   |   \\  |  |   \\    |  |\\    | /     \\     /\\     |\\    |     /     \\   |  |  |  |  \\   /     |");
+        System.out.println("|   |    | |  |    |   |  | \\   | |          /  \\    | \\   |     |         |     |      \\ /      |");
+        System.out.println("|   |---<  |  |---<    |  |  \\  | |  _____  /____\\   |  \\  |     |         |     |       Y       |");
+        System.out.println("|   |    | |  |    \\   |  |   \\ | |      | /      \\  |   \\ |     |         |     |       |       |");
+        System.out.println("|   |___/ _|_ |     \\ _|_ |    \\|  \\____/ /        \\ |    \\|      \\_____/ _|_    |       |       |");
+        System.out.println("|                                                                                                |");
+        System.out.println("|                             A city of light and lurking darkness.                              |");
+        System.out.println("|                                                                                                |");
+        System.out.println("+------------------------------------------------------------------------------------------------+");
         System.out.println();
 
         System.out.println("The moment you cross the threshold to Mogul, a suffocating weight settles into your chest. The air itself is different here.");
@@ -44,29 +53,5 @@ public class Intro2 {
         System.out.println("You sense a gust of wind and move to follow the direction from which it came.");
         DialogueUtils.pause();
 
-        System.out.println();
-        System.out.println("================================================");
-        System.out.println("          MISSION 1:  THE LAST LAUGH ");
-        System.out.println("================================================");
-        System.out.println();
-
-        System.out.println(
-                "You see Andrea heavily injured on the ground, the Bungisngis limping towards her. You rush in to protect her.\n");
-        DialogueUtils.pause();
-
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
-        BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 2, true);
-
-        if (!survived) {
-            return false;
-        }
-
-        System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
-        scan.nextLine();
-        player.addBarya(10);
-
-        player.rest();
-        return true;
     }
 }

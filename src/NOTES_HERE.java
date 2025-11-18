@@ -4,20 +4,22 @@ public class NOTES_HERE {
 
     TO DO!!!:
     -Insert Boss Battles
-        -adjust enemy attack damage
-
+    -adjust enemy attack damage (need jud ni ifix cuz nabantayan nko dli siya ranged, it's constant - k)
+    -in rest, cooldown of skills must also reset
+    -pet healing must be after enemies' turn
     -Level up system [on going - st]
-    -implement story [on going - st]
+    -world1 mission3 missing some story parts, need to recover
     -fix distance and spacing [ongoing for world 1 - k]
     -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
     -Implement the choices in World 3: Mission 3 & Mission 5
-
-    - Test Run Game (I think Player is too op) maybe need i buff ang enemies
-
-
-        (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can 
-        only revive once, but unli sa world 1 and 2) -a
-        (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
+    -implement try-catch in decision moment in world2, mission 2
+    -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight)
+    -show race stats and class stats during player selection
+    -Show in character preview
+        -that inventory is currently empty (so that in first fight, dli pilion ang use item and waste action)
+        -barya is 0
+    -make sure pet food has max, to avoid abuse of pet healing (can be max 4 or so pet food)
+    - Test Run Game
 
 ------------------------------------------------------------------
 
@@ -60,6 +62,10 @@ public class NOTES_HERE {
     - HP recovery [done - a]
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
+
+    (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can
+        only revive once, but unli sa world 1 and 2) -a
+        (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
 
      */
 }
