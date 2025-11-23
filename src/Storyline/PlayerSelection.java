@@ -12,6 +12,14 @@ public class PlayerSelection {
         // Race selection
         while (true) {
             try {
+                System.out.println("╔════════════════════════════════════╗");
+                System.out.println("║   -- LEGENDS OF THE SHADOWED --    ║");
+                System.out.println("║         >> REALM RACES <<          ║");
+                System.out.println("╠════════════════════════════════════╣");
+                System.out.println("║ Tikbalang   → HP 95  | Mana 80     ║");
+                System.out.println("║ Kapre       → HP 100 | Mana 70     ║");
+                System.out.println("║ Manananggal → HP 90  | Mana 100    ║");
+                System.out.println("╚════════════════════════════════════╝");
                 System.out.println("Choose your race:");
                 Map<Integer, String> races = ClassMenu.getRaceOptions();
                 for (Map.Entry<Integer, String> entry : races.entrySet()) {
@@ -30,6 +38,26 @@ public class PlayerSelection {
         // Class selection
         while (true) {
             try {
+                System.out.println("╔══════════════════════════════════════╗");
+
+                if (raceChoice == 1) {
+                    System.out.println("║        >> Tikbalang Classes <<       ║");
+                    System.out.println("╠══════════════════════════════════════╣");
+                    System.out.println("║ Spearman  → +90 HP  | +75 Mana       ║");
+                    System.out.println("║ Assassin  → +85 HP  | +80 Mana       ║");
+                } else if (raceChoice == 2) {
+                    System.out.println("║            >> Kapre Class <<         ║");
+                    System.out.println("╠══════════════════════════════════════╣");
+                    System.out.println("║ Gunman   → +80 HP  | +70 Mana        ║");
+                    System.out.println("║ Druid    → +100 HP | +85 Mana        ║");
+                } else if (raceChoice == 3) {
+                    System.out.println("║        >> Manananggal Class <<       ║");
+                    System.out.println("╠══════════════════════════════════════╣");
+                    System.out.println("║ Mage    → +75 HP   | +100 Mana       ║");
+                    System.out.println("║ Assassin → +85 HP  | +80  Mana       ║");
+                }
+
+                System.out.println("╚══════════════════════════════════════╝");
                 System.out.println("Choose your class:");
                 Map<Integer, String> classes = ClassMenu.getClassOptionsForRace(raceChoice);
                 for (Map.Entry<Integer, String> entry : classes.entrySet()) {
