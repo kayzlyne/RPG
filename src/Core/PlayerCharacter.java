@@ -92,17 +92,45 @@ public class PlayerCharacter {
         if (skillCooldown > 0) skillCooldown--;
         if (specialCooldown > 0) specialCooldown--;
     }
-
+/*
+🛡️ ═════ Character Preview ═════ 🛡️
+╔════════════════════════════════╗
+║ Name      : Saint              ║
+║ Race      : Elf                ║
+║ Class     : Mage               ║
+╠════════════════════════════════╣
+║ HP        : 100/100            ║
+║ Mana      : 50/50              ║
+║ Defense   : 5                  ║
+╠════════════════════════════════╣
+║ Inventory : (empty)            ║
+║ Barya     : 0                  ║
+╚════════════════════════════════╝
+System.out.println("𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜");
+📜
+ */
     public void displayStats() {
-        System.out.println("\n📜 Character Preview");
-        System.out.println("──────────────────────────────");
+        System.out.println("\n📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
+        System.out.printf("──────────────────────────────\n");
         System.out.printf("Name      : %s\n", name);
         System.out.printf("Race      : %s\n", race);
         System.out.printf("Class     : %s\n", charClass);
-        System.out.println("──────────────────────────────");
+        System.out.printf("──────────────────────────────\n");
         System.out.printf("HP        : %d/%d\n", hp, maxHp);
         System.out.printf("Mana      : %d/%d\n", mana, getMaxMana());
         System.out.printf("Defense   : %d (Passive)\n", defense);
+        System.out.printf("──────────────────────────────\n");
+        if (inventory.isEmpty()) {
+            System.out.println("Inventory : (empty)");
+        } else {
+            System.out.print("Inventory : ");
+            for (int i = 0; i < inventory.size(); i++) {
+                System.out.print(inventory.get(i).getName());
+                if (i < inventory.size() - 1) System.out.print(", ");
+            }
+            System.out.println();
+        }
+           System.out.printf("Barya     : %d\n", barya);
         System.out.println("──────────────────────────────\n");
     }
 

@@ -13,9 +13,6 @@ public class NOTES_HERE {
     -Implement the choices in World 3: Mission 3 & Mission 5 (sacrifice barya and hp)
     -implement try-catch in decision moment in world2, mission 2
     -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight)
-    -Show in character preview
-        -that inventory is currently empty (so that in first fight, dli pilion ang use item and waste action)
-        -barya is 0
     -make sure pet food has max, to avoid abuse of pet healing (can be max 4 or so pet food)
     - Test Run Game
 
