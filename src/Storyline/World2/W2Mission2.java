@@ -2,12 +2,16 @@ package Storyline.World2;
 
 import Core.*;
 import Storyline.DialogueUtils;
+
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission2 {
     public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
+        boolean isValid = false;
+        int choice = 1;
 
         System.out.println();
         System.out.println("================================================");
@@ -21,18 +25,29 @@ public class W2Mission2 {
 
         System.out.println("Press 1: Take the mushrooms. It could be the cure\n" +
                 "Press 2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
-        System.out.print("You've chosen: ");
-        int choice = scan.nextInt();
-        System.out.println();
 
-        //implement try-catch
+        while (true){
+            try {
+                System.out.print("You've chosen: ");
+                choice = scan.nextInt();
+                System.out.println();
 
-        if (choice == 1){
-            player.modifyHp(-10);
-            System.out.println("???: You’ve just brought yourself closer to death.\n");
-        } else {
-            System.out.println("???: You have keen eyes and a good survival instinct.\n");
+                if (choice == 1){
+                    player.modifyHp(-10);
+                    System.out.println("???: You’ve just brought yourself closer to death.\n");
+                    break;
+                } else if (choice == 2){
+                    System.out.println("???: You have keen eyes and a good survival instinct.\n");
+                    break;
+                } else {
+                    System.out.println("Invalid choice! Please try again.\n");
+                }
+            } catch (InputMismatchException e){
+                System.out.println("Invalid input! Please try again.\n");
+                scan.nextLine();
+            }
         }
+
         scan.nextLine();
         System.out.println("You hear a voice from beside you, and you see an old man dressed in leather and leaves, matching the colors of the marsh.");
         System.out.println("A bag is slung across his chest and his leather belt, carrying herbs and a potion bottle.");

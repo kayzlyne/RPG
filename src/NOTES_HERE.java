@@ -11,7 +11,6 @@ public class NOTES_HERE {
     -world1 mission3 missing some story parts, need to recover
     -fix distance and spacing [ongoing for world 1 - k]
     -Implement the choices in World 3: Mission 3 & Mission 5 (sacrifice barya and hp)
-    -implement try-catch in decision moment in world2, mission 2
     -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight)
     -make sure pet food has max, to avoid abuse of pet healing (can be max 4 or so pet food)
     - Test Run Game
@@ -56,11 +55,15 @@ public class NOTES_HERE {
     - minus barya after player agrees to give sir khai money [done - a]
     - HP recovery [done - a]
 
+    -implement try-catch in decision moment in world2, mission 2 [-ef]
+
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 
     (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can
         only revive once, but unli sa world 1 and 2) -a
         (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
+
+    note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
 
      */
 }
