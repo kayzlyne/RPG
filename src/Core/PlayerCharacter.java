@@ -13,8 +13,6 @@ public class PlayerCharacter {
     public int maxHp;
     public int maxMana;
     private int level;
-
-    // New fields
     private int barya = 0;
     private List<Item>  inventory = new ArrayList<>();
 
@@ -125,8 +123,6 @@ public class PlayerCharacter {
         System.out.println("──────────────────────────────\n");
     }
 
-    // NEW METHODS BELOW THIS LINE -ef
-
     // ----- Inventory -----
 
     public void addItem(Item item) {
@@ -170,25 +166,47 @@ public class PlayerCharacter {
 
     // ----- Barya -----
 
-    public int getBarya() { return barya; }
+    public int getBarya() {
+        return barya;
+    }
 
-    public void setBarya(int amount) { this.barya = amount; }
+    public void setBarya(int amount) {
+        this.barya = amount;
+    }
 
-    public void addBarya(int amount) { this.barya += amount; }
+    public void addBarya(int amount) {
+        this.barya += amount;
+    }
 
-    // ----- Mana and Defense setters/getters for Shop -----
+    // ----- Mana, hp, and Defense setters/getters -----
 
     public int getMaxMana() {
         return raceType.getBaseMana() + classType.getBonusMana();
     }
 
     public void setMana(int mana) {
-        this.mana = Math.min(mana, getMaxMana());
+        this.mana = mana;
     }
 
-    public int getDefense() { return defense; }
+    public int getMana(){
+        return mana;
+    }
 
-    public void setDefense(int defense) { this.defense = defense; }
+    public void setHp(int hp){
+        this.hp = hp;
+    }
+
+    public int getHp(){
+        return hp;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
 
     // ----- Pet system -----
 

@@ -9,8 +9,8 @@ public class NOTES_HERE {
     -make new method for resetting cooldown of skills
     -Level up system [on going - st]
     -fix distance and spacing [ongoing for world 1 - k]
-    -Implement the choices in World 3: Mission 5 (sacrifice hp or mana)
     -adjust barya/rewards system (or adjust shop pricing bc rn the prices seem too expensive when compared with what player earns)
+    -settle on a uniform format (re: emojis used and phrasing for try-catch scenarios)
     - Test Run Game
 
 ------------------------------------------------------------------
@@ -60,6 +60,7 @@ public class NOTES_HERE {
     -implement try-catch in decision moment in world2, mission 2 [-ef]
     -world1 mission3 missing some story parts, need to recover [-ef]
     -Implement the choices in World 3: Mission 3 (sacrifice barya or armor) [-ef]
+    -Implement the choices in World 3: Mission 5 (sacrifice hp or mana) [-ef]
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 
