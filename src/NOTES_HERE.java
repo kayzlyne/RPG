@@ -1,6 +1,7 @@
 public class NOTES_HERE {
 
     /*
+    note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
 
     TO DO!!!:
     -Insert Boss Battles (tria and erika)
@@ -8,7 +9,8 @@ public class NOTES_HERE {
     -make new method for resetting cooldown of skills
     -Level up system [on going - st]
     -fix distance and spacing [ongoing for world 1 - k]
-    -Implement the choices in World 3: Mission 3 & Mission 5 (sacrifice barya and hp)
+    -Implement the choices in World 3: Mission 5 (sacrifice hp or mana)
+    -adjust barya/rewards system (or adjust shop pricing bc rn the prices seem too expensive when compared with what player earns)
     - Test Run Game
 
 ------------------------------------------------------------------
@@ -57,6 +59,7 @@ public class NOTES_HERE {
 
     -implement try-catch in decision moment in world2, mission 2 [-ef]
     -world1 mission3 missing some story parts, need to recover [-ef]
+    -Implement the choices in World 3: Mission 3 (sacrifice barya or armor) [-ef]
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 
@@ -64,7 +67,7 @@ public class NOTES_HERE {
         only revive once, but unli sa world 1 and 2) -a
         (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
 
-    note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
+
 
      */
 }

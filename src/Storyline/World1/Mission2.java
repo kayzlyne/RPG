@@ -107,6 +107,9 @@ public class Mission2 {
             } catch (InputMismatchException e) {
                     System.out.println("❌ Invalid input. Please enter 0 or 1.\n");
                     scan.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                scan.nextLine();
             }
         }
 

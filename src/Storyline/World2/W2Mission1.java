@@ -43,7 +43,7 @@ public class W2Mission1 {
         scan.nextLine();
         System.out.println(player.name + ": It’ll be too late if we go to the city.");
         scan.nextLine();
-        System.out.println(player.name + ": Stay conscious, I’ll find something to treat you.");
+        System.out.println(player.name + ": Stay conscious, I’ll find something to treat you with.");
         scan.nextLine();
 
         System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.\n");

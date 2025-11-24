@@ -248,6 +248,10 @@ public class PlayerCharacter {
                 " (Total Defense: " + defense + ")");
     }
 
+    public int getArmorLevel(){
+        return armorLevel;
+    }
+
     public void rest() {
         hp = maxHp;
         mana = maxMana;

@@ -3,11 +3,13 @@ package Storyline.World3;
 import Core.PlayerCharacter;
 import Storyline.DialogueUtils;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class W3Mission3 {
     public static void w3mission3(PlayerCharacter player) {
         Scanner sc = new Scanner(System.in);
+        int choice = 0;
 
         System.out.println("================================================");
         System.out.println("     MISSION 3: A BARGAIN AT THE BORDER  ");
@@ -39,13 +41,11 @@ public class W3Mission3 {
         sc.nextLine();
         System.out.println("She circles you, her presence freezing the air around your body.\n");
         sc.nextLine();
-        System.out.println("White Lady: The Diwata cannot wield the blade, for she is already bonded to a weapon,\nand the Babaylan cannot use it, for she is forbidden from raising that blade against her own kind.\nIt must be you, child of dusk. You are not human, yet your heart still beats with choice.\nTo open the path, you must surrender what binds you to your true nature.\n");
+        System.out.println("White Lady: The Diwata cannot wield the blade, for she is already bonded to a weapon,\nand the Babaylan cannot use it, for she is forbidden from raising that blade against her own kind.\nIt must be you, child of dusk. You are not human, yet your heart still beats with choice.\nTo open the path, you must surrender what binds you to the material world.\n");
         sc.nextLine();
         System.out.println("Andrea: What does that mean?\n");
         sc.nextLine();
-        System.out.println("White Lady: Each soul bears an essence — strength, freedom, cunning, or desire.\nIt is your anchor to what you are. Give it up, and the moonlight will reveal the way.\n");
-        sc.nextLine();
-        System.out.println("Kheila: That’s what she meant in the scroll… “The sacrifice of truth.”\nYour essence is who you are. Without it, you’ll never be the same.\n");
+        System.out.println("White Lady: Mortals cling to possessions — wealth, armor, safety. To walk the moon’s road, you must surrender what protects you in this world.\n");
         sc.nextLine();
         System.out.println("The White Lady stops before you, her eyes two pale orbs of light.\n");
         sc.nextLine();
@@ -53,18 +53,48 @@ public class W3Mission3 {
         sc.nextLine();
 
         // !!! NEEDS ADJUSTMENT AND IMPLEMENTATION
-        System.out.println("Gameplay Choice: The Sacrifice of Self");
+        System.out.println("[Press 1] You lose all the barya you’ve earned so far.\n" +
+                "[Press 2] You lose all armor upgrades.\n");
 
-        System.out.println("Depending on your mythical race, the player must choose one essence to give up:");
-        //if KAPRE, result; if TIKBALANG, result; if MANANGGAL, result;
+        while (true){
+            try {
+                System.out.print("You've chosen: ");
+                choice = sc.nextInt();
+                System.out.println();
 
-        System.out.println("White Lady whispers: No longer shall you soar above the world. Instead, you will move within its silence.");
-        sc.nextLine();
-        System.out.println("After the choice is made:");
-        sc.nextLine();
-        System.out.println("The White Lady extends her hand. A pale light flows from your chest into her palm. You feel your essence torn away, leaving a hole in your heart.");
-        sc.nextLine();
-        System.out.println("The ground trembles as the Balete’s roots part, revealing a spiral staircase of stone leading downward, glowing faintly in silver light.");
+                if (choice == 1){
+                    System.out.println("White Lady: Prosperity binds the spirit to comfort. You have released it, and so I shall let you pass.\n");
+                    player.setBarya(0);
+                    System.out.println("🏦 Total barya: " + player.getBarya());
+                    break;
+                } else if (choice == 2){
+                    System.out.println("White Lady: Your material armor was a promise of protection to your body, but now the moon shall shield your soul instead.\n");
+                    int armor = player.getArmorLevel();
+                    if (armor == 0){
+                        player.setDefense(5);
+                    } else if (armor == 1){
+                        player.setDefense(player.getDefense() - 2);
+                    } else if (armor == 2){
+                        player.setDefense(player.getDefense() - 5);
+                    } else if (armor == 3){
+                        player.setDefense(player.getDefense() - 10);
+                    } else {
+                        player.setDefense(7);
+                    }
+                    break;
+                } else {
+                    System.out.println("⚠️ Invalid choice! Please try again.\n");
+                }
+            } catch (InputMismatchException e){
+                System.out.println("❌ Invalid input! Please try again.\n");
+                sc.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                sc.nextLine();
+            }
+        }
+
+        System.out.println("The ground trembles as the Balete’s roots part, revealing a spiral staircase of stone leading downward, glowing faintly in silver light.\n");
         sc.nextLine();
         System.out.println("White Lady: The path opens only to those who understand loss. Step carefully, for the moon remembers all who bleed for its light.");
         sc.nextLine();

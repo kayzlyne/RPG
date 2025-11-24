@@ -57,7 +57,7 @@ public class W2Mission5 {
         System.out.println("[You encountered 7 henchmen of Tria. 3 Tiktiks, 2 Abwak, 2 Aswang. Choose a target and an attack]\n{Boss cannot be chosen until henchmen are wiped out}\n");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIKTIK, 3);
+        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIKTIK, 3);
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.ABWAK, 2);
         List<Enemy> enemies3 = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 2);
         BattleManager battle = new BattleManager();
@@ -75,7 +75,7 @@ public class W2Mission5 {
 
         if (!survived) {
             return false;
-        }
+        } */
 
         //Boss Battle
         System.out.println("\uD83D\uDCB0 You earned 30 barya for winning the battle!");
