@@ -74,7 +74,7 @@ public class Mission3 {
         scan.nextLine();
         player.addBarya(20);
 
-        player.rest();
+        //player.rest();
         return true;
     }
 }

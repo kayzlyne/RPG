@@ -7,7 +7,6 @@ public class NOTES_HERE {
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
     -Level up system [on going - st]
-    -world1 mission3 missing some story parts, need to recover
     -fix distance and spacing [ongoing for world 1 - k]
     -Implement the choices in World 3: Mission 3 & Mission 5 (sacrifice barya and hp)
     - Test Run Game
@@ -57,6 +56,7 @@ public class NOTES_HERE {
     - HP recovery [done - a]
 
     -implement try-catch in decision moment in world2, mission 2 [-ef]
+    -world1 mission3 missing some story parts, need to recover [-ef]
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 

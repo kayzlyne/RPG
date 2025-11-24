@@ -9,6 +9,10 @@ import java.util.Scanner;
 public class Intro2 {
     public static boolean intro(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Conscious Diwata: I’ve woken them all up. They’re escaping towards the city now. I’ll help you fight the Bungisngis. I’m Andrea, you are?\n");
+        scan.nextLine();
+        System.out.println(player.name + ": I'm " + player.name + ", let’s take this laughing monster down, Andrea.\n");
+        scan.nextLine();
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");
         scan.nextLine();
