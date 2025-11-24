@@ -16,7 +16,7 @@ public class PlayerCharacter {
 
     // New fields
     private int barya = 0;
-    private List<Item> inventory = new ArrayList<>();
+    private List<Item>  inventory = new ArrayList<>();
 
     public List<Item> getInventory() {
         return inventory;
@@ -92,23 +92,7 @@ public class PlayerCharacter {
         if (skillCooldown > 0) skillCooldown--;
         if (specialCooldown > 0) specialCooldown--;
     }
-/*
-🛡️ ═════ Character Preview ═════ 🛡️
-╔════════════════════════════════╗
-║ Name      : Saint              ║
-║ Race      : Elf                ║
-║ Class     : Mage               ║
-╠════════════════════════════════╣
-║ HP        : 100/100            ║
-║ Mana      : 50/50              ║
-║ Defense   : 5                  ║
-╠════════════════════════════════╣
-║ Inventory : (empty)            ║
-║ Barya     : 0                  ║
-╚════════════════════════════════╝
-System.out.println("𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜");
-📜
- */
+
     public void displayStats() {
         System.out.println("\n📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
         System.out.printf("──────────────────────────────\n");

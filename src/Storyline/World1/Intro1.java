@@ -15,17 +15,6 @@ public class Intro1 {
         System.out.println();
         DialogueUtils.pause();
 
-/*
-        System.out.println("+------------------------------------------------+");
-        System.out.println("|                                                |");
-        System.out.println("|                BIRINGAN CITY                   |");
-        System.out.println("|                                                |");
-        System.out.println("|     A city of light and lurking darkness.      |");
-        System.out.println("|                                                |");
-        System.out.println("+------------------------------------------------+");
-        System.out.println();
- */
-
         System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
         System.out.println("║                                                                                                                                                       ║ ");
         System.out.println("║   ░███████████░██                     ░████████   ░██         ░██                                                 ░██████  ░██   ░██                  ║ ");
