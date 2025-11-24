@@ -41,7 +41,23 @@ public class W3Mission1 {
         sc.nextLine();
         System.out.println("You nod and begin to search for any clues and materials that could be of help. As you walk down the mountain,\nyou notice claw marks on the trees.\nYou and Andrea begin to cautiously follow the trail and eventually end up with a small clearing with a fallen tree in the middle.\nYou scan the area and see a small, ragged satchel beside the tree trunk. You inspect it and find Recovery potions and a pack of pet feed.\n");
         sc.nextLine();
+
         //Player obtains HP Potion, MANA Potion, PET Feed
+        Item hpPotion = new Item("Health Potion", 0, "Restores HP to full", ItemType.HEALTH);
+        Item manaPotion = new Item("Mana Potion", 0, "Restores Mana to full", ItemType.MANA);
+        Item petFood = new Item("Pet Food", 0, "Increases pet's healing power", ItemType.PET_FOOD);
+
+        player.addItem(hpPotion);
+        player.addItem(manaPotion);
+
+        if (player.hasPet()) {
+            player.getPet().increaseHealingPower(5); // increase healing
+            System.out.println("🍖 You found Pet Food! Your pet's healing power has increased by 5 HP!");
+        } else {
+            System.out.println("🍖 You found Pet Food, but you don't have a pet. The item is discarded.");
+        }
+
+        System.out.println("🧪 You found a Health Potion and a Mana Potion!\n");
         System.out.println("Andrea: That’s a nice find!\n");
         sc.nextLine();
         System.out.println(player.name + ": Indeed. We should go explore the mountain some more.\n");
@@ -65,8 +81,6 @@ public class W3Mission1 {
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
         sc.nextLine();
         player.addBarya(15);
-
-        player.rest();
 
         if (player.isAlive()) {
             System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\n");

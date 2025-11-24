@@ -79,7 +79,6 @@ public class W2Mission3 {
         System.out.println("Pandai: Very good. Mogul is a place that cannot be navigated, but the tambalan can point you to the right direction,");
         sc.nextLine();
         System.out.println("Pandai: and the blessed bolo will lead the way. Good luck, young hero.");
-        player.rest();
 
         DialogueUtils.pause();
         return true;

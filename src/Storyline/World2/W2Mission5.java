@@ -113,7 +113,6 @@ public class W2Mission5 {
         System.out.println("The path ahead stretches into darkness once more. But somewhere beyond it lies Mt. Kanatuan. And with it, the truth behind the Babaylan’s sinister plan.\n");
         sc.nextLine();
 
-        player.rest();
         DialogueUtils.pause();
 
 

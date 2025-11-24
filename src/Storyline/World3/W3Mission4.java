@@ -43,7 +43,6 @@ public class W3Mission4 {
         sc.nextLine();
         player.addBarya(20);
 
-        player.rest();
 
         System.out.println("The battle is fierce, but the power of Mogul still flows through your veins.\n" +
                 "When the last guardian falls, silence returns, broken only by the faint hum of the Blade.\n");

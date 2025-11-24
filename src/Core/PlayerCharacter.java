@@ -25,6 +25,8 @@ public class PlayerCharacter {
     // Pet support
     private Pet pet;
     private boolean hasPet = false;
+    private int petHealCounter = 0;
+    private int petFoodUsed = 0;
 
     // Cooldown counters
     private int skillCooldown = 0;
@@ -201,14 +203,27 @@ public class PlayerCharacter {
 
     public void petHeal() {
         if (hasPet && pet != null) {
-            hp += pet.getHealingPower();
 
-            // cap HP so it doesn't exceed max
-            int maxHp = raceType.getBaseHp() + classType.getBonusHp();
-            if (hp > maxHp) hp = maxHp;
+            petHealCounter++;
+            if (petHealCounter >= 2) {
+                hp += pet.getHealingPower();
 
-            System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
+                // cap HP so it doesn't exceed max
+                int maxHp = raceType.getBaseHp() + classType.getBonusHp();
+                if (hp > maxHp) hp = maxHp;
+
+                System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
+                petHealCounter = 0;
+            }
         }
+    }
+
+    public int getPetFoodUsed() {
+        return petFoodUsed;
+    }
+
+    public void incrementPetFoodUsed() { // Keep track of Pet upgrades max of 4
+        petFoodUsed++;
     }
 
     public void buyArmor() {

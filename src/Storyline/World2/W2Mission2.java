@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class W2Mission2 {
     public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
-        boolean isValid = false;
         int choice = 1;
 
         System.out.println();
