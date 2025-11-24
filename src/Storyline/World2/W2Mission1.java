@@ -21,19 +21,19 @@ public class W2Mission1 {
                 "You see Andrea heavily injured on the ground, the Bungisngis limping towards her. You rush in to protect her.\n");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
+        /*List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, true);
 
         if (!survived) {
             return false;
-        }
+        } */
 
         System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
         scan.nextLine();
         player.addBarya(10);
 
-        player.rest();
+        //player.rest();
 
         System.out.println("Andrea: Finally, you took it down, friend.\n");
         scan.nextLine();

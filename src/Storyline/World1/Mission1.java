@@ -28,7 +28,7 @@ public class Mission1 {
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 5);
         BattleManager battle = new BattleManager();
-        battle.startBattle(player, enemies, 1, false);
+        //battle.startBattle(player, enemies, 1, false);
 
 
         System.out.println("\n\nSean: Thank you so much. I owe you my livelihood. I wouldn’t have made it through the end of this month without that merchandise.");
