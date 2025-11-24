@@ -12,7 +12,7 @@ public class PlayerCharacter {
     private int armorLevel = 0;
     public int maxHp;
     public int maxMana;
-
+    private int level;
 
     // New fields
     private int barya = 0;
@@ -40,6 +40,11 @@ public class PlayerCharacter {
         this.maxMana = raceType.getBaseMana() + classType.getBonusMana();
         this.hp = maxHp;
         this.mana = maxMana;
+        this.level = 1;
+    }
+
+    public int getLevel() {
+        return level;
     }
 
     public boolean isAlive() {
@@ -236,6 +241,38 @@ public class PlayerCharacter {
         System.out.println(name + " was able to get some rest.");
         System.out.println("Health and Mana recovered to full!");
         System.out.println();
+    }
+
+    /**
+     * Level Up Method
+     *
+     * For the level up system, there are 4 quadratic growth formulas that we can
+     * use:
+     * 1. Multiplicative (steady percentage growth)
+     * maxHp = maxHp * pow(1.10, level -1)
+     *
+     * 2. Diminishing incremental gains (front‑loaded):
+     * maxHp = maxHp + sum( floor( startGain * decay^(i) ) )
+     *
+     * 3. Soft cap (logistic/exponential approach to a ceiling):
+     * maxHp = maxHp + (cap - baseHp) * (1 - exp(-level * k))
+     *
+     * 4. Piecewise (fast early, stabilize later).
+     * if (level < threshold) {
+     * maxHp = maxHp + highGain;
+     * } else {
+     * maxHp = maxHp + lowGain;
+     * }
+     *
+     *
+     * It will be up to the us which one to use but multiplicative will be used for
+     * now
+     */
+    public void levelUp() {
+        level++;
+
+        hp = maxHp = (int) Math.round(maxHp * Math.pow(1.10, 1));
+        mana = maxMana = (int) Math.round(maxMana * Math.pow(1.10, 1));
     }
 }
 

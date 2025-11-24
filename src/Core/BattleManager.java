@@ -119,14 +119,16 @@ public class BattleManager {
         }
 
         if (player.isAlive()) {
-            System.out.println("🎉" + player.name + " defeated all enemies!");
+            System.out.println("\n┏━━━━━★★★★★ QUEST COMPLETE ★★★★★━━━━━━┓");
+            System.out.println("  [🎉]" + player.name + " defeated all enemies!");
             int reward = isBossBattle ? 100 : 50;
             player.setBarya(player.getBarya() + reward);
-            System.out.println("💰 You received " + reward + " barya!");
-            System.out.println("🏦 Total barya: " + player.getBarya());
+            System.out.println("  [💰] You received " + reward + " barya!");
+            System.out.println("  [↑] Level Up Achieved! ");
+            player.levelUp();
+            System.out.println("  [🏦] Total barya: " + player.getBarya());
+            System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
         }
-
-
         return true;
     }
 }
