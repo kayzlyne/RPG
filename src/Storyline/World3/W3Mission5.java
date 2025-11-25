@@ -28,10 +28,12 @@ public class W3Mission5 {
         sc.nextLine();
         System.out.println("As you step deeper, voices echo around you. Some sound like lost loved ones, while others sound like the\n" +
                 "vengeful screams of enemies you’ve slain.\n");
+
+        sc.nextLine();
+        System.out.println("[Press 1] Follow the voices.\n[Press 2] Ignore them and keep going.\n");
+
         while (true) {
             try {
-                sc.nextLine();
-                System.out.println("Press 1: Follow the voices.\nPress 2: Ignore them and keep going.");
                 System.out.print("Enter your choice: ");
                 choice = sc.nextInt();
 
@@ -61,16 +63,15 @@ public class W3Mission5 {
             }
         }
 
+        System.out.println("Section 2: The Split Passage\n");
+        System.out.println("Three tunnels stretch ahead, each marked with symbols carved into the stone: a moon, a sun, and a star.\n");
+        System.out.println("[Press 1] Enter the Moon path.");
+        System.out.println("[Press 2] Enter the Sun path.");
+        System.out.println("[Press 3] Enter the Star path.");
 
         while (true) {
             try {
-                System.out.println("Section 2: The Split Passage");
-                System.out.println("Three tunnels stretch ahead, each marked with symbols carved into the stone: a moon, a sun, and a star.");
-                System.out.println("Press 1: Enter the Moon path.");
-                System.out.println("Press 2: Enter the Sun path.");
-                System.out.println("Press 3: Enter the Star path.");
                 System.out.print("Enter your choice: ");
-
                 choice = sc.nextInt();
 
                 if (choice == 1) {
@@ -104,25 +105,49 @@ public class W3Mission5 {
         sc.nextLine();
         System.out.println(player.name + ": We’ve come this far. Tell us what must be done.\n");
         sc.nextLine();
-        System.out.println("White Lady: The door will open only to one who understands balance. You must give up what anchors\n" +
-                "you most. Not your power, but your purpose.\n");
+        System.out.println("White Lady: The door opens only to one who understands sacrifice. Not of spirit, not of pride – but of the body that carries your will.\n");
         sc.nextLine();
-        System.out.println("Andrea: What does that mean?\n");
+        System.out.println("Andrea steps forward, alarmed.\n");
         sc.nextLine();
-        System.out.println("White Lady: If your strength is bound by vengeance, you must forsake it. If it’s guided by pride,\n" +
-                "you must humble yourself. The maze tests not your might, but your heart.\n");
+        System.out.println("Andrea: What do you mean? What kind of sacrifice?\n");
         sc.nextLine();
-        System.out.println("Kheila: So… the sacrifice isn’t physical?\n");
+        System.out.println("White Lady: To cross this threshold, you must surrender half of what sustains you. Either your life-force or the moon-forged mana that fuels your power.\n");
         sc.nextLine();
-        System.out.println("White Lady: No. It’s the reason you fight. To open this door, you must choose what drives you,\n" +
-                "and let it die here.\n");
+        System.out.println("Kheila’s voice trembles.\n");
         sc.nextLine();
-        //System.out.println("Choices:"); IMPLEMENT !!!
-        System.out.println("[Press 1] Sacrifice your vengeance – You lose a powerful attack, but gain the blessing of clarity.");
-        System.out.println("[Press 2] Sacrifice your fear – You gain resistance to illusions and mental attacks.");
-        System.out.println("[Press 3] Sacrifice your pride – You unlock the ability to protect allies at your own expense.");
+        System.out.println("Kheila: Half? That’s– that’s irreversible.\n");
+        sc.nextLine();
+        System.out.println("White Lady: Strength and magic shape every path you have walked. Choose which burden you will lighten, and which wound you will carry forward.\n");
+        sc.nextLine();
 
-        System.out.println("As soon as the choice is made, the Blade of Bulan glows, absorbing the essence of what was sacrificed.\n");
+        System.out.println("[Press 1] Sacrifice half of your current hp. Your vitality withers.");
+        System.out.println("[Press 2] Sacrifice half of your current mana. Your magical core dims.");
+
+        while (true){
+            try {
+                System.out.print("Enter your choice: ");
+                choice = sc.nextInt();
+                if (choice == 1) {
+                    player.setHp(player.getHp() / 2);
+                    System.out.println("White Lady: Your life-force narrows to a fragile thread… yet the moon often favors the desperate.");
+                    break;
+                } else if (choice == 2) {
+                    player.setMana(player.getMana() / 2);
+                    System.out.println(" White Lady: Power wanes, but resolve sharpens. The moon tests those who rely not on spells, but on will.");
+                    break;
+                } else {
+                    System.out.println("⚠️ Invalid choice. Please enter 1 or 2 only.\n");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("❌ Invalid input. Please enter a number (1 or 2).\n");
+                sc.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                sc.nextLine();
+            }
+        }
+
+        System.out.println("The Blade of Bulan glows, absorbing the essence of what was sacrificed and locking it into its lunar steel.\n");
         sc.nextLine();
         System.out.println("White Lady: You have chosen well. The Blade now mirrors your truth. Go, bearer of the moon’s will.\n");
         sc.nextLine();

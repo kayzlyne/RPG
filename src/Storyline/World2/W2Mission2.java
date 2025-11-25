@@ -2,12 +2,15 @@ package Storyline.World2;
 
 import Core.*;
 import Storyline.DialogueUtils;
+
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class W2Mission2 {
     public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
+        int choice = 1;
 
         System.out.println();
         System.out.println("================================================");
@@ -21,18 +24,29 @@ public class W2Mission2 {
 
         System.out.println("Press 1: Take the mushrooms. It could be the cure\n" +
                 "Press 2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
-        System.out.print("You've chosen: ");
-        int choice = scan.nextInt();
-        System.out.println();
 
-        //implement try-catch
+        while (true){
+            try {
+                System.out.print("You've chosen: ");
+                choice = scan.nextInt();
+                System.out.println();
 
-        if (choice == 1){
-            player.modifyHp(-10);
-            System.out.println("???: You’ve just brought yourself closer to death.\n");
-        } else {
-            System.out.println("???: You have keen eyes and a good survival instinct.\n");
+                if (choice == 1){
+                    player.modifyHp(-10);
+                    System.out.println("???: You’ve just brought yourself closer to death.\n");
+                    break;
+                } else if (choice == 2){
+                    System.out.println("???: You have keen eyes and a good survival instinct.\n");
+                    break;
+                } else {
+                    System.out.println("Invalid choice! Please try again.\n");
+                }
+            } catch (InputMismatchException e){
+                System.out.println("Invalid input! Please try again.\n");
+                scan.nextLine();
+            }
         }
+
         scan.nextLine();
         System.out.println("You hear a voice from beside you, and you see an old man dressed in leather and leaves, matching the colors of the marsh.");
         System.out.println("A bag is slung across his chest and his leather belt, carrying herbs and a potion bottle.");
@@ -66,10 +80,10 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("Tambalan: She will live. But your debt begins now.");
         scan.nextLine();
-        System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
+        /*System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
         scan.nextLine();
-        player.rest();
-        System.out.println("A few moments later, your brief respite is interrupted as a sudden shriek cuts through the marshlands, high and guttural.\n From the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\n An Aswang, its body shifting grotesquely between forms,crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
+        player.rest(); few moments later, your brief respite is interrupted as a */
+        System.out.println("A sudden shriek cuts through the marshlands, high and guttural.\n From the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\n An Aswang, its body shifting grotesquely between forms,crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
         scan.nextLine();
         System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime. If you wish for your friend to live, you must keep me alive.");
         scan.nextLine();
@@ -78,7 +92,7 @@ public class W2Mission2 {
         System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks.\nThe Tambalan stands his ground, clutching his satchel of herbs, but you know one thing: his fate now lies in your hands.");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 1);
+        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 1);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, false);
 
@@ -87,7 +101,7 @@ public class W2Mission2 {
         }
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
         scan.nextLine();
-        player.addBarya(15);
+        player.addBarya(15); */
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.");
         System.out.println("The silence after the Aswang’s defeat lingers like a festering wound. You lower yourself to the ground, giving your tired legs a moment of rest.");

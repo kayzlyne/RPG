@@ -42,13 +42,13 @@ public class W2Mission3 {
         System.out.println("Pandai: Defeat them, and prove you are worthy. Only then will the weapon be forged anew.");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
+        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
-        }
+        } */
 
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
         sc.nextLine();
@@ -79,7 +79,6 @@ public class W2Mission3 {
         System.out.println("Pandai: Very good. Mogul is a place that cannot be navigated, but the tambalan can point you to the right direction,");
         sc.nextLine();
         System.out.println("Pandai: and the blessed bolo will lead the way. Good luck, young hero.");
-        player.rest();
 
         DialogueUtils.pause();
         return true;

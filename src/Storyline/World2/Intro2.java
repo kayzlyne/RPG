@@ -9,6 +9,10 @@ import java.util.Scanner;
 public class Intro2 {
     public static void intro2(PlayerCharacter player){
         Scanner scan = new Scanner(System.in);
+        System.out.println("Conscious Diwata: I’ve woken them all up. They’re escaping towards the city now. I’ll help you fight the Bungisngis. I’m Andrea, you are?\n");
+        scan.nextLine();
+        System.out.println(player.name + ": I'm " + player.name + ", let’s take this laughing monster down, Andrea.\n");
+        scan.nextLine();
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");
         scan.nextLine();
@@ -21,19 +25,19 @@ public class Intro2 {
         System.out.println("[You have entered Mogul, the land of the Aswangs]\n");
         DialogueUtils.pause();
 
-        System.out.println("+---------------------------------------------------------------------+");
-        System.out.println("|   |\\          /|   _------_     _------_  _         _ _            |");
-        System.out.println("|   | \\        / |  /        \\  /       \\ |         | |            |");
-        System.out.println("|   |  \\      /  | |          |  |          |         | |            |");
-        System.out.println("|   |   \\    /   | |          |  |    _____ |         | |            |");
-        System.out.println("|   |    \\  /    | \\         /  \\       | |         | |            |");
-        System.out.println("|   |     \\/     |  \\_______/    \\______/  \\______/  |________|   |");
-        System.out.println("|                                                                     |");
-        System.out.println("|                    The land of death and Aswangs.                   |");
-        System.out.println("|                                                                     |");
-        System.out.println("+---------------------------------------------------------------------+");
-        System.out.println();
+        System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
+        System.out.println("║                                                                                                                                                       ║ ");
+        System.out.println("║                                                     ▄▀▀▄ ▄▀▄  ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀▀▀▄                                                     ║");
+        System.out.println("║                  (  .      )                       █  █ ▀  █ █      █ █        █   █    █ █    █                  (  .      )                         ║");
+        System.out.println("║            )           (         ,                 ▐  █    █ █      █ █    ▀▄▄ ▐  █    █  ▐    █                           )           (              ║");
+        System.out.println("║             .  '   .   '  .  '  .                     █    █  ▀▄    ▄▀ █     █ █  █    █       █                 .  '   .   '  .  '  .                ║");
+        System.out.println("║         (    , )       (.   )  (                    ▄▀   ▄▀     ▀▀▀▀   ▐▀▄▄▄▄▀ ▐   ▀▄▄▄▄▀    ▄▀▄▄▄▄▄▄▀       (    , )       (.   )  (                 ║");
+        System.out.println("║       .' ) ( . )    ,') '. )  , ( .                █    █             ▐                     █                   .' ) ( . )    ,') '. )  , ( .         ║");
+        System.out.println("║    ). , ( .   (  ) ( , ')  .' (  ,    )           ▐    ▐                                   ▐                  ). , ( .   (  ) ( , ')  .' (  ,    )    ║");
+        System.out.println("║  (_,) . ), ) _) _,')  (, ) '. )  ,. (' )                  >> The land of death and decay. <<                 (_,) . ), ) _) _,')  (, ) '. )  ,. (' )  ║ ");
+        System.out.println("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
 
+        DialogueUtils.pause();
         System.out.println("The moment you cross the threshold to Mogul, a suffocating weight settles into your chest. The air itself is different here.");
         System.out.println("While the Dark Forest’s atmosphere was just as oppressive, the air at least still smelled like cedar and fresh pine.");
         System.out.println("Here, the air is thick, acrid, and laced with the copper sting of blood. Each breath tastes of rust and rot.");

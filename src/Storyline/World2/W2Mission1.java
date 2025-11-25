@@ -21,19 +21,19 @@ public class W2Mission1 {
                 "You see Andrea heavily injured on the ground, the Bungisngis limping towards her. You rush in to protect her.\n");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
+        /*List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS2, 1);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, true);
 
         if (!survived) {
             return false;
-        }
+        } */
 
         System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
         scan.nextLine();
         player.addBarya(10);
 
-        player.rest();
+        //player.rest();
 
 
         System.out.println("Andrea: Finally, you took it down, friend.\n");
@@ -44,7 +44,7 @@ public class W2Mission1 {
         scan.nextLine();
         System.out.println(player.name + ": It’ll be too late if we go to the city.");
         scan.nextLine();
-        System.out.println(player.name + ": Stay conscious, I’ll find something to treat you.");
+        System.out.println(player.name + ": Stay conscious, I’ll find something to treat you with.");
         scan.nextLine();
 
         System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.\n");

@@ -89,7 +89,7 @@ public class Mission2 {
                     System.out.println("You think of the beggar and decide that he needs it more than you do.");
                     System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
                     System.out.println();
-                    System.out.println("Taking it out, you find coins worth 100 barya — ");
+                    System.out.println("Taking it out, you find coins worth 50 barya — ");
                     System.out.println("when before you were certain all your money was given away to the beggar.");
                     System.out.println("And when you look back at the alley, it now appears completely empty.");
                     System.out.println("Did you just get played by an encanto?");
@@ -97,7 +97,7 @@ public class Mission2 {
                     DialogueUtils.pause();
 
                     player.setBarya(player.getBarya() + 50);
-                    System.out.println("💰 You received 100 barya!");
+                    System.out.println("💰 You received 50 barya!");
                     System.out.println("🏦 Total barya: " + player.getBarya());
                     break;
                 } else {
@@ -106,7 +106,10 @@ public class Mission2 {
                 }
             } catch (InputMismatchException e) {
                     System.out.println("❌ Invalid input. Please enter 0 or 1.\n");
-                    scan.nextLine(); // clear invalid input
+                    scan.nextLine();
+            } catch (Exception e) {
+                System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
+                scan.nextLine();
             }
         }
 
@@ -146,17 +149,17 @@ public class Mission2 {
         //player.addBarya(50);
 
         scan.nextLine();
-        System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts.");
+        System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts of the city.");
         scan.nextLine();
         System.out.println("Scribe: These laughing beasts, though dim of wit, are bound by new masters.");
         scan.nextLine();
-        System.out.println("Scribe: They work with tiyanaks who drag Enkantos and Diwatas into the Dark Forest, where they are carted off like mere cattle ");
+        System.out.println("Scribe: They work with tiyanaks who drag Enkantos and Diwatas into the Dark Forest, where they are carted off like mere cattle and brought to the land of the Aswangs.");
         scan.nextLine();
-        System.out.println("Scribe: and brought to the land of the Aswangs. He presses a worn map into your hand, the edges trembling faintly as though");
+        System.out.println("He presses a worn map into your hand, the edges trembling faintly as though the parchment itself feared what it depicted.");
         scan.nextLine();
-        System.out.println("Scribe: the parchment itself feared what it depicted. If you truly wish to stand against them, then steel yourself.");
+        System.out.println("Scribe: If you truly wish to stand against them, then steel yourself. It is not named the Dark Forest for no reason.");
         scan.nextLine();
-        System.out.println("Scribe: It is not named the Dark Forest for no reason. The forest is alive. And it does not forgive trespassers easily.");
+        System.out.println("Scribe: The forest is alive. And it does not forgive trespassers easily.");
         scan.nextLine();
         System.out.println("The chamber grows colder as the candles flicker low.");
         System.out.println("Outside, the wind howls, carrying with it faint echoes of laughter—low, booming, and unending.");

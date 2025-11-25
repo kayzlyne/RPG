@@ -7,6 +7,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+
+
 public class W3Mission1 {
     public static boolean w3mission1 (PlayerCharacter player){
         Scanner sc = new Scanner(System.in);
@@ -39,7 +41,23 @@ public class W3Mission1 {
         sc.nextLine();
         System.out.println("You nod and begin to search for any clues and materials that could be of help. As you walk down the mountain,\nyou notice claw marks on the trees.\nYou and Andrea begin to cautiously follow the trail and eventually end up with a small clearing with a fallen tree in the middle.\nYou scan the area and see a small, ragged satchel beside the tree trunk. You inspect it and find Recovery potions and a pack of pet feed.\n");
         sc.nextLine();
+
         //Player obtains HP Potion, MANA Potion, PET Feed
+        Item hpPotion = new Item("Health Potion", 0, "Restores HP to full", ItemType.HEALTH);
+        Item manaPotion = new Item("Mana Potion", 0, "Restores Mana to full", ItemType.MANA);
+        Item petFood = new Item("Pet Food", 0, "Increases pet's healing power", ItemType.PET_FOOD);
+
+        player.addItem(hpPotion);
+        player.addItem(manaPotion);
+
+        if (player.hasPet()) {
+            player.getPet().increaseHealingPower(5); // increase healing
+            System.out.println("🍖 You found Pet Food! Your pet's healing power has increased by 5 HP!");
+        } else {
+            System.out.println("🍖 You found Pet Food, but you don't have a pet. The item is discarded.");
+        }
+
+        System.out.println("🧪 You found a Health Potion and a Mana Potion!\n");
         System.out.println("Andrea: That’s a nice find!\n");
         sc.nextLine();
         System.out.println(player.name + ": Indeed. We should go explore the mountain some more.\n");
@@ -52,19 +70,17 @@ public class W3Mission1 {
         System.out.println("But your blood runs cold when you hear the chilling wails of infants behind you.\nThe crying soon morphs into cruel, mischievous laughter, and you come face-to-face with the bane of your kind's existence: a tiyanak.");
         System.out.println("Backing away, you hiss when the mist comes into contact with just a small patch of your skin.\nThe tiyanak's laughter rises in pitch when more of its friends come out of the bushes to join it.\nFour of them now stand before you, their sharp black teeth glinting with viscera. Andrea raises her blessed steel,\nand you know exactly what she's thinking: you have no choice but to fight these creatures.");
         sc.nextLine();
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 2);
+        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 4);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
 
         if (!survived) {
             return false;
-        }
+        } */
 
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
         sc.nextLine();
         player.addBarya(15);
-
-        player.rest();
 
         if (player.isAlive()) {
             System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\n");
@@ -108,7 +124,6 @@ public class W3Mission1 {
 
             while (true) {
                 try {
-                    System.out.println("MISSION CHOICE");
                     System.out.println("[Press 1] Create a distraction while Andrea frees Kheila");
                     System.out.println("[Press 2] Stealth attack the Babaylans before they notice you");
                     System.out.print("Enter your choice: ");
@@ -138,13 +153,13 @@ public class W3Mission1 {
             System.out.println("Commander: Intruders! Stop them!\n");
             sc.nextLine();
 
-            List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 2);
+            /*List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 4);
             BattleManager battle2 = new BattleManager();
             survived = battle2.startBattle(player, enemies2, 3, false);
 
             if (!survived) {
                 return false;
-            }
+            } */
 
             if (player.isAlive()) {
                 System.out.println("You and Andrea finish off the last of the enemies. The remaining Babaylans scatter into the forest.\n");
@@ -157,7 +172,7 @@ public class W3Mission1 {
                 System.out.println("Andrea: Let them. We’re looking for them anyway. Why were they after you?\n");
                 sc.nextLine();
                 System.out.println("Kheila: I was one of them. I helped with their rituals until I learned what they were truly planning.\n" +
-                                   "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
+                        "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
                 sc.nextLine();
                 System.out.println(player.name + ": Tria mentioned something. A “Babaylan’s plan.” So it’s true, then?\n");
                 sc.nextLine();

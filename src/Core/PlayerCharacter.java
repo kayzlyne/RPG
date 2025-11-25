@@ -12,11 +12,9 @@ public class PlayerCharacter {
     private int armorLevel = 0;
     public int maxHp;
     public int maxMana;
-
-
-    // New fields
+    private int level;
     private int barya = 0;
-    private List<Item> inventory = new ArrayList<>();
+    private List<Item>  inventory = new ArrayList<>();
 
     public List<Item> getInventory() {
         return inventory;
@@ -25,6 +23,8 @@ public class PlayerCharacter {
     // Pet support
     private Pet pet;
     private boolean hasPet = false;
+    private int petHealCounter = 0;
+    private int petFoodUsed = 0;
 
     // Cooldown counters
     private int skillCooldown = 0;
@@ -40,6 +40,11 @@ public class PlayerCharacter {
         this.maxMana = raceType.getBaseMana() + classType.getBonusMana();
         this.hp = maxHp;
         this.mana = maxMana;
+        this.level = 1;
+    }
+
+    public int getLevel() {
+        return level;
     }
 
     public boolean isAlive() {
@@ -94,19 +99,29 @@ public class PlayerCharacter {
     }
 
     public void displayStats() {
-        System.out.println("\n📜 Character Preview");
-        System.out.println("──────────────────────────────");
+        System.out.println("\n📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
+        System.out.printf("──────────────────────────────\n");
         System.out.printf("Name      : %s\n", name);
         System.out.printf("Race      : %s\n", race);
         System.out.printf("Class     : %s\n", charClass);
-        System.out.println("──────────────────────────────");
+        System.out.printf("──────────────────────────────\n");
         System.out.printf("HP        : %d/%d\n", hp, maxHp);
         System.out.printf("Mana      : %d/%d\n", mana, getMaxMana());
         System.out.printf("Defense   : %d (Passive)\n", defense);
+        System.out.printf("──────────────────────────────\n");
+        if (inventory.isEmpty()) {
+            System.out.println("Inventory : (empty)");
+        } else {
+            System.out.print("Inventory : ");
+            for (int i = 0; i < inventory.size(); i++) {
+                System.out.print(inventory.get(i).getName());
+                if (i < inventory.size() - 1) System.out.print(", ");
+            }
+            System.out.println();
+        }
+           System.out.printf("Barya     : %d\n", barya);
         System.out.println("──────────────────────────────\n");
     }
-
-    // NEW METHODS BELOW THIS LINE -ef
 
     // ----- Inventory -----
 
@@ -151,25 +166,47 @@ public class PlayerCharacter {
 
     // ----- Barya -----
 
-    public int getBarya() { return barya; }
+    public int getBarya() {
+        return barya;
+    }
 
-    public void setBarya(int amount) { this.barya = amount; }
+    public void setBarya(int amount) {
+        this.barya = amount;
+    }
 
-    public void addBarya(int amount) { this.barya += amount; }
+    public void addBarya(int amount) {
+        this.barya += amount;
+    }
 
-    // ----- Mana and Defense setters/getters for Shop -----
+    // ----- Mana, hp, and Defense setters/getters -----
 
     public int getMaxMana() {
         return raceType.getBaseMana() + classType.getBonusMana();
     }
 
     public void setMana(int mana) {
-        this.mana = Math.min(mana, getMaxMana());
+        this.mana = mana;
     }
 
-    public int getDefense() { return defense; }
+    public int getMana(){
+        return mana;
+    }
 
-    public void setDefense(int defense) { this.defense = defense; }
+    public void setHp(int hp){
+        this.hp = hp;
+    }
+
+    public int getHp(){
+        return hp;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
 
     // ----- Pet system -----
 
@@ -184,14 +221,27 @@ public class PlayerCharacter {
 
     public void petHeal() {
         if (hasPet && pet != null) {
-            hp += pet.getHealingPower();
 
-            // cap HP so it doesn't exceed max
-            int maxHp = raceType.getBaseHp() + classType.getBonusHp();
-            if (hp > maxHp) hp = maxHp;
+            petHealCounter++;
+            if (petHealCounter >= 2) {
+                hp += pet.getHealingPower();
 
-            System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
+                // cap HP so it doesn't exceed max
+                int maxHp = raceType.getBaseHp() + classType.getBonusHp();
+                if (hp > maxHp) hp = maxHp;
+
+                System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
+                petHealCounter = 0;
+            }
         }
+    }
+
+    public int getPetFoodUsed() {
+        return petFoodUsed;
+    }
+
+    public void incrementPetFoodUsed() { // Keep track of Pet upgrades max of 4
+        petFoodUsed++;
     }
 
     public void buyArmor() {
@@ -216,6 +266,10 @@ public class PlayerCharacter {
                 " (Total Defense: " + defense + ")");
     }
 
+    public int getArmorLevel(){
+        return armorLevel;
+    }
+
     public void rest() {
         hp = maxHp;
         mana = maxMana;
@@ -224,6 +278,38 @@ public class PlayerCharacter {
         System.out.println(name + " was able to get some rest.");
         System.out.println("Health and Mana recovered to full!");
         System.out.println();
+    }
+
+    /**
+     * Level Up Method
+     *
+     * For the level up system, there are 4 quadratic growth formulas that we can
+     * use:
+     * 1. Multiplicative (steady percentage growth)
+     * maxHp = maxHp * pow(1.10, level -1)
+     *
+     * 2. Diminishing incremental gains (front‑loaded):
+     * maxHp = maxHp + sum( floor( startGain * decay^(i) ) )
+     *
+     * 3. Soft cap (logistic/exponential approach to a ceiling):
+     * maxHp = maxHp + (cap - baseHp) * (1 - exp(-level * k))
+     *
+     * 4. Piecewise (fast early, stabilize later).
+     * if (level < threshold) {
+     * maxHp = maxHp + highGain;
+     * } else {
+     * maxHp = maxHp + lowGain;
+     * }
+     *
+     *
+     * It will be up to the us which one to use but multiplicative will be used for
+     * now
+     */
+    public void levelUp() {
+        level++;
+
+        hp = maxHp = (int) Math.round(maxHp * Math.pow(1.10, 1));
+        mana = maxMana = (int) Math.round(maxMana * Math.pow(1.10, 1));
     }
 }
 

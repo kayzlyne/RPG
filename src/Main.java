@@ -6,19 +6,24 @@ import Storyline.World1.*;
 import Storyline.World2.*;
 import Storyline.World3.*;
 
-public class Main {
+public class
+Main {
     public static void main(String[] args) {
+
 
         int currentWorld = 1;
         Opening.opening();
+
         PlayerCharacter player = PlayerSelection.createPlayer();
         //Shop.enterShop(player);
         //InventoryMenu.open(player);
         Intro1.intro1(player);
         Mission1.mission1(player);
         Mission2.mission2(player);
+
         Shop.enterShop(player);
         InventoryMenu.open(player);
+
         if (!Mission3.mission3(player)) return;
         Shop.enterShop(player);
 

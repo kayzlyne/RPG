@@ -1,24 +1,16 @@
 public class NOTES_HERE {
 
     /*
+    note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
 
     TO DO!!!:
-    -Insert Boss Battles
-    -adjust enemy attack damage (need jud ni ifix cuz nabantayan nko dli siya ranged, it's constant - k)
-    -in rest, cooldown of skills must also reset
-    -pet healing must be after enemies' turn
+    -Insert Boss Battles (tria and erika)
+    -adjust enemy attack damage
+    -make new method for resetting cooldown of skills
     -Level up system [on going - st]
-    -world1 mission3 missing some story parts, need to recover
     -fix distance and spacing [ongoing for world 1 - k]
-    -design and stuff (including alignment) [ongoing - k] (just need to redesign Mogul and Mt. Kanatuan)
-    -Implement the choices in World 3: Mission 3 & Mission 5
-    -implement try-catch in decision moment in world2, mission 2
-    -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight)
-    -show race stats and class stats during player selection
-    -Show in character preview
-        -that inventory is currently empty (so that in first fight, dli pilion ang use item and waste action)
-        -barya is 0
-    -make sure pet food has max, to avoid abuse of pet healing (can be max 4 or so pet food)
+    -adjust barya/rewards system (or adjust shop pricing bc rn the prices seem too expensive when compared with what player earns)
+    -settle on a uniform format (re: emojis used and phrasing for try-catch scenarios)
     - Test Run Game
 
 ------------------------------------------------------------------
@@ -49,6 +41,10 @@ public class NOTES_HERE {
     battle.startBattle(player, enemies);
 
     ✅ DONE !!!
+    -make sure pet food has max, to avoid abuse of pet healing (can be max 4 or so pet food) -a
+    -position rest wisely in story instead of every after fight (napansin nko na unnatural siya if every after especially if naay boss fight) -a
+    -pet healing must be after enemies' turn every after 2 rounds -a
+    - implement World 3 Mission 1 PLayer finds items -a
     -display starting barya as 20 [changed it to 0 to add more sentimental weight to the beggar dilemma -ef]
     -Implement a reward system so the player can earn barya [-ef]
     -display barya every reward event [-ef]
@@ -61,11 +57,18 @@ public class NOTES_HERE {
     - minus barya after player agrees to give sir khai money [done - a]
     - HP recovery [done - a]
 
+    -implement try-catch in decision moment in world2, mission 2 [-ef]
+    -world1 mission3 missing some story parts, need to recover [-ef]
+    -Implement the choices in World 3: Mission 3 (sacrifice barya or armor) [-ef]
+    -Implement the choices in World 3: Mission 5 (sacrifice hp or mana) [-ef]
+
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
 
     (guys I added an extra parameter when calling the battlesystem. (currentworld) kay need i keep track so that if naas world 3 sir khai can
         only revive once, but unli sa world 1 and 2) -a
         (changed the methods with fight scenes from void to bool to continuously check if buhi pa ang player and end the game if di) -a
+
+
 
      */
 }

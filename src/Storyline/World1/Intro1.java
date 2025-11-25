@@ -15,30 +15,22 @@ public class Intro1 {
         System.out.println();
         DialogueUtils.pause();
 
-/*
-        System.out.println("+------------------------------------------------+");
-        System.out.println("|                                                |");
-        System.out.println("|                BIRINGAN CITY                   |");
-        System.out.println("|                                                |");
-        System.out.println("|     A city of light and lurking darkness.      |");
-        System.out.println("|                                                |");
-        System.out.println("+------------------------------------------------+");
-        System.out.println();
- */
+        System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
+        System.out.println("║                                                                                                                                                       ║ ");
+        System.out.println("║   ░███████████░██                     ░████████   ░██         ░██                                                 ░██████  ░██   ░██                  ║ ");
+        System.out.println("║        ░██    ░██                     ░██    ░██                                                                 ░██   ░██       ░██                  ║ ");
+        System.out.println("║        ░██    ░████████   ░███████    ░██    ░██  ░██░██░████ ░██░████████   ░████████  ░██████   ░████████     ░██        ░██░████████ ░██    ░██    ║ ");
+        System.out.println("║        ░██    ░██   ░██ ░██    ░██    ░████████   ░██░███     ░██░██    ░██ ░██    ░██       ░██  ░██    ░██    ░██        ░██   ░██    ░██    ░██    ║ ");
+        System.out.println("║        ░██    ░██   ░██ ░█████████    ░██     ░██ ░██░██      ░██░██    ░██ ░██    ░██  ░███████  ░██    ░██    ░██        ░██   ░██    ░██    ░██    ║ ");
+        System.out.println("║        ░██    ░██   ░██ ░██           ░██     ░██ ░██░██      ░██░██    ░██ ░██   ░███ ░██   ░██  ░██    ░██     ░██   ░██ ░██   ░██    ░██   ░███    ║ ");
+        System.out.println("║        ░██    ░██   ░██  ░███████     ░█████████  ░██░██      ░██░██    ░██  ░█████░██  ░█████░██ ░██    ░██      ░██████  ░██    ░████  ░█████░██    ║ ");
+        System.out.println("║                                                                                    ░██                                                         ░██    ║ ");
+        System.out.println("║                                                                             ░███████                                                      ░███████    ║ ");
+        System.out.println("║                                                                                                                                                       ║ ");
+        System.out.println("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
+        System.out.println("                                                       >>  A city of light and lurking darkness. <<                                                        \n  ");
 
-        System.out.println("+------------------------------------------------------------------------------------------------+");
-        System.out.println("|   ____  ___ ____    ___ _     _  ______     _      _     _      _____   ___ _______ _     _    |");
-        System.out.println("|   |   \\  |  |   \\    |  |\\    | /     \\     /\\     |\\    |     /     \\   |  |  |  |  \\   /     |");
-        System.out.println("|   |    | |  |    |   |  | \\   | |          /  \\    | \\   |     |         |     |      \\ /      |");
-        System.out.println("|   |---<  |  |---<    |  |  \\  | |  _____  /____\\   |  \\  |     |         |     |       Y       |");
-        System.out.println("|   |    | |  |    \\   |  |   \\ | |      | /      \\  |   \\ |     |         |     |       |       |");
-        System.out.println("|   |___/ _|_ |     \\ _|_ |    \\|  \\____/ /        \\ |    \\|      \\_____/ _|_    |       |       |");
-        System.out.println("|                                                                                                |");
-        System.out.println("|                             A city of light and lurking darkness.                              |");
-        System.out.println("|                                                                                                |");
-        System.out.println("+------------------------------------------------------------------------------------------------+");
-        System.out.println();
-
+        DialogueUtils.pause();
         System.out.println("A city filled with glittering riches beyond compare that shines like a beacon for all the darkest creatures of the night.\n" +
                            "But lately, you find that traces of a different breed of darkness have been popping up in various areas of your beloved Biringan.\n" +
                            "With this in mind, you set out to look for clues and follow the trail left behind by the ones threatening to devour the light \n" +

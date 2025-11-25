@@ -13,6 +13,7 @@ public enum EnemyType {
     BABAYLANS("Babaylans", 12, 16, "casts a curse on you"),
     BABAYLANS2("Babaylan Sentinels", 13, 17, "casts a curse on you"),
     HUMANS("Humans", 10, 15, "fires their gun");
+    //insert tria and erika bosses
 
     public final String typeName;
     public final int minDamage;
