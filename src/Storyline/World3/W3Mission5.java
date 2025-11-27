@@ -49,13 +49,13 @@ public class W3Mission5 {
                     sc.nextLine();
                     break;
                 } else {
-                    System.out.println("⚠️ Invalid choice. Try again.\n");
-                }
+                    System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
 
+                }
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number (1 or 2).");
+                System.out.println("❌ Invalid input. Please enter 1 or 2.");
             } catch (InputMismatchException e) {
-                System.out.println("Please input a valid number (1 or 2).");
+                System.out.println("❌ Invalid input. Please enter 1 or 2.\n");
                 sc.nextLine();
             } catch (Exception e) {
                 System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
@@ -84,11 +84,11 @@ public class W3Mission5 {
                     System.out.println("Star Path: The tunnel collapses behind you. You barely escape.\n");
                     break;
                 } else {
-                    System.out.println("⚠️ Invalid choice. Please enter 1, 2, or 3.\n");
+                    System.out.println("❌ Invalid choice. Please enter 1, 2, or 3.\n");
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Invalid input. Please enter a number (1, 2, or 3).\n");
+                System.out.println("❌ Invalid input. Please enter 1, 2, or 3.\n");
                 sc.nextLine();
             } catch (Exception e) {
                 System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
@@ -136,10 +136,10 @@ public class W3Mission5 {
                     System.out.println(" White Lady: Power wanes, but resolve sharpens. The moon tests those who rely not on spells, but on will.");
                     break;
                 } else {
-                    System.out.println("⚠️ Invalid choice. Please enter 1 or 2 only.\n");
+                    System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("❌ Invalid input. Please enter a number (1 or 2).\n");
+                System.out.println("❌ Invalid input. Please enter 1 or 2.\n");
                 sc.nextLine();
             } catch (Exception e) {
                 System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());

@@ -40,8 +40,9 @@ public class W3Mission4 {
         }
 
         System.out.println("\uD83D\uDCB0 You earned 20 barya for winning the battle!");
-        sc.nextLine();
         player.addBarya(20);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        sc.nextLine();
 
 
         System.out.println("The battle is fierce, but the power of Mogul still flows through your veins.\n" +

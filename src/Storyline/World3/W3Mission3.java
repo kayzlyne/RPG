@@ -83,10 +83,10 @@ public class W3Mission3 {
                     }
                     break;
                 } else {
-                    System.out.println("⚠️ Invalid choice! Please try again.\n");
+                    System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
                 }
-            } catch (InputMismatchException e){
-                System.out.println("❌ Invalid input! Please try again.\n");
+            } catch (InputMismatchException e) {
+                System.out.println("❌ Invalid input. Please enter 1 or 2.\n");
                 sc.nextLine();
             } catch (Exception e) {
                 System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());

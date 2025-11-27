@@ -32,28 +32,28 @@ public class Mission2 {
 
         System.out.println("Beggar: Please, kind stranger, do you have any barya to spare?");
         scan.nextLine();
-        System.out.println("Beggar: I have been sick for days, but I do not have the fifty barya needed to pay for medicine.");
+        System.out.println("Beggar: I have been sick for days, but I do not have the twenty barya needed to pay for medicine.");
         scan.nextLine();
         System.out.println("Beggar: Won’t you spare a poor beggar some mercy?");
         scan.nextLine();
 
         System.out.println("The man starts coughing halfway through his last sentence, his body shaking violently as he’s overwhelmed by the coughing fit,");
         System.out.println("and you fight the urge to say yes to him immediately. You may not be stricken with a terrible illness, but you are not much better off");
-        System.out.println("than this beggar, either, for you only have fifty pesos to your name. But you know that in this part of the city, it’s every man for himself.");
+        System.out.println("than this beggar, either, for you only have twenty pesos to your name. But you know that in this part of the city, it’s every man for himself.");
         System.out.println("If you do not help him, no one else will, and he will be a dead man by tomorrow.");
         scan.nextLine();
 
         while(true) {
 
             System.out.println(">> Do you give away your only money to help a begging stranger?");
-            System.out.println("[1] Yes");
-            System.out.println("[0] No");
+            System.out.println("[Press 1] Yes");
+            System.out.println("[Press 2] No");
             System.out.println();
             System.out.print("Enter your choice: ");
 
             try {
                 int choice = scan.nextInt();
-                if (choice == 0) {
+                if (choice == 2) {
                     System.out.println();
                     System.out.println("You have chosen not to help the beggar.");
                     System.out.println();
@@ -69,7 +69,7 @@ public class Mission2 {
                     System.out.println("You have chosen to help the beggar.");
                     System.out.println();
                     scan.nextLine();
-                    System.out.println(player.name + ": Here’s fifty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
                     System.out.println("Beggar: You would offer me all the money you have?");
                     scan.nextLine();
@@ -96,17 +96,17 @@ public class Mission2 {
                     System.out.println("Shaking your head, you try to put the previous encounter out of your thoughts and instead focus on your mission.");
                     DialogueUtils.pause();
 
-                    player.setBarya(player.getBarya() + 50);
+                    //player.setBarya(player.getBarya() + 50);
+                    player.addBarya(30);
                     System.out.println("💰 You received 50 barya!");
                     System.out.println("🏦 Total barya: " + player.getBarya());
                     break;
                 } else {
-                    System.out.println("❌ Invalid choice. Please enter 0 or 1.\n");
-
+                    System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
                 }
             } catch (InputMismatchException e) {
-                    System.out.println("❌ Invalid input. Please enter 0 or 1.\n");
-                    scan.nextLine();
+                System.out.println("❌ Invalid input. Please enter 1 or 2.\n");
+                scan.nextLine();
             } catch (Exception e) {
                 System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());
                 scan.nextLine();
@@ -142,11 +142,10 @@ public class Mission2 {
         scan.nextLine();
         System.out.println("Scribe: Thank you! Sean is a valued member of our guild. Here, have this as a small token of our gratitude.");
         scan.nextLine();
-        player.setBarya(player.getBarya() + 50);
+        //player.setBarya(player.getBarya() + 50);
+        player.addBarya(50);
         System.out.println("💰 You received 50 barya!");
         System.out.println("🏦 Total barya: " + player.getBarya());
-        //System.out.println("You have received 50 barya!");
-        //player.addBarya(50);
 
         scan.nextLine();
         System.out.println("Scribe: The vanishings are no mere rumor. Our informants speak of Bungisngis prowling the outskirts of the city.");

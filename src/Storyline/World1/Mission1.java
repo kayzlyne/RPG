@@ -29,6 +29,10 @@ public class Mission1 {
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 3);
         BattleManager battle = new BattleManager();
         //battle.startBattle(player, enemies, 1, false);
+        System.out.println("\uD83D\uDCB0 You earned 20 barya for winning the battle!");
+        player.addBarya(20);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        scan.nextLine();
 
         player.levelUp();
 

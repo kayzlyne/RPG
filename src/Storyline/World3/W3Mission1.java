@@ -79,8 +79,9 @@ public class W3Mission1 {
         } */
 
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
-        sc.nextLine();
         player.addBarya(15);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        sc.nextLine();
 
         if (player.isAlive()) {
             System.out.println("After the tedious fight with the tiyanak, you and Andrea sit by the side of a stream to recuperate and recover your energy.\n");
@@ -137,11 +138,11 @@ public class W3Mission1 {
                         System.out.println("You and Andrea move in silently, striking fast. The nearest Babaylan falls before he can even shout. Kheila’s eyes widen in shock as Andrea slices through her bindings.");
                         break;
                     } else {
-                        System.out.println("⚠️ Invalid choice. Please enter 1 or 2.\n");
-                    }
+                        System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
 
+                    }
                 } catch (InputMismatchException e) {
-                    System.out.println("❌ Invalid input. Please enter a number (1 or 2).\n");
+                    System.out.println("❌ Invalid input. Please enter 1 or 2.\n");
                     sc.nextLine();
                 } catch (Exception e) {
                     System.out.println("⚠️ An unexpected error occurred: " + e.getMessage());

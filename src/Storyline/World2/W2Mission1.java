@@ -30,8 +30,9 @@ public class W2Mission1 {
         } */
 
         System.out.println("\uD83D\uDCB0 You earned 10 barya for winning the battle!");
-        scan.nextLine();
         player.addBarya(10);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        scan.nextLine();
 
         //player.rest();
 

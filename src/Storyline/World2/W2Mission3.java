@@ -51,8 +51,9 @@ public class W2Mission3 {
         } */
 
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
-        sc.nextLine();
         player.addBarya(15);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        sc.nextLine();
 
         System.out.println("Once the battle is won, the Pandai approaches you, impressed.");
         sc.nextLine();

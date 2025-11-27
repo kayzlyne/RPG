@@ -14,7 +14,7 @@ public class Intro1 {
                 player.name + " is taking the first step to the battle that will determine the fate of their kind.");
         System.out.println();
         DialogueUtils.pause();
-
+/*
         System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
         System.out.println("║                                                                                                                                                       ║ ");
         System.out.println("║   ░███████████░██                     ░████████   ░██         ░██                                                 ░██████  ░██   ░██                  ║ ");
@@ -29,7 +29,21 @@ public class Intro1 {
         System.out.println("║                                                                                                                                                       ║ ");
         System.out.println("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
         System.out.println("                                                       >>  A city of light and lurking darkness. <<                                                        \n  ");
-
+*/
+        System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
+        System.out.println("║                                                                                                                                                       ║ ");
+        System.out.println("║                   ░████████   ░██         ░██                                                 ░██████  ░██   ░██                                      ║ ");
+        System.out.println("║                   ░██    ░██                                                                 ░██   ░██       ░██                                      ║ ");
+        System.out.println("║                   ░██    ░██  ░██░██░████ ░██░████████   ░████████  ░██████   ░████████     ░██        ░██░████████ ░██    ░██                        ║ ");
+        System.out.println("║                   ░████████   ░██░███     ░██░██    ░██ ░██    ░██       ░██  ░██    ░██    ░██        ░██   ░██    ░██    ░██                        ║ ");
+        System.out.println("║                   ░██     ░██ ░██░██      ░██░██    ░██ ░██    ░██  ░███████  ░██    ░██    ░██        ░██   ░██    ░██    ░██                        ║ ");
+        System.out.println("║                   ░██     ░██ ░██░██      ░██░██    ░██ ░██   ░███ ░██   ░██  ░██    ░██     ░██   ░██ ░██   ░██    ░██   ░███                        ║ ");
+        System.out.println("║                   ░█████████  ░██░██      ░██░██    ░██  ░█████░██  ░█████░██ ░██    ░██      ░██████  ░██    ░████  ░█████░██                        ║ ");
+        System.out.println("║                                                                ░██                                                         ░██                        ║ ");
+        System.out.println("║                                                         ░███████                                                      ░███████                        ║ ");
+        System.out.println("║                                                                                                                                                       ║ ");
+        System.out.println("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
+        System.out.println("                                                       >>  A city of light and lurking darkness. <<                                                   \n  ");
         DialogueUtils.pause();
         System.out.println("A city filled with glittering riches beyond compare that shines like a beacon for all the darkest creatures of the night.\n" +
                            "But lately, you find that traces of a different breed of darkness have been popping up in various areas of your beloved Biringan.\n" +

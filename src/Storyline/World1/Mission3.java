@@ -71,8 +71,9 @@ public class Mission3 {
         } */
 
         System.out.println("\uD83D\uDCB0 You earned 20 barya for winning the battle!");
-        scan.nextLine();
         player.addBarya(20);
+        System.out.println("🏦 Total barya: " + player.getBarya());
+        scan.nextLine();
 
         //player.rest();
         return true;
