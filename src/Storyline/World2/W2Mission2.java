@@ -84,9 +84,9 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("Tambalan: She will live. But your debt begins now.");
         scan.nextLine();
-        /*System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
+        System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
         scan.nextLine();
-        player.rest(); few moments later, your brief respite is interrupted as a */
+        player.rest();
         System.out.println("A sudden shriek cuts through the marshlands, high and guttural.\nFrom the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\nAn Aswang, its body shifting grotesquely between forms,crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
         scan.nextLine();
         System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime. If you wish for your friend to live, you must keep me alive.");
@@ -96,13 +96,13 @@ public class W2Mission2 {
         System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks.\nThe Tambalan stands his ground, clutching his satchel of herbs, but you know one thing: his fate now lies in your hands.");
         DialogueUtils.pause();
 
-        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 1);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 2);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
-        } */
+        }
         System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
         player.addBarya(15);
         System.out.println("🏦 Total barya: " + player.getBarya());
@@ -136,10 +136,10 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("You nod, tightening your grip on your weapon before setting out to find the Pandai.");
         scan.nextLine();
-        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]");
+        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]");
         System.out.println("[\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");
         System.out.println("[\tAndrea joins you on your adventure!\t\t\t\t\t\t]");
-        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]\n");
+        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]\n");
         DialogueUtils.pause();
         return true;
     }

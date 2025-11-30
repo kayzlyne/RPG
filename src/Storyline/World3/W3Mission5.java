@@ -16,18 +16,18 @@ public class W3Mission5 {
         System.out.println("================================================");
         System.out.println();
         System.out.println("The moonlight filters through cracks in the roots above, painting silver streaks across the cave floor.\n" +
-                "The air feels alive. It is breathing, whispering, remembering.\n");
+                           "The air feels alive. It is breathing, whispering, remembering.\n");
         System.out.println("You step through the threshold, and the world falls silent. The air grows cold, thick with the scent of\n" +
-                "damp soil and iron. The walls are made of the twisting roots of the Balete Tree, pulsing faintly like veins\n" +
-                "running through a living entity.\n");
+                           "damp soil and iron. The walls are made of the twisting roots of the Balete Tree, pulsing faintly like veins\n" +
+                           "running through a living entity.\n");
         System.out.println("You press forward. Every corridor bends in strange, impossible ways. Paths you’ve taken seem to vanish \n" +
-                "behind you and bulging ancient eyes open from their slumber as you pass.You realize something as the walls close\n" +
-                "in around you: this place means to swallow you whole.\n");
+                           "behind you and bulging ancient eyes open from their slumber as you pass.You realize something as the walls close\n" +
+                           "in around you: this place means to swallow you whole.\n");
         sc.nextLine();
         System.out.println("Section 1: The Ghastly Path\n"); //changed Whispering Path to Ghastly Path, change if need be
         sc.nextLine();
         System.out.println("As you step deeper, voices echo around you. Some sound like lost loved ones, while others sound like the\n" +
-                "vengeful screams of enemies you’ve slain.\n");
+                           "vengeful screams of enemies you’ve slain.\n");
 
         sc.nextLine();
         System.out.println("[Press 1] Follow the voices.\n[Press 2] Ignore them and keep going.\n");
@@ -99,7 +99,7 @@ public class W3Mission5 {
         System.out.println("Section 3: The Door of Sacrifice\n");
         sc.nextLine();
         System.out.println("At the heart of the maze stands a massive stone door carved with lunar sigils.\n" +
-                "A ghostly figure materializes before you. The White Lady of Balete Drive, her form both sorrowful and radiant.\n");
+                           "A ghostly figure materializes before you. The White Lady of Balete Drive, her form both sorrowful and radiant.\n");
         sc.nextLine();
         System.out.println("White Lady: So you have come for the Blade’s final purpose, but every light demands a shadow.\n");
         sc.nextLine();

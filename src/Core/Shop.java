@@ -13,9 +13,9 @@ public class Shop {
         items.add(new Item("Shield", 75, "Increases defense"));
         items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) Increases pet's healing power")); */
 
-        items.add(new Item("Mana Potion", 100, "Regenerates mana to full", ItemType.MANA));
-        items.add(new Item("Health Potion", 100, "Regenerates HP to full", ItemType.HEALTH));
-        items.add(new Item("Armor Upgrade", 150, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
+        items.add(new Item("Mana Potion", 75, "Regenerates mana to full", ItemType.MANA));
+        items.add(new Item("Health Potion", 75, "Regenerates HP to full", ItemType.HEALTH));
+        items.add(new Item("Armor Upgrade", 125, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
         items.add(new Item("Pet", 100, "A loyal companion who heals you after every round of battle", ItemType.PET));
         items.add(new Item("Pet Food", 50, "Organic entrails fresh from the source :) - Increases pet's healing power", ItemType.PET_FOOD));
 
@@ -23,7 +23,7 @@ public class Shop {
 
     public static void enterShop(PlayerCharacter player) {
         System.out.println("\n=== 🏪 Welcome to the Shop! ===\n");
-        //System.out.println("You have " + player.getBarya() + " barya.\n");
+        System.out.println("You have " + player.getBarya() + " barya.\n");
 
         while (true) {
             System.out.println("Available items:");

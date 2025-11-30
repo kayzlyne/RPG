@@ -70,16 +70,16 @@ public class W3Mission1 {
         System.out.println("But your blood runs cold when you hear the chilling wails of infants behind you.\nThe crying soon morphs into cruel, mischievous laughter, and you come face-to-face with the bane of your kind's existence: a tiyanak.");
         System.out.println("Backing away, you hiss when the mist comes into contact with just a small patch of your skin.\nThe tiyanak's laughter rises in pitch when more of its friends come out of the bushes to join it.\nFour of them now stand before you, their sharp black teeth glinting with viscera. Andrea raises her blessed steel,\nand you know exactly what she's thinking: you have no choice but to fight these creatures.");
         sc.nextLine();
-        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 4);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 3);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
 
         if (!survived) {
             return false;
-        } */
+        }
 
-        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
-        player.addBarya(15);
+        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
+        player.addBarya(25);
         System.out.println("🏦 Total barya: " + player.getBarya());
         sc.nextLine();
 
@@ -154,13 +154,13 @@ public class W3Mission1 {
             System.out.println("Commander: Intruders! Stop them!\n");
             sc.nextLine();
 
-            /*List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 4);
+            List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 3);
             BattleManager battle2 = new BattleManager();
             survived = battle2.startBattle(player, enemies2, 3, false);
 
             if (!survived) {
                 return false;
-            } */
+            }
 
             if (player.isAlive()) {
                 System.out.println("You and Andrea finish off the last of the enemies. The remaining Babaylans scatter into the forest.\n");
@@ -173,7 +173,7 @@ public class W3Mission1 {
                 System.out.println("Andrea: Let them. We’re looking for them anyway. Why were they after you?\n");
                 sc.nextLine();
                 System.out.println("Kheila: I was one of them. I helped with their rituals until I learned what they were truly planning.\n" +
-                        "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
+                                   "They want to merge the powers of Mogul and the mortal world so they can make\nthe Babaylan Mistress the ruler of Biringan City and control all the powers and riches it has to offer.\nI tried to warn the others, but they called me a traitor.\n");
                 sc.nextLine();
                 System.out.println(player.name + ": Tria mentioned something. A “Babaylan’s plan.” So it’s true, then?\n");
                 sc.nextLine();

@@ -54,7 +54,7 @@ public class W3Mission3 {
 
         // !!! NEEDS ADJUSTMENT AND IMPLEMENTATION
         System.out.println("[Press 1] You lose all the barya you’ve earned so far.\n" +
-                "[Press 2] You lose all armor upgrades.\n");
+                           "[Press 2] You lose all armor upgrades.\n");
 
         while (true){
             try {

@@ -42,16 +42,16 @@ public class W2Mission3 {
         System.out.println("Pandai: Defeat them, and prove you are worthy. Only then will the weapon be forged anew.");
         DialogueUtils.pause();
 
-        /* List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 2, false);
 
         if (!survived) {
             return false;
-        } */
+        }
 
-        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
-        player.addBarya(15);
+        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
+        player.addBarya(25);
         System.out.println("🏦 Total barya: " + player.getBarya());
         sc.nextLine();
 

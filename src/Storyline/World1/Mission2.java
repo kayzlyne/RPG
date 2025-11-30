@@ -97,7 +97,7 @@ public class Mission2 {
                     DialogueUtils.pause();
 
                     //player.setBarya(player.getBarya() + 50);
-                    player.addBarya(30);
+                    player.addBarya(50);
                     System.out.println("💰 You received 50 barya!");
                     System.out.println("🏦 Total barya: " + player.getBarya());
                     break;

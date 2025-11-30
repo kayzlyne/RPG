@@ -78,6 +78,7 @@ public class W3Mission6 {
         System.out.println("The ritual circle flares, her body absorbing corrupted power. She becomes monstrous.\n" +
                            "A chimera that's part woman, part shadow flame.\n");
         sc.nextLine();
+
         //[You have angered the leader of the Babaylans. Choose your attack.]
 
         System.out.println("The Blade of Bulan glows fiercely, resonating with your heart. You strike, each blow cutting through\n" +
@@ -103,8 +104,8 @@ public class W3Mission6 {
             return false;
         }
 
-        System.out.println("\uD83D\uDCB0  You earned 30 barya for winning the battle!");
-        player.addBarya(30);
+        System.out.println("\uD83D\uDCB0  You earned 50 barya for winning the battle!");
+        player.addBarya(50);
         System.out.println("🏦 Total barya: " + player.getBarya());
         sc.nextLine();
 

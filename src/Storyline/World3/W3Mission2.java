@@ -16,8 +16,8 @@ public class W3Mission2 {
         System.out.println(player.name + ": Can I see it?");
         sc.nextLine();
         System.out.println("Kheila hands the scroll to you. You gently open the scroll, mindful of causing tears. Unfortunately, however careful you were, the scroll’s state was for the worse. The ink has faded, the surface marred by age and moisture. Most of the writing is smeared and lost in oblivion.\n" +
-                "But near the bottom, a single line remains legible, written in bold, deliberate strokes:\n" +
-                "“Seek the Origin of the Babaylans.”\n");
+                           "But near the bottom, a single line remains legible, written in bold, deliberate strokes:\n" +
+                           "“Seek the Origin of the Babaylans.”\n");
         sc.nextLine();
         System.out.println("Kheila: I’m sorry. The ink must have run when I crossed the river while running from my kin. It’s the only part I could save.\n");
         sc.nextLine();

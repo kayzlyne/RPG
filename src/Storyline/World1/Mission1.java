@@ -19,18 +19,19 @@ public class Mission1 {
         System.out.println("???: Someone help! Please! A thief has stolen my merchandise!");
         scan.nextLine();
 
-        System.out.println("Without even taking a second to think about it, you bolt after five duwendes clearly trying to make a run for it.");
+        System.out.println("Without even taking a second to think about it, you bolt after the two duwendes clearly trying to make a run for it.");
         scan.nextLine();
 
-        System.out.println("[You encountered 5 thief duwendes.]");
+        System.out.println("[You encountered 2 duwende.]");
         System.out.println();
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 3);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.DUWENDE, 2);
         BattleManager battle = new BattleManager();
-        //battle.startBattle(player, enemies, 1, false);
-        System.out.println("\uD83D\uDCB0 You earned 20 barya for winning the battle!");
-        player.addBarya(20);
+        boolean survived = battle.startBattle(player, enemies, 1, false);
+
+        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
+        player.addBarya(25);
         System.out.println("🏦 Total barya: " + player.getBarya());
         scan.nextLine();
 
