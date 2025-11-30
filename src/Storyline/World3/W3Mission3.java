@@ -12,7 +12,7 @@ public class W3Mission3 {
         int choice = 0;
 
         System.out.println("================================================");
-        System.out.println("     MISSION 3: A BARGAIN AT THE BORDER  ");
+        System.out.println("      MISSION 3: A BARGAIN AT THE BORDER  ");
         System.out.println("================================================");
         System.out.println();
         System.out.println("The three of you trek through the Valley of Mist, where moonlight clings to the fog like silk. Eventually, you reach a colossal Balete tree, its roots twisting into the ground like an ancient cage.\n");

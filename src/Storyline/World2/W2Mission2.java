@@ -103,7 +103,7 @@ public class W2Mission2 {
         if (!survived) {
             return false;
         }
-        System.out.println("\uD83D\uDCB0 You earned 15 barya for winning the battle!");
+        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
         player.addBarya(15);
         System.out.println("🏦 Total barya: " + player.getBarya());
         scan.nextLine();

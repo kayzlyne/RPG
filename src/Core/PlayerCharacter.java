@@ -5,10 +5,10 @@ import java.util.List;
 
 public class PlayerCharacter {
     public String name, race, charClass;
-    public int hp, mana, defense = 7;
+    public int hp, mana, defense = 5;
     private Race raceType;
     public ClassArchetype classType;
-    private final int manaRegen = 10;
+    private final int manaRegen = 9;
     private int armorLevel = 0;
     public int maxHp;
     public int maxMana;

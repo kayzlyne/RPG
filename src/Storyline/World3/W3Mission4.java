@@ -10,7 +10,7 @@ public class W3Mission4 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("================================================");
-        System.out.println("       MISSION 4: THE RUINS OF BANWA-AN DAAN  ");
+        System.out.println("      MISSION 4: THE RUINS OF BANWA-AN DAAN  ");
         System.out.println("================================================");
         System.out.println();
         System.out.println("The three of you descend the spiraling staircase beneath the Balete Tree.\nThe temperature drops with every step, your breath fogging in the pale light.\n");
@@ -32,7 +32,7 @@ public class W3Mission4 {
         System.out.println("But before you can move closer, shadows stir at the edges of the chamber and Babaylan Sentinels emerge.\nTwisted humanoid figures cloaked in bone charms, their eyes glowing red with witchfire.\n");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 2);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 3);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
         if (!survived) {
