@@ -30,11 +30,11 @@ public class W2Mission4 {
         System.out.println("Tambalan: Good. The sword knows its master. She must carry it herself.\n");
 
         DialogueUtils.pause();
-        player.rest();
+        /*player.rest();
         DialogueUtils.pause();
 
         System.out.println("The tambalan allows you mere hours to recuperate before he ushers you and Andrea away.\n");
-        sc.nextLine();
+        sc.nextLine(); */
 
         System.out.println("You glance at him with concern.\n");
         sc.nextLine();

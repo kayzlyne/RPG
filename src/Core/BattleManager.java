@@ -51,7 +51,7 @@ public class BattleManager {
                 System.out.println("┃ [1] Basic Attack                      ┃");
                 System.out.println("┃ [2] Skill                             ┃");
                 System.out.println("┃ [3] Special Skill                     ┃");
-                System.out.println("┃ [4] Use Item:                         ┃");
+                System.out.println("┃ [4] Use Item                          ┃");
                 System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
                 try {
                     System.out.print("\n>> Choose action: ");

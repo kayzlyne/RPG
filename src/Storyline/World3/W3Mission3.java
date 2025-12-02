@@ -52,7 +52,6 @@ public class W3Mission3 {
         System.out.println("White Lady: Decide, child of dusk. What will you give to walk in the goddess’s light?\n");
         sc.nextLine();
 
-        // !!! NEEDS ADJUSTMENT AND IMPLEMENTATION
         System.out.println("[Press 1] You lose all the barya you’ve earned so far.\n" +
                            "[Press 2] You lose all armor upgrades.\n");
 
