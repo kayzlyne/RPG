@@ -68,10 +68,10 @@ public class W3Mission3 {
                     System.out.println("🏦 Total barya: " + player.getBarya());
                     break;
                 } else if (choice == 2){
-                    System.out.println("White Lady: Your material armor was a promise of protection to your body, but now the moon shall shield your soul instead.\n");
+                    System.out.println("White Lady: Your material armor was a promise of protection to your fleshly body, but now hope that the moon shall shield your soul instead.\n");
                     int armor = player.getArmorLevel();
                     if (armor == 0){
-                        player.setDefense(5);
+                        player.setDefense(3);
                     } else if (armor == 1){
                         player.setDefense(player.getDefense() - 2);
                     } else if (armor == 2){
@@ -79,7 +79,7 @@ public class W3Mission3 {
                     } else if (armor == 3){
                         player.setDefense(player.getDefense() - 10);
                     } else {
-                        player.setDefense(7);
+                        player.setDefense(3);
                     }
                     break;
                 } else {

@@ -18,7 +18,17 @@ public class W3Mission6 {
                 "nods in understanding and raises her staff. She casts a spell of light and the Babaylans hiding in the\n" +
                 "shadows are revealed.\n");
         sc.nextLine();
-        System.out.println("[You have encountered 10 Babaylans. Please choose a target and an attack.]");
+        System.out.println("[You have encountered 3 Babaylans. Please choose a target and an attack.]");
+        List<Enemy> bosses = EnemyFactory.spawnEnemies(EnemyType.ERIKA, 1);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ERIKA2, 2);
+        List<Enemy> enemies1 = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 2);
+        List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 2);
+        BattleManager battle = new BattleManager();
+        boolean survived = battle.startBattle(player, enemies2, 3, true);
+
+        if (!survived) {
+            return false;
+        }
         //insert battle
         System.out.println("The last Babaylan crouches in defeat. She looks up at Kheila weakly but with a resentful glare.\n");
         sc.nextLine();
@@ -81,6 +91,22 @@ public class W3Mission6 {
 
         //[You have angered the leader of the Babaylans. Choose your attack.]
 
+        survived = battle.startBattle(player, bosses, 3, true);
+
+        if (!survived) {
+            return false;
+        }
+        System.out.println();
+        System.out.println("I REFUSE TO FALL LIKE THIS! MY CLONES, HELP ME!\n");
+        sc.nextLine();
+
+
+        survived = battle.startBattle(player, enemies, 3, true);
+
+        if (!survived) {
+            return false;
+        }
+
         System.out.println("The Blade of Bulan glows fiercely, resonating with your heart. You strike, each blow cutting through\n" +
                            "layers of darkness.\n");
         sc.nextLine();
@@ -96,17 +122,16 @@ public class W3Mission6 {
         sc.nextLine();
         System.out.println("The runes flare. From the walls emerge armored silhouettes. Human soldiers wielding weapons that glow with stolen magic.\n");
         sc.nextLine();
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 2);
-        BattleManager battle = new BattleManager();
-        boolean survived = battle.startBattle(player, enemies, 3, false);
+
+        survived = battle.startBattle(player, enemies1, 3, false);
 
         if (!survived) {
             return false;
         }
 
-        System.out.println("\uD83D\uDCB0  You earned 50 barya for winning the battle!");
-        player.addBarya(50);
-        System.out.println("🏦 Total barya: " + player.getBarya());
+//        System.out.println("\uD83D\uDCB0  You earned 50 barya for winning the battle!");
+//        player.addBarya(50);
+//        System.out.println("🏦 Total barya: " + player.getBarya());
         sc.nextLine();
 
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees\n" +

@@ -26,7 +26,7 @@ public class BeggarEvent {
         System.out.println("Sir Khai: Lucky I found you before someone else did.\n");
         sc.nextLine();
 
-        int lostBarya = Math.min(20, player.getBarya()); // loses up to 20 pesos
+        int lostBarya = Math.min(25, player.getBarya()); // loses up to 25 pesos
         player.setBarya(player.getBarya() - lostBarya);
         player.hp += 50; // restores some HP
 

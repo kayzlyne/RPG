@@ -103,9 +103,9 @@ public class W2Mission2 {
         if (!survived) {
             return false;
         }
-        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
-        player.addBarya(15);
-        System.out.println("🏦 Total barya: " + player.getBarya());
+//        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
+//        player.addBarya(25);
+//        System.out.println("🏦 Total barya: " + player.getBarya());
         scan.nextLine();
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.");

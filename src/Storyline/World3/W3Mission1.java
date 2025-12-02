@@ -78,6 +78,7 @@ public class W3Mission1 {
             return false;
         }
 
+
         System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
         player.addBarya(25);
         System.out.println("🏦 Total barya: " + player.getBarya());

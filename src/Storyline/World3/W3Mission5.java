@@ -65,9 +65,9 @@ public class W3Mission5 {
 
         System.out.println("Section 2: The Split Passage\n");
         System.out.println("Three tunnels stretch ahead, each marked with symbols carved into the stone: a moon, a sun, and a star.\n");
-        System.out.println("[Press 1] Enter the Moon path.");
+        System.out.println("[Press 1] Enter the Star path.");
         System.out.println("[Press 2] Enter the Sun path.");
-        System.out.println("[Press 3] Enter the Star path.");
+        System.out.println("[Press 3] Enter the Moon path.");
 
         while (true) {
             try {
@@ -75,13 +75,13 @@ public class W3Mission5 {
                 choice = sc.nextInt();
 
                 if (choice == 1) {
-                    System.out.println("Moon Path: The Blade of Bulan hums and glows faintly. You’re on the right path.\n");
+                    System.out.println("Star Path: The tunnel collapses behind you. You barely escape.\n");
                     break;
                 } else if (choice == 2) {
                     System.out.println("Sun Path: The walls begin to burn with light. You retreat.\n");
                     break;
                 } else if (choice == 3) {
-                    System.out.println("Star Path: The tunnel collapses behind you. You barely escape.\n");
+                    System.out.println("Moon Path: The Blade of Bulan hums and glows faintly. You’re on the right path.\n");
                     break;
                 } else {
                     System.out.println("❌ Invalid choice. Please enter 1, 2, or 3.\n");

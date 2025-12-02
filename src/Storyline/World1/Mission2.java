@@ -69,7 +69,7 @@ public class Mission2 {
                     System.out.println("You have chosen to help the beggar.");
                     System.out.println();
                     scan.nextLine();
-                    System.out.println(player.name + ": Here’s twenty pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    System.out.println(player.name + ": Here’s twenty five pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
                     System.out.println("Beggar: You would offer me all the money you have?");
                     scan.nextLine();
@@ -89,7 +89,7 @@ public class Mission2 {
                     System.out.println("You think of the beggar and decide that he needs it more than you do.");
                     System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
                     System.out.println();
-                    System.out.println("Taking it out, you find coins worth 50 barya — ");
+                    System.out.println("Taking it out, you find coins worth 25 barya — ");
                     System.out.println("when before you were certain all your money was given away to the beggar.");
                     System.out.println("And when you look back at the alley, it now appears completely empty.");
                     System.out.println("Did you just get played by an encanto?");
@@ -97,8 +97,8 @@ public class Mission2 {
                     DialogueUtils.pause();
 
                     //player.setBarya(player.getBarya() + 50);
-                    player.addBarya(50);
-                    System.out.println("💰 You received 50 barya!");
+                    player.addBarya(25);
+                    System.out.println("💰 You received 25 barya!");
                     System.out.println("🏦 Total barya: " + player.getBarya());
                     break;
                 } else {

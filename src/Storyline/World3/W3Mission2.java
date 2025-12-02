@@ -38,7 +38,8 @@ public class W3Mission2 {
         System.out.println(player.name + ": Alright. Lead the way, Kheila.\n");
         sc.nextLine();
         System.out.println("[\tCongratulations! You’ve gained another friend! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]"); //EMOTICON UNSURE IF IT WORKS
-        System.out.println("[\t\tKheila joins you on your adventure!\t\t\t\t\t\t]");
+        System.out.println("[\t\tKheila joins you on your adventure!\t\t\t\t\t]");
+        //removed 1 /t
         sc.nextLine();
         System.out.println("The three of you make your way through the forest as dusk deepens into night. The moon hangs pale and hollow over the canopy, its light bending through the mist like silk. After a long trek, you reach a secluded waterfall, its sound masking the outside world. Behind the veil of water lies a cave.");
         sc.nextLine();
