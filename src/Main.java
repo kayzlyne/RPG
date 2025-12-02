@@ -16,10 +16,12 @@ Main {
 
         PlayerCharacter player = PlayerSelection.createPlayer();
         //Shop.enterShop(player);
+
         //InventoryMenu.open(player);
         Intro1.intro1(player);
         Mission1.mission1(player);
         Mission2.mission2(player);
+
 
         Shop.enterShop(player);
         InventoryMenu.open(player);
@@ -45,6 +47,8 @@ Main {
         if (!W3Mission1.w3mission1(player)) return;
         Shop.enterShop(player);
         W3Mission2.w3mission2(player);
+
+
         Shop.enterShop(player);
         W3Mission3.w3mission3(player);
         Shop.enterShop(player);

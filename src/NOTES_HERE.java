@@ -7,7 +7,6 @@ public class NOTES_HERE {
     -Insert Boss Battles (tria and erika)
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
-    -Level up system [on going - st]
     -fix distance and spacing [ongoing for world 1 - k]
     -adjust barya/rewards system (or adjust shop pricing bc rn the prices seem too expensive when compared with what player earns)
     - Test Run Game
