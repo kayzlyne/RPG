@@ -1,5 +1,6 @@
 import Core.*;
 
+import Storyline.Ending;
 import Storyline.Opening;
 import Storyline.PlayerSelection;
 import Storyline.World1.*;
@@ -55,5 +56,6 @@ Main {
         W3Mission5.w3mission5(player);
         Shop.enterShop(player);
         W3Mission6.w3mission6(player);
+        Ending.ending();
     }
 }
