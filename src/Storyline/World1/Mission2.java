@@ -69,7 +69,7 @@ public class Mission2 {
                     System.out.println("You have chosen to help the beggar.");
                     System.out.println();
                     scan.nextLine();
-                    System.out.println(player.name + ": Here’s twenty five pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
+                    System.out.println(player.name + ": Here’s " + player.getBarya() + " pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
                     System.out.println("Beggar: You would offer me all the money you have?");
                     scan.nextLine();
@@ -143,8 +143,8 @@ public class Mission2 {
         System.out.println("Scribe: Thank you! Sean is a valued member of our guild. Here, have this as a small token of our gratitude.");
         scan.nextLine();
         //player.setBarya(player.getBarya() + 50);
-        player.addBarya(50);
-        System.out.println("💰 You received 50 barya!");
+        player.addBarya(25);
+        System.out.println("💰 You received 25 barya!");
         System.out.println("🏦 Total barya: " + player.getBarya());
 
         scan.nextLine();

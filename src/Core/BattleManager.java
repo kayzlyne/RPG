@@ -121,7 +121,7 @@ public class BattleManager {
         if (player.isAlive()) {
             System.out.println("\n┏━━━━━★★★★★ QUEST COMPLETE ★★★★★━━━━━━┓");
             System.out.println("  [🎉]" + player.name + " defeated all enemies!");
-            int reward = isBossBattle ? 100 : 50;
+            int reward = isBossBattle ? 100 : 20;
             player.setBarya(player.getBarya() + reward);
             System.out.println("  [💰] You received " + reward + " barya!");
             System.out.println("  [↑] Level Up Achieved! ");
