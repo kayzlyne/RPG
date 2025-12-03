@@ -4,11 +4,11 @@ public class NOTES_HERE {
     note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
 
     TO DO!!!:
-    -Insert Boss Battles (tria and erika)
-    -insert battles in world 3: mission 6
+    
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
     -fix distance and spacing [ongoing for world 1 - k]
+    - Fix bugs (big jumps in mana and hp) doesnt make sense sa damage????
     - Test Run Game
 
 ------------------------------------------------------------------
@@ -61,6 +61,8 @@ public class NOTES_HERE {
     -Implement the choices in World 3: Mission 5 (sacrifice hp or mana) [-ef]
     -settle on a uniform format (re: emojis used and phrasing for try-catch scenarios) [-ef]
     -adjust barya/rewards system (redundancy in barya earnings after battle) [-a]
+    -Insert Boss Battles (tria and erika) / done
+    -insert battles in world 3: mission 6 / done
 
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
