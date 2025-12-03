@@ -9,7 +9,6 @@ public class NOTES_HERE {
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
     -fix distance and spacing [ongoing for world 1 - k]
-    -adjust barya/rewards system (redundancy in barya earnings after battle) (on going - a)
     - Test Run Game
 
 ------------------------------------------------------------------
@@ -61,6 +60,7 @@ public class NOTES_HERE {
     -Implement the choices in World 3: Mission 3 (sacrifice barya or armor) [-ef]
     -Implement the choices in World 3: Mission 5 (sacrifice hp or mana) [-ef]
     -settle on a uniform format (re: emojis used and phrasing for try-catch scenarios) [-ef]
+    -adjust barya/rewards system (redundancy in barya earnings after battle) [-a]
 
 
     note: nag-conflict sa pag-upload namo ni andrea pero we basically did the same tasks so i merged the changes nalang -ef
