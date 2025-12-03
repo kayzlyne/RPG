@@ -8,7 +8,8 @@ public class NOTES_HERE {
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
     -fix distance and spacing [ongoing for world 1 - k]
-    - Fix bugs (big jumps in mana and hp) doesnt make sense sa damage????
+    - ehrm ga sige ug plus ang max hp ug max mana when u level up but during battle if mo dako na kayo mana kay mo reset sha to starting na maxmana
+    gituyo ni sha?
     - Test Run Game
 
 ------------------------------------------------------------------
