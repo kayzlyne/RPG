@@ -9,7 +9,7 @@ public class NOTES_HERE {
     -adjust enemy attack damage
     -make new method for resetting cooldown of skills
     -fix distance and spacing [ongoing for world 1 - k]
-    -adjust barya/rewards system (redundancy in barya earnings after battle)
+    -adjust barya/rewards system (redundancy in barya earnings after battle) (on going - a)
     - Test Run Game
 
 ------------------------------------------------------------------
