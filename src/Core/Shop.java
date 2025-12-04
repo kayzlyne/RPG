@@ -24,13 +24,13 @@ public class Shop {
     }
 
     public static void enterShop(PlayerCharacter player) {
-        System.out.println("                                                  ┃  ┃┃┃┏━┛┃  ┏━┛┏━┃┏┏ ┏━┛  ━┏┛┏━┃  ━┏┛┃ ┃┏━┛  ┏━┛┃ ┃┏━┃┏━┃  ┃");
-        System.out.println("                                                  ┛  ┃┃┃┏━┛┃  ┃  ┃ ┃┃┃┃┏━┛   ┃ ┃ ┃   ┃ ┏━┃┏━┛  ━━┃┏━┃┃ ┃┏━┛  ┛");
-        System.out.println("                                                  ┛  ━━┛━━┛━━┛━━┛━━┛┛┛┛━━┛   ┛ ━━┛   ┛ ┛ ┛━━┛  ━━┛┛ ┛━━┛┛    ┛");
+        System.out.println("                                              ┃  ┃┃┃┏━┛┃  ┏━┛┏━┃┏┏ ┏━┛  ━┏┛┏━┃  ━┏┛┃ ┃┏━┛  ┏━┛┃ ┃┏━┃┏━┃  ┃");
+        System.out.println("                                              ┛  ┃┃┃┏━┛┃  ┃  ┃ ┃┃┃┃┏━┛   ┃ ┃ ┃   ┃ ┏━┃┏━┛  ━━┃┏━┃┃ ┃┏━┛  ┛");
+        System.out.println("                                              ┛  ━━┛━━┛━━┛━━┛━━┛┛┛┛━━┛   ┛ ━━┛   ┛ ┛ ┛━━┛  ━━┛┛ ┛━━┛┛    ┛");
 
-        System.out.print("                                                        ┏━───────────────────────────────────────────━┓");
-        System.out.print("\n                                                                    >> You have " + player.getBarya() + " barya.\n");
-        System.out.println("                                                        ┗━───────────────────────────────────────────━┛");
+        System.out.print("                                                   ┏━───────────────────────────────────────────━┓");
+        System.out.print("\n                                                               >> You have " + player.getBarya() + " barya.\n");
+        System.out.println("                                                   ┗━───────────────────────────────────────────━┛");
 
         while (true) {
             System.out.println("                                              Available items:");
@@ -39,28 +39,28 @@ public class Shop {
             }
             System.out.println("                                                  [0] Exit Shop");
            // System.out.println("                                                  You have " + player.getBarya() + " barya.\n");
-            System.out.print("                                                                     Enter choice: ");
+            System.out.print("                                                                  Enter choice: ");
             int choice;
             try {
                 choice = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
-                System.out.println("                                                              ❌ Invalid input. Try again.\n");
+                System.out.println("                                                            ❌ Invalid input. Try again.\n");
                 continue;
             }
 
             if (choice == 0) {
-                System.out.println("                                                                >> You leave the shop. <<\n");
+                System.out.println("                                                             >> You leave the shop. <<\n");
                 break;
             }
 
             if (choice < 1 || choice > items.size()) {
-                System.out.println("                                                              ❌ Invalid choice. Try again.\n");
+                System.out.println("                                                            ❌ Invalid choice. Try again.\n");
                 continue;
             }
 
             Item item = items.get(choice - 1);
             if (player.getBarya() < item.getPrice()) {
-                System.out.println("                                                              ❌ You don’t have enough barya!\n");
+                System.out.println("                                                            ❌ You don’t have enough barya!\n");
             } else if (item.getName().equals("Pet")) {
                 if (!player.hasPet()) {
                     player.setBarya(player.getBarya() - item.getPrice());
