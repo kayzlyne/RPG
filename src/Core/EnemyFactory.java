@@ -12,7 +12,7 @@ public class EnemyFactory {
         }
         return enemies;
     }
-    //make a Boss version of spawnEnemies
+
     public static List<Enemy> spawnBosses(EnemyType type, int count) {
         List<Enemy> bosses = new ArrayList<>();
         for (int i = 1; i <= count; i++) {

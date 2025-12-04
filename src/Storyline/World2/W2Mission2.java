@@ -86,9 +86,6 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("Tambalan: She will live. But your debt begins now.");
         scan.nextLine();
-        /*System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
-        scan.nextLine();
-        player.rest(); */
         System.out.println("A sudden shriek cuts through the marshlands, high and guttural.\nFrom the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\nAn Aswang, its body shifting grotesquely between forms, crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
         scan.nextLine();
         System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime. If you wish for your friend to live, you must keep me alive.");
@@ -105,9 +102,6 @@ public class W2Mission2 {
         if (!survived) {
             return false;
         }
-//        System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
-//        player.addBarya(25);
-//        System.out.println("🏦 Total barya: " + player.getBarya());
         scan.nextLine();
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.");

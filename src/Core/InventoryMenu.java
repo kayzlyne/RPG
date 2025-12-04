@@ -9,8 +9,8 @@ public class InventoryMenu {
         List<Item> inv = player.getInventory();
 
         if (inv.isEmpty()) {
-            System.out.print("                                                   ┏━───────────────────────────────────────────━┓");
-            System.out.print("\n                                                            ++ You inventory is empty. ++\n");
+            System.out.print("                                                   ┏━───────────────────────────────────────────━┓\n");
+            System.out.print("                                                            ++ Your inventory is empty. ++\n");
             System.out.println("                                                   ┗━───────────────────────────────────────────━┛");
             return;
         }

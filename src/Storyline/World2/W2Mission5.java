@@ -81,15 +81,11 @@ public class W2Mission5 {
             return false;
         }
 
-        //Boss Battle
-
         survived = battle.startBattle(player, bosses, 2, true);
         if (!survived) {
             return false;
         }
-//        System.out.println("\uD83D\uDCB0 You earned 75 barya for winning the battle!");
-//        player.addBarya(75);
-//        System.out.println("🏦 Total barya: " + player.getBarya());
+
         sc.nextLine();
 
 

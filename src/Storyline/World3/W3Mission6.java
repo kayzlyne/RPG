@@ -29,7 +29,7 @@ public class W3Mission6 {
         if (!survived) {
             return false;
         }
-        //insert battle
+
         System.out.println("The last Babaylan crouches in defeat. She looks up at Kheila weakly but with a resentful glare.\n");
         sc.nextLine();
         System.out.println("Babaylan: Traitor! We’ll never forgive you! Mistress Erika will never forgive you! She trusted you\n" +
@@ -57,7 +57,6 @@ public class W3Mission6 {
         sc.nextLine();
         System.out.println("Kheila's shout catches her attention, and Erika looks up, her eyes burning with divine fury.\n");
         sc.nextLine();
-        //MEET BOSS EVENT FIGHT (ERIKA, THE MISTRESS OF THE BABAYLANS)
 
         System.out.println("Erika: So… you’re the Fool wielding the goddess’s toy. Do you even know whose war you’re fighting?\n");
         sc.nextLine();
@@ -76,7 +75,7 @@ public class W3Mission6 {
         sc.nextLine();
         System.out.println(player.name + ": Power in exchange for obedience. You’ve been used, Erika.\n");
         sc.nextLine();
-        System.out.println("Erika: Ridiculous!\n"); //changed content
+        System.out.println("Erika: Ridiculous!\n");
         sc.nextLine();
         System.out.println("Andrea: They were never your allies, Erika. They were waiting to take it all. Mogul, Biringan,\n" +
                            "even your people.\n");
@@ -88,8 +87,6 @@ public class W3Mission6 {
         System.out.println("The ritual circle flares, her body absorbing corrupted power. She becomes monstrous.\n" +
                            "A chimera that's part woman, part shadow flame.\n");
         sc.nextLine();
-
-        //[You have angered the leader of the Babaylans. Choose your attack.]
 
         survived = battle.startBattle(player, bosses, 3, true);
 
@@ -129,9 +126,6 @@ public class W3Mission6 {
             return false;
         }
 
-//        System.out.println("\uD83D\uDCB0  You earned 50 barya for winning the battle!");
-//        player.addBarya(50);
-//        System.out.println("🏦 Total barya: " + player.getBarya());
         sc.nextLine();
 
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees\n" +

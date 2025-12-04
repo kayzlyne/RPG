@@ -93,11 +93,6 @@ public class Mission3 {
         System.out.println("[You have entered Mogul, the land of the Aswangs]");
         DialogueUtils.pause();
 
-       /* System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
-        player.addBarya(25);
-        System.out.println("🏦 Total barya: " + player.getBarya());*/
-
-        //player.rest();
         return true;
     }
 }

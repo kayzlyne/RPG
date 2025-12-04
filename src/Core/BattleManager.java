@@ -6,8 +6,7 @@ public class BattleManager {
     Scanner scanner = new Scanner(System.in);
 
     public boolean startBattle(PlayerCharacter player, List<Enemy> enemies, int currentWorld, boolean isBossBattle) {
-        //added isBossBattle for rewards system -ef
-        //Insert new lines and arrange outputs
+
         System.out.println("                                                      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
         System.out.println("                                                      █              ⚔ ️ Battle Begins!             █");
         System.out.println("                                                      ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
@@ -85,7 +84,6 @@ public class BattleManager {
                 enemies.remove(targetIndex);
             }
 
-            // Pet heals the player after each enemy is defeated
             player.petHeal();
 
 

@@ -51,15 +51,17 @@ public class PlayerSelection {
         }
 
         if (raceChoice == 1){
+            System.out.println("\n                                                                        Archer");
+            System.out.println("                    Archers are the silent wind on the battlefield—swift, elusive, and deadly from afar. Trained in the art of trajectory " +
+                    "\n              and terrain, they rain down judgment with feathered fury. Whether perched in the treetops or shadowing prey through the underbrush," +
+                    "\n                                               the Archer is a master of distance, vision, and timing.\n");
+
             System.out.println("\n                                                                       Spearman");
             System.out.println("                    Spearmen are the iron wall and piercing fang of any disciplined force. With unmatched reach and formation control, " +
                     "\n                 they hold lines, break ranks, and strike with relentless precision. Whether defending a fortress or charging into chaos, " +
                     "\n                                       the Spearman is the embodiment of martial order and battlefield dominance.\n");
 
-            System.out.println("\n                                                                        Archer");
-            System.out.println("                    Archers are the silent wind on the battlefield—swift, elusive, and deadly from afar. Trained in the art of trajectory " +
-                    "\n              and terrain, they rain down judgment with feathered fury. Whether perched in the treetops or shadowing prey through the underbrush," +
-                    "\n                                               the Archer is a master of distance, vision, and timing.\n");
+
         } else if (raceChoice == 2){
             System.out.println("\n                                                                        Gunman");
             System.out.println("                  Gunmen are lone tacticians of the battlefield, wielding precision and firepower with deadly grace. Born from the fusion " +
@@ -90,8 +92,8 @@ public class PlayerSelection {
                 if (raceChoice == 1) {
                     System.out.println("                                                        ║        >> Tikbalang Classes <<       ║");
                     System.out.println("                                                        ╠══════════════════════════════════════╣");
-                    System.out.println("                                                        ║ Spearman  → +90 HP  | +75 Mana       ║");
                     System.out.println("                                                        ║ Archer    → +70 HP  | +85 Mana       ║");
+                    System.out.println("                                                        ║ Spearman  → +90 HP  | +75 Mana       ║");
                 } else if (raceChoice == 2) {
                     System.out.println("                                                        ║           >> Kapre Class <<          ║");
                     System.out.println("                                                        ╠══════════════════════════════════════╣");

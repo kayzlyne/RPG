@@ -17,10 +17,5 @@ public class Intro3 {
         System.out.println("   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
 
         DialogueUtils.pause();
-        System.out.println(
-                "The moment you cross the threshold to Mogul, a suffocating weight settles into your chest. The air itself is different here.");
-        System.out.println();
-
-        DialogueUtils.pause();
     }
 }

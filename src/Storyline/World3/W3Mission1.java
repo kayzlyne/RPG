@@ -42,7 +42,6 @@ public class W3Mission1 {
         System.out.println("You nod and begin to search for any clues and materials that could be of help. As you walk down the mountain,\nyou notice claw marks on the trees.\nYou and Andrea begin to cautiously follow the trail and eventually end up with a small clearing with a fallen tree in the middle.\nYou scan the area and see a small, ragged satchel beside the tree trunk. You inspect it and find Recovery potions and a pack of pet feed.\n");
         sc.nextLine();
 
-        //Player obtains HP Potion, MANA Potion, PET Feed
         Item hpPotion = new Item("Health Potion", 0, "Restores HP to full", ItemType.HEALTH);
         Item manaPotion = new Item("Mana Potion", 0, "Restores Mana to full", ItemType.MANA);
         Item petFood = new Item("Pet Food", 0, "Increases pet's healing power", ItemType.PET_FOOD);
@@ -51,7 +50,7 @@ public class W3Mission1 {
         player.addItem(manaPotion);
 
         if (player.hasPet()) {
-            player.getPet().increaseHealingPower(5); // increase healing
+            player.getPet().increaseHealingPower(5);
             System.out.println("🍖 You found Pet Food! Your pet's healing power has increased by 5 HP!");
         } else {
             System.out.println("🍖 You found Pet Food, but you don't have a pet. The item is discarded.");
@@ -78,10 +77,6 @@ public class W3Mission1 {
             return false;
         }
 
-
-       /* System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
-        player.addBarya(25);
-        System.out.println("🏦 Total barya: " + player.getBarya());*/
         sc.nextLine();
 
         if (player.isAlive()) {
