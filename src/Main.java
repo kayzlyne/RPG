@@ -13,7 +13,7 @@ Main {
 
 
         int currentWorld = 1;
-        //Opening.opening();
+        Opening.opening();
         PlayerCharacter player = PlayerSelection.createPlayer();
 
 
