@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class W2Mission2 {
     public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
+        int choice = 0;
 
         System.out.println();
         System.out.println("                   ======================================================================================================================");
@@ -28,7 +29,7 @@ public class W2Mission2 {
         while (true){
             try {
                 System.out.print("You've chosen: ");
-                int choice = scan.nextInt();
+                choice = scan.nextInt();
                 System.out.println();
 
                 if (choice == 1){
