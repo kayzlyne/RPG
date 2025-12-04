@@ -5,11 +5,11 @@ public class NOTES_HERE {
 
     TO DO!!!:
 
-    -fix distance and spacing [ongoing for world 1 - k]
+    -make sure mana regen is not negative and random. Must be constant.
     - ehrm ga sige ug plus ang max hp ug max mana when u level up but during battle if mo dako na kayo mana kay mo reset sha to starting na maxmana
     gituyo ni sha?
-    -make sure mana regen is not negative and random. Must be constant.
     - Test Run Game0
+    -fix distance and spacing [ongoing for world 1 - k]
 
 ------------------------------------------------------------------
 

@@ -11,7 +11,6 @@ public class W2Mission1 {
         Scanner scan = new Scanner(System.in);
 
         System.out.println();
-
         System.out.println("                       ================================================================================================================");
         System.out.println("                       ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░▀█░░░░░░░░▀█▀░█░█░█▀▀░░░█░░░█▀█░█▀▀░▀█▀░░░█░░░█▀█░█░█░█▀▀░█░█░░░░▄▀░░▄▀");
         System.out.println("                       ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░░█░░░▀░░░░░█░░█▀█░█▀▀░░░█░░░█▀█░▀▀█░░█░░░░█░░░█▀█░█░█░█░█░█▀█░░░▀▄░░▀▄░");
@@ -40,7 +39,7 @@ public class W2Mission1 {
         //player.rest();
 
 
-        System.out.println("Andrea: Finally, you took it down, friend.\n");
+        System.out.println("Andrea: Finally, you took it down, friend.");
         scan.nextLine();
         System.out.println(player.name + ": Andrea, you’re heavily injured.");
         scan.nextLine();

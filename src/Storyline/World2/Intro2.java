@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Intro2 {
     public static void intro2(PlayerCharacter player){
-
+        System.out.println();
         System.out.println("   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
         System.out.println("   ║                                                                                                                                                       ║ ");
         System.out.println("   ║                                                     ▄▀▀▄ ▄▀▄  ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀▀▀▄                                                     ║");

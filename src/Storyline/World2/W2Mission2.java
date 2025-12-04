@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class W2Mission2 {
     public static boolean w2mission2(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
-        int choice = 1;
 
         System.out.println();
         System.out.println("                   ======================================================================================================================");
@@ -23,17 +22,18 @@ public class W2Mission2 {
         System.out.println("You immediately go near and inspect the mushrooms.");
         DialogueUtils.pause();
 
-        System.out.println("Press 1: Take the mushrooms. It could be the cure\n" +
-                "Press 2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
+        System.out.println("1: Take the mushrooms. It could be the cure.\n" +
+                "2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
 
         while (true){
             try {
                 System.out.print("You've chosen: ");
-                choice = scan.nextInt();
+                int choice = scan.nextInt();
                 System.out.println();
 
                 if (choice == 1){
                     player.modifyHp(-10);
+                    System.out.println("{You have been poisoned. [-10HP] }\n");
                     System.out.println("???: You’ve just brought yourself closer to death.\n");
                     break;
                 } else if (choice == 2){
@@ -64,7 +64,7 @@ public class W2Mission2 {
         scan.nextLine();
 
         if (choice == 1){
-            System.out.println("???: I’m a Tambalan. Although I can give you the antidote to the mushroom’s potion, I will not. That serves as your lesson in life.");
+            System.out.println("???: I’m a Tambalan. Although I can give you the antidote to the mushroom’s poison, I will not. That serves as your lesson in life.");
             scan.nextLine();
             System.out.println(player.name + ": Wait, you’re a Tambalan? Sir, you don’t need to give me the antidote. Instead, please save my friend. She’s dying.");
         } else if (choice == 2){
@@ -88,13 +88,13 @@ public class W2Mission2 {
         /*System.out.println("Breathing out a sigh of relief, you slump in exhaustion next to Andrea's prone form. You allow yourself to rest as you think about what to do next.");
         scan.nextLine();
         player.rest(); */
-        System.out.println("A sudden shriek cuts through the marshlands, high and guttural.\nFrom the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\nAn Aswang, its body shifting grotesquely between forms,crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
+        System.out.println("A sudden shriek cuts through the marshlands, high and guttural.\nFrom the treeline, a shape emerges—elongated limbs, a mouth split too wide, dripping with black rot and fresh blood.\nAn Aswang, its body shifting grotesquely between forms, crawls toward you with murderous intent. Its eyes lock not on you, but on the Tambalan.");
         scan.nextLine();
         System.out.println("Tambalan: It comes for me. They know I aided you, and they would see me dead for that crime. If you wish for your friend to live, you must keep me alive.");
         scan.nextLine();
         System.out.println("The Aswang snarls, wings unfurling with a crack of sinew. It takes to the sky and the shadows unnaturally bend around its sinister form.");
         scan.nextLine();
-        System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks.\nThe Tambalan stands his ground, clutching his satchel of herbs, but you know one thing: his fate now lies in your hands.");
+        System.out.println("Andrea stirs weakly behind you, whispering your name, her voice too frail to rise above the Aswang’s shrieks.\nThe Tambalan stands his ground, clutching his satchel of herbs, but you know one thing- his fate now lies in your hands.");
         DialogueUtils.pause();
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ASWANG, 2);
@@ -127,7 +127,7 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("Tambalan: Find him, and convince him. Only then will Andrea wield a weapon strong enough to cut through Mogul’s nightmares.");
         scan.nextLine();
-        System.out.println("Tambalan: Get some rest first. You must set out at the break of dawn.");
+        System.out.println("Tambalan: Get some rest first. You must set out at the break of dawn.\n");
         player.rest();
         DialogueUtils.pause();
         System.out.println("You're up at the first hint of bleak light across the dreary sky, wincing as your weary bones protest the endeavour.");
@@ -138,8 +138,8 @@ public class W2Mission2 {
         System.out.println("You nod, tightening your grip on your weapon before setting out to find the Pandai.");
         scan.nextLine();
         System.out.println("                                             [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]");;
-        System.out.println("                                             [\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");
-        System.out.println("                                             [\tAndrea joins you on your adventure!\t\t\t\t\t\t]");
+        System.out.println("                                             [\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t ]");
+        System.out.println("                                             [\tAndrea joins you on your adventure!\t\t\t\t\t\t ]");
         System.out.println("                                             [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]\n");
         DialogueUtils.pause();
         return true;
