@@ -15,6 +15,7 @@ Main {
         int currentWorld = 1;
         Opening.opening();
 
+
         PlayerCharacter player = PlayerSelection.createPlayer();
         //Shop.enterShop(player);
 

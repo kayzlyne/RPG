@@ -99,28 +99,28 @@ public class PlayerCharacter {
     }
 
     public void displayStats() {
-        System.out.println("\n📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
-        System.out.printf("──────────────────────────────\n");
-        System.out.printf("Name      : %s\n", name);
-        System.out.printf("Race      : %s\n", race);
-        System.out.printf("Class     : %s\n", charClass);
-        System.out.printf("──────────────────────────────\n");
-        System.out.printf("HP        : %d/%d\n", hp, maxHp);
-        System.out.printf("Mana      : %d/%d\n", mana, getMaxMana());
-        System.out.printf("Defense   : %d (Passive)\n", defense);
-        System.out.printf("──────────────────────────────\n");
+        System.out.println("\n                                                            📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
+        System.out.printf("                                                            ──────────────────────────────\n");
+        System.out.printf("                                                             >> Name      : %s\n", name);
+        System.out.printf("                                                             >> Race      : %s\n", race);
+        System.out.printf("                                                             >> Class     : %s\n", charClass);
+        System.out.printf("                                                            ──────────────────────────────\n");
+        System.out.printf("                                                             >> HP        : %d/%d\n", hp, maxHp);
+        System.out.printf("                                                             >> Mana      : %d/%d\n", mana, getMaxMana());
+        System.out.printf("                                                             >> Defense   : %d (Passive)\n", defense);
+        System.out.printf("                                                            ──────────────────────────────\n");
         if (inventory.isEmpty()) {
-            System.out.println("Inventory : (empty)");
+            System.out.println("                                                             >> Inventory : (empty)");
         } else {
-            System.out.print("Inventory : ");
+            System.out.print("                                                             >> Inventory : ");
             for (int i = 0; i < inventory.size(); i++) {
                 System.out.print(inventory.get(i).getName());
                 if (i < inventory.size() - 1) System.out.print(", ");
             }
             System.out.println();
         }
-           System.out.printf("Barya     : %d\n", barya);
-        System.out.println("──────────────────────────────\n");
+           System.out.printf("                                                             >> Barya     : %d\n", barya);
+        System.out.println("                                                            ──────────────────────────────\n");
     }
 
     // ----- Inventory -----

@@ -9,10 +9,11 @@ import java.util.Scanner;
 public class Intro1 {
     public static void intro1(PlayerCharacter player) {
 
-        System.out.println("With the hero's experience as a(n) " + player.classType.getClassName() +
-                ", he/she starts to find clues in the heart of Biringan City.\n" +
-                player.name + " is taking the first step to the battle that will determine the fate of their kind.");
+        System.out.println("                          With the hero's experience as a(n) " + player.classType.getClassName() +
+                ", he/she starts to find clues in the heart of Biringan City.\n                                " +
+                                                              player.name + " is taking the first step to the battle that will determine the fate of their kind.");
         System.out.println();
+        System.out.print("      +================================================================================================================================================+\n");
         DialogueUtils.pause();
 
         System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
