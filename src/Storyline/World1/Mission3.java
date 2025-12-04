@@ -66,6 +66,12 @@ public class Mission3 {
             return false;
         }
 
+        scan.nextLine();
+        System.out.println("Conscious Diwata: I’ve woken them all up. They’re escaping towards the city now. I’ll help you fight the Bungisngis. I’m Andrea, you are?");
+        scan.nextLine();
+        System.out.println(player.name + ": I'm " + player.name + ", let’s take this laughing monster down, Andrea.");
+        scan.nextLine();
+
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
         BattleManager battle2 = new BattleManager();
         survived = battle2.startBattle(player, enemies2, 1, false);
@@ -74,10 +80,22 @@ public class Mission3 {
             return false;
         }
 
+        scan.nextLine();
+        System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
+                "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");
+        scan.nextLine();
+        System.out.println("Andrea: Help!");
+        scan.nextLine();
+        System.out.println(player.name + ": Andrea!");
+        scan.nextLine();
+        System.out.println("Without a second thought, you rush towards Mogul.");
+        scan.nextLine();
+        System.out.println("[You have entered Mogul, the land of the Aswangs]");
+        DialogueUtils.pause();
+
        /* System.out.println("\uD83D\uDCB0 You earned 25 barya for winning the battle!");
         player.addBarya(25);
         System.out.println("🏦 Total barya: " + player.getBarya());*/
-        scan.nextLine();
 
         //player.rest();
         return true;

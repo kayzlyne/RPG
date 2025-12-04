@@ -28,11 +28,11 @@ public class Shop {
         System.out.println("                                              ┛  ┃┃┃┏━┛┃  ┃  ┃ ┃┃┃┃┏━┛   ┃ ┃ ┃   ┃ ┏━┃┏━┛  ━━┃┏━┃┃ ┃┏━┛  ┛");
         System.out.println("                                              ┛  ━━┛━━┛━━┛━━┛━━┛┛┛┛━━┛   ┛ ━━┛   ┛ ┛ ┛━━┛  ━━┛┛ ┛━━┛┛    ┛");
 
-        System.out.print("                                                   ┏━───────────────────────────────────────────━┓");
-        System.out.print("\n                                                               >> You have " + player.getBarya() + " barya.\n");
-        System.out.println("                                                   ┗━───────────────────────────────────────────━┛");
-
         while (true) {
+            System.out.print("                                                   ┏━───────────────────────────────────────────━┓");
+            System.out.print("\n                                                               >> You have " + player.getBarya() + " barya.\n");
+            System.out.println("                                                   ┗━───────────────────────────────────────────━┛");
+
             System.out.println("                                              Available items:");
             for (int i = 0; i < items.size(); i++) {
                 System.out.println("                                                  [" + (i + 1) + "] " + items.get(i));
