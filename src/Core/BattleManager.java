@@ -127,7 +127,7 @@ public class BattleManager {
             System.out.println("                                                             [↑] Level Up Achieved! ");
             player.levelUp();
             System.out.println("                                                             [🏦] Total barya: " + player.getBarya());
-            System.out.println("                                             ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+            System.out.println("                                             ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
         }
         return true;
     }

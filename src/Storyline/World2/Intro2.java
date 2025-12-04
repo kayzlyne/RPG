@@ -25,17 +25,17 @@ public class Intro2 {
         System.out.println("[You have entered Mogul, the land of the Aswangs]\n");
         DialogueUtils.pause();
 
-        System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
-        System.out.println("║                                                                                                                                                       ║ ");
-        System.out.println("║                                                     ▄▀▀▄ ▄▀▄  ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀▀▀▄                                                     ║");
-        System.out.println("║                  (  .      )                       █  █ ▀  █ █      █ █        █   █    █ █    █                  (  .      )                         ║");
-        System.out.println("║            )           (         ,                 ▐  █    █ █      █ █    ▀▄▄ ▐  █    █  ▐    █                           )           (              ║");
-        System.out.println("║             .  '   .   '  .  '  .                     █    █  ▀▄    ▄▀ █     █ █  █    █       █                 .  '   .   '  .  '  .                ║");
-        System.out.println("║         (    , )       (.   )  (                    ▄▀   ▄▀     ▀▀▀▀   ▐▀▄▄▄▄▀ ▐   ▀▄▄▄▄▀    ▄▀▄▄▄▄▄▄▀       (    , )       (.   )  (                 ║");
-        System.out.println("║       .' ) ( . )    ,') '. )  , ( .                █    █             ▐                     █                   .' ) ( . )    ,') '. )  , ( .         ║");
-        System.out.println("║    ). , ( .   (  ) ( , ')  .' (  ,    )           ▐    ▐                                   ▐                  ). , ( .   (  ) ( , ')  .' (  ,    )    ║");
-        System.out.println("║  (_,) . ), ) _) _,')  (, ) '. )  ,. (' )                  >> The land of death and decay. <<                 (_,) . ), ) _) _,')  (, ) '. )  ,. (' )  ║ ");
-        System.out.println("╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
+        System.out.println("   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ");
+        System.out.println("   ║                                                                                                                                                       ║ ");
+        System.out.println("   ║                                                     ▄▀▀▄ ▄▀▄  ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀▀▀▄                                                     ║");
+        System.out.println("   ║                  (  .      )                       █  █ ▀  █ █      █ █        █   █    █ █    █                  (  .      )                         ║");
+        System.out.println("   ║            )           (         ,                 ▐  █    █ █      █ █    ▀▄▄ ▐  █    █  ▐    █                           )           (              ║");
+        System.out.println("   ║             .  '   .   '  .  '  .                     █    █  ▀▄    ▄▀ █     █ █  █    █       █                 .  '   .   '  .  '  .                ║");
+        System.out.println("   ║         (    , )       (.   )  (                    ▄▀   ▄▀     ▀▀▀▀   ▐▀▄▄▄▄▀ ▐   ▀▄▄▄▄▀    ▄▀▄▄▄▄▄▄▀       (    , )       (.   )  (                 ║");
+        System.out.println("   ║       .' ) ( . )    ,') '. )  , ( .                █    █             ▐                     █                   .' ) ( . )    ,') '. )  , ( .         ║");
+        System.out.println("   ║    ). , ( .   (  ) ( , ')  .' (  ,    )           ▐    ▐                                   ▐                  ). , ( .   (  ) ( , ')  .' (  ,    )    ║");
+        System.out.println("   ║  (_,) . ), ) _) _,')  (, ) '. )  ,. (' )                  >> The land of death and decay. <<                 (_,) . ), ) _) _,')  (, ) '. )  ,. (' )  ║ ");
+        System.out.println("   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
 
         DialogueUtils.pause();
         System.out.println("The moment you cross the threshold to Mogul, a suffocating weight settles into your chest. The air itself is different here.");

@@ -18,7 +18,7 @@ public class Shop {
         items.add(new Item("Mana Potion", 75, "Regenerates mana to full", ItemType.MANA));
         items.add(new Item("Health Potion", 75, "Regenerates HP to full", ItemType.HEALTH));
         items.add(new Item("Armor Upgrade", 125, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
-        items.add(new Item("Pet", 100, "A loyal companion who heals you after every round of battle", ItemType.PET));
+        items.add(new Item("Pet", 100, "A loyal companion who heals after battle.", ItemType.PET));
         items.add(new Item("Pet Food", 50, "Increases pet's healing power", ItemType.PET_FOOD));
 
     }
@@ -61,20 +61,21 @@ public class Shop {
             Item item = items.get(choice - 1);
             if (player.getBarya() < item.getPrice()) {
                 System.out.println("                                                            ❌ You don’t have enough barya!\n");
+
             } else if (item.getName().equals("Pet")) {
                 if (!player.hasPet()) {
                     player.setBarya(player.getBarya() - item.getPrice());
                     //addItem(item);
                     player.setPet(new Pet(5)); // starting heal = 5 HP
-                    System.out.println("✧\u2060◝\u2060(\u2060⁰\u2060▿\u2060⁰\u2060)\u2060◜\u2060✧ A loyal companion joins you!\n");
+                    System.out.println("\n                                                     [ ✧\u2060◝\u2060(\u2060⁰\u2060▿\u2060⁰\u2060)\u2060◜\u2060✧ A loyal companion joins you! ]\n");
                 } else {
-                    System.out.println("You already have a pet!\n");
+                    System.out.println("                                                                 You already have a pet!\n");
                 }
             } else if (item.getName().equals("Pet Food")) {
 
 
                 if (player.getPetFoodUsed() >= 4) {
-                    System.out.println("❌ Your pet cannot eat more Pet Food! (Max 4 upgrades reached)\n");
+                    System.out.println("                                            ❌ Your pet cannot eat more Pet Food! (Max 4 upgrades reached)\n");
                     continue;
                 }
 
@@ -85,7 +86,7 @@ public class Shop {
                     player.incrementPetFoodUsed();
                     System.out.println("🍖 Great! Your pet's healing power has increased by 5! (" + player.getPetFoodUsed() + "/4)\n");
                 } else {
-                    System.out.println("You don't have a pet yet!\n");
+                    System.out.println("                                                                You don't have a pet yet!\n");
                 }
             } else if (item.getName().equals("Armor Upgrade")){
                 player.setBarya(player.getBarya() - item.getPrice());
@@ -94,7 +95,7 @@ public class Shop {
             } else {
                 player.setBarya(player.getBarya() - item.getPrice());
                 player.addItem(item);
-                System.out.println("✅ You purchased " + item.getName() + "!\n");
+                System.out.println("                                                       ✅ You purchased " + item.getName() + "!\n");
             }
         }
     }
