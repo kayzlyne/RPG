@@ -13,8 +13,9 @@ Main {
 
 
         int currentWorld = 1;
-        Opening.opening();
+        //Opening.opening();
         PlayerCharacter player = PlayerSelection.createPlayer();
+
 
         Intro1.intro1(player);
         Mission1.mission1(player);
@@ -25,6 +26,7 @@ Main {
         if (!Mission3.mission3(player)) return;
 
         Shop.enterShop(player);
+
 
         currentWorld = 2;
         Intro2.intro2(player);

@@ -13,10 +13,11 @@ public class W2Mission2 {
         int choice = 1;
 
         System.out.println();
-        System.out.println("================================================");
-        System.out.println("          MISSION 2:  TO SAVE A FRIEND ");
-        System.out.println("================================================");
-        //System.out.println();
+        System.out.println("                   ======================================================================================================================");
+        System.out.println("                   ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░▀▀▄░░░░░░░▀█▀░█▀█░░░█▀▀░█▀█░█░█░█▀▀░░░█▀█░░░█▀▀░█▀▄░▀█▀░█▀▀░█▀█░█▀▄░░░░▄▀░░▄▀");
+        System.out.println("                   ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░▄▀░░░▀░░░░░█░░█░█░░░▀▀█░█▀█░▀▄▀░█▀▀░░░█▀█░░░█▀▀░█▀▄░░█░░█▀▀░█░█░█░█░░░▀▄░░▀▄░");
+        System.out.println("                   ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀▀░░▀░░░░░▀░░▀▀▀░░░▀▀▀░▀░▀░░▀░░▀▀▀░░░▀░▀░░░▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀▀░░░░░░▀░░░▀");
+        System.out.println("                   ======================================================================================================================");
         scan.nextLine();
         System.out.println("As you search for medicinal herbs, you come across a marsh with strange mushrooms growing around.");
         System.out.println("You immediately go near and inspect the mushrooms.");
@@ -136,10 +137,10 @@ public class W2Mission2 {
         scan.nextLine();
         System.out.println("You nod, tightening your grip on your weapon before setting out to find the Pandai.");
         scan.nextLine();
-        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]");
-        System.out.println("[\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");
-        System.out.println("[\tAndrea joins you on your adventure!\t\t\t\t\t\t]");
-        System.out.println("[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]\n");
+        System.out.println("                                             [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]");;
+        System.out.println("                                             [\tCongratulations! You’re no longer friendless! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");
+        System.out.println("                                             [\tAndrea joins you on your adventure!\t\t\t\t\t\t]");
+        System.out.println("                                             [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]\n");
         DialogueUtils.pause();
         return true;
     }

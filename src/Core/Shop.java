@@ -84,7 +84,7 @@ public class Shop {
                     //player.addItem(item);
                     player.getPet().increaseHealingPower(5);
                     player.incrementPetFoodUsed();
-                    System.out.println("🍖 Great! Your pet's healing power has increased by 5! (" + player.getPetFoodUsed() + "/4)\n");
+                    System.out.println("                                       🍖 Great! Your pet's healing power has increased by 5! (" + player.getPetFoodUsed() + "/4)\n");
                 } else {
                     System.out.println("                                                                You don't have a pet yet!\n");
                 }
@@ -95,7 +95,7 @@ public class Shop {
             } else {
                 player.setBarya(player.getBarya() - item.getPrice());
                 player.addItem(item);
-                System.out.println("                                                       ✅ You purchased " + item.getName() + "!\n");
+                System.out.println("                                                          ✅ You purchased " + item.getName() + "!\n");
             }
         }
     }
