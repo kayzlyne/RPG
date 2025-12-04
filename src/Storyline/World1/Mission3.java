@@ -10,10 +10,14 @@ public class Mission3 {
     public static boolean mission3(PlayerCharacter player) {
         Scanner scan = new Scanner(System.in);
         System.out.println();
-        System.out.println("================================================");
-        System.out.println("          MISSION 3: THE HEART OF DARKNESS      ");
-        System.out.println("================================================");
+        System.out.println("          ==========================================================================================================================================");
+        System.out.println("          ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░▀▀█░░░░░░░▀█▀░█░█░█▀▀░░░█░█░█▀▀░█▀█░█▀▄░▀█▀░░░█▀█░█▀▀░░░█▀▄░█▀█░█▀▄░█░█░█▀█░█▀▀░█▀▀░█▀▀░░░░▄▀░░▄▀\n"
+                + "          ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░░▀▄░░▀░░░░░█░░█▀█░█▀▀░░░█▀█░█▀▀░█▀█░█▀▄░░█░░░░█░█░█▀▀░░░█░█░█▀█░█▀▄░█▀▄░█░█░█▀▀░▀▀█░▀▀█░░░▀▄░░▀▄\n"
+                + "          ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀░░░▀░░░░░▀░░▀░▀░▀▀▀░░░▀░▀░▀▀▀░▀░▀░▀░▀░░▀░░░░▀▀▀░▀░░░░░▀▀░░▀░▀░▀░▀░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░░░▀░░░▀");
+        System.out.println("          ==========================================================================================================================================");
+
         scan.nextLine();
+
         //System.out.println();
         System.out.println("Enlightened with the clues from the Information Guild, you hurry to the Dark Forest.");
         System.out.println("The path becomes rough, bushes thick and thorny, leaving scratches on whoever is unlucky enough to come into contact with it.");

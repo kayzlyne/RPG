@@ -8,14 +8,14 @@ public class BattleManager {
     public boolean startBattle(PlayerCharacter player, List<Enemy> enemies, int currentWorld, boolean isBossBattle) {
         //added isBossBattle for rewards system -ef
         //Insert new lines and arrange outputs
-        System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-        System.out.println("█              ⚔ ️ Battle Begins!             █");
-        System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+        System.out.println("                                                       ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+        System.out.println("                                                       █              ⚔ ️ Battle Begins!             █");
+        System.out.println("                                                       ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 
         while (player.isAlive() && !enemies.isEmpty()) {
-            System.out.println("\n ┏━PLAYER STATUS───────────────────────────━┓");
-            System.out.println("      >> 🧍 Your HP: " + player.hp + " | Mana: " + player.mana +" <<");;
-            System.out.println(" ┗━────────────────────────────────────────━┛");
+            System.out.println("\n                                                        ┏━PLAYER STATUS───────────────────────────━┓");
+            System.out.println("                                                             >> 🧍 Your HP: " + player.hp + " | Mana: " + player.mana +" <<");;
+            System.out.println("                                                        ┗━────────────────────────────────────────━┛");
             System.out.println("\n👹 ENEMIES");
             for (int i = 0; i < enemies.size(); i++) {
                 Enemy e = enemies.get(i);
@@ -119,15 +119,15 @@ public class BattleManager {
         }
 
         if (player.isAlive()) {
-            System.out.println("\n┏━━━━━★★★★★ QUEST COMPLETE ★★★★★━━━━━━┓");
-            System.out.println("  [🎉]" + player.name + " defeated all enemies!");
+            System.out.println("\n                                             ┏━━━━━━━━━━━━━━━━★★★★★ QUEST COMPLETE ★★★★★━━━━━━━━━━━━━━━━┓");
+            System.out.println("                                                         [🎉] " + player.name + " defeated all enemies!");
             int reward = isBossBattle ? 100 : 20;
             player.setBarya(player.getBarya() + reward);
-            System.out.println("  [💰] You received " + reward + " barya!");
-            System.out.println("  [↑] Level Up Achieved! ");
+            System.out.println("                                                         [💰] You received " + reward + " barya!");
+            System.out.println("                                                         [↑] Level Up Achieved! ");
             player.levelUp();
-            System.out.println("  [🏦] Total barya: " + player.getBarya());
-            System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+            System.out.println("                                                         [🏦] Total barya: " + player.getBarya());
+            System.out.println("                                             ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
         }
         return true;
     }
