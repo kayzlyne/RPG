@@ -24,6 +24,10 @@ public class Shop {
     }
 
     public static void enterShop(PlayerCharacter player) {
+        System.out.println("                                                  ┃  ┃┃┃┏━┛┃  ┏━┛┏━┃┏┏ ┏━┛  ━┏┛┏━┃  ━┏┛┃ ┃┏━┛  ┏━┛┃ ┃┏━┃┏━┃  ┃");
+        System.out.println("                                                  ┛  ┃┃┃┏━┛┃  ┃  ┃ ┃┃┃┃┏━┛   ┃ ┃ ┃   ┃ ┏━┃┏━┛  ━━┃┏━┃┃ ┃┏━┛  ┛");
+        System.out.println("                                                  ┛  ━━┛━━┛━━┛━━┛━━┛┛┛┛━━┛   ┛ ━━┛   ┛ ┛ ┛━━┛  ━━┛┛ ┛━━┛┛    ┛");
+
         System.out.print("                                                        ┏━───────────────────────────────────────────━┓");
         System.out.print("\n                                                                    >> You have " + player.getBarya() + " barya.\n");
         System.out.println("                                                        ┗━───────────────────────────────────────────━┛");

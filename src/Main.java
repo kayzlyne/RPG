@@ -13,11 +13,11 @@ Main {
 
 
         int currentWorld = 1;
-        Opening.opening();
+        //Opening.opening();
 
 
         PlayerCharacter player = PlayerSelection.createPlayer();
-        //Shop.enterShop(player);
+        Shop.enterShop(player);
 
         //InventoryMenu.open(player);
         Intro1.intro1(player);
