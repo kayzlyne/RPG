@@ -11,7 +11,7 @@ public class Mage implements ClassArchetype {
 
     public void useSkill(String playerName, Enemy target) {
         System.out.println(playerName + " casts Fireball!");
-        int dmg = new Random().nextInt(11) + 25;
+        int dmg = new Random().nextInt(11) + 15;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " fire damage to " + target.name + "!");
@@ -19,7 +19,7 @@ public class Mage implements ClassArchetype {
 
     public void useSpecial(String playerName, Enemy target) {
         System.out.println(playerName + " casts Lightning Storm!");
-        int dmg = new Random().nextInt(31) + 55;
+        int dmg = new Random().nextInt(31) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " lightning damage to " + target.name + "!");

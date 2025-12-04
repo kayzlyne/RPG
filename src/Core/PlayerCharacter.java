@@ -98,6 +98,11 @@ public class PlayerCharacter {
         if (specialCooldown > 0) specialCooldown--;
     }
 
+    public void resetCooldowns() {
+        specialCooldown = 0;
+        skillCooldown = 0;
+    }
+
     public void displayStats() {
         System.out.println("\n                                                            📜 ════ 𝕮𝖍𝖆𝖗𝖆𝖈𝖙𝖊𝖗 𝕻𝖗𝖊𝖛𝖎𝖊𝖜 ════ 📜");
         System.out.printf("                                                           ────────────────────────────────\n");

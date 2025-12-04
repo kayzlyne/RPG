@@ -51,8 +51,8 @@ public class Mission2 {
         while(true) {
 
             System.out.println(">> Do you give away your only money to help a begging stranger?");
-            System.out.println("[Press 1] Yes");
-            System.out.println("[Press 2] No");
+            System.out.println("[1] Yes");
+            System.out.println("[2] No");
             System.out.println();
             System.out.print("Enter your choice: ");
 
@@ -72,7 +72,6 @@ public class Mission2 {
                     helpedBeggar = true;
                     System.out.println();
                     System.out.println("You have chosen to help the beggar.");
-                    System.out.println();
                     scan.nextLine();
                     System.out.println(player.name + ": Here’s " + player.getBarya() + " pesos. I’m sorry, it’s all I have, but I do hope you can use it to seek treatment for your illness.");
                     scan.nextLine();
@@ -87,6 +86,7 @@ public class Mission2 {
                     System.out.println(player.name + ": It was no problem, truly. I must go, though, for I am on a mission. Best of luck to you, my friend.");
                     scan.nextLine();
                     System.out.println("Beggar: And to you. May the Gods bless you.");
+                    System.out.println();
 
                     DialogueUtils.pause();
                     System.out.println("Smiling warmly, you walk away from the alley and towards the Information Guild.");

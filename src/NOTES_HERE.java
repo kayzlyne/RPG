@@ -4,13 +4,12 @@ public class NOTES_HERE {
     note: temporarily converted some of the battle implementations to comments para easier ang pag run through sa program while checking -ef
 
     TO DO!!!:
-    
-    -adjust enemy attack damage
-    -make new method for resetting cooldown of skills
+
     -fix distance and spacing [ongoing for world 1 - k]
     - ehrm ga sige ug plus ang max hp ug max mana when u level up but during battle if mo dako na kayo mana kay mo reset sha to starting na maxmana
     gituyo ni sha?
-    - Test Run Game
+    -make sure mana regen is not negative and random. Must be constant.
+    - Test Run Game0
 
 ------------------------------------------------------------------
 
@@ -50,7 +49,8 @@ public class NOTES_HERE {
     -add option 4 (drink potion if naay sulod inventory) [-ef]
     -Rest every after fight (recover hp and mana) [ongoing - k] (I made the method rest na, just have to insert it after every fight)
             [added some dialogue and inserted the method rest into areas where i think it would make sense -ef]
-
+    -adjust enemy attack damage [- k]
+    -make new method for resetting cooldown of skills [-k]
     -display starting barya as 20 [done - a]
     -display barya every reward event [done - a]
     - minus barya after player agrees to give sir khai money [done - a]

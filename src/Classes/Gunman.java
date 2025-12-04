@@ -17,7 +17,7 @@ public class Gunman implements ClassArchetype {
 
     public void useSkill(String playerName, Enemy target) {
         System.out.println(playerName + " throws Smoke Grenade!");
-        int dmg = new Random().nextInt(11) + 25;
+        int dmg = new Random().nextInt(11) + 15;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " lung damage to " + target.name + "!");
@@ -25,7 +25,7 @@ public class Gunman implements ClassArchetype {
 
     public void useSpecial(String playerName, Enemy target) {
         System.out.println(playerName + " shoots Steam Canon!");
-        int dmg = new Random().nextInt(31) + 55;
+        int dmg = new Random().nextInt(31) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " thermal damage to " + target.name + "!");

@@ -17,7 +17,7 @@ public class Assassin implements ClassArchetype {
 
     public void useSkill(String playerName, Enemy target) {
         System.out.println(playerName + " does Swift Blink!");
-        int dmg = new Random().nextInt(11) + 25;
+        int dmg = new Random().nextInt(11) + 15;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " physical damage to " + target.name + "!");
@@ -25,7 +25,7 @@ public class Assassin implements ClassArchetype {
 
     public void useSpecial(String playerName, Enemy target) {
         System.out.println(playerName + " does Last Words!");
-        int dmg = new Random().nextInt(31) + 55;
+        int dmg = new Random().nextInt(31) + 25;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " critical damage to " + target.name + "!");
