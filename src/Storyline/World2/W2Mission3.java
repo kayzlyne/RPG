@@ -53,6 +53,7 @@ public class W2Mission3 {
             return false;
         }
 
+        player.resetCooldowns();
         sc.nextLine();
 
         System.out.println("Once the battle is won, the Pandai approaches you, impressed.");

@@ -103,15 +103,18 @@ public class BattleManager {
                 System.out.println("💀 You were defeated...");
 
                 // Attempt to trigger Sir Khai rescue
-                boolean rescued = BeggarEvent.trigger(player, currentWorld);
+                int rescueType = BeggarEvent.trigger(player, currentWorld);
 
-                if (rescued) {
-                    System.out.println("\n✨ Sir Khai has saved you! You live to fight another day!");
-
-                    //Insert small Sir khai interaction
+                if (rescueType == 1) {
+                    System.out.println("\n✨ Sir Khai has saved you for the first time!");
                     continue;
-                } else {
+                }
+                if (rescueType == 2) {
+                    System.out.println("\n✨ Sir Khai drags your unconscious body to safety again!!");
+                    continue;
+                }
 
+                if (rescueType == 0) {
                     System.out.println("\n☠️ Your journey ends here...");
                     System.out.println("🔚 Game Over");
                     return false;

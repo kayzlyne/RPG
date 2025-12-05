@@ -80,6 +80,8 @@ public class Mission3 {
             return false;
         }
 
+        player.resetCooldowns();
+
         scan.nextLine();
         System.out.println("The Bungisngis, no longer smiling, throws soil at both of you, effectively " +
                 "blocking your vision. It takes this chance to grab Andrea and run towards Mogul.");

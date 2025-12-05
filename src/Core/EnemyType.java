@@ -17,7 +17,6 @@ public enum EnemyType {
     ERIKA("Erika", 20, 40, "lunges at you"),
     ERIKA2("Erika Clones", 15, 20, "scratches you");
 
-
     public final String typeName;
     public final int minDamage;
     public final int maxDamage;

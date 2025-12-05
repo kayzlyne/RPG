@@ -111,7 +111,7 @@ public class PlayerCharacter {
         System.out.printf("                                                             >> Class     : %s\n", charClass);
         System.out.printf("                                                           ────────────────────────────────\n");
         System.out.printf("                                                             >> HP        : %d/%d\n", hp, maxHp);
-        System.out.printf("                                                             >> Mana      : %d/%d\n", mana, getMaxMana());
+        System.out.printf("                                                             >> Mana      : %d/%d\n", mana, maxMana);
         System.out.printf("                                                             >> Defense   : %d (Passive)\n", defense);
         System.out.printf("                                                           ────────────────────────────────\n");
         if (inventory.isEmpty()) {
@@ -185,9 +185,9 @@ public class PlayerCharacter {
 
     // ----- Mana, hp, and Defense setters/getters -----
 
-    public int getMaxMana() {
+   /* public int getMaxMana() {
         return raceType.getBaseMana() + classType.getBonusMana();
-    }
+    }*/
 
     public void setMana(int mana) {
         this.mana = mana;

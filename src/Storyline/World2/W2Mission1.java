@@ -31,6 +31,7 @@ public class W2Mission1 {
             return false;
         }
 
+        player.resetCooldowns();
 
         System.out.println("Andrea: Finally, you took it down, friend.");
         scan.nextLine();
@@ -43,7 +44,8 @@ public class W2Mission1 {
         System.out.println(player.name + ": Stay conscious, I’ll find something to treat you with.");
         scan.nextLine();
 
-        System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.\n");
+        System.out.println("You lay Andrea against a small boulder and search for herbs that could treat her.");
+        System.out.println();
         DialogueUtils.pause();
         return true;
     }
