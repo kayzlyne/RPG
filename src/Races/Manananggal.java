@@ -3,7 +3,7 @@ package Races;
 import Core.Race;
 import java.util.Random;
 
-public class Manananggal implements Race {
+public class Manananggal extends Race {
     public int getBaseHp() { return 90; }
     public int getBaseMana() { return 100; }
     public String getRaceName() { return "Manananggal"; }
