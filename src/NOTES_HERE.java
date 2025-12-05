@@ -9,8 +9,7 @@ public class NOTES_HERE {
     - ehrm ga sige ug plus ang max hp ug max mana when u level up but during battle if mo dako na kayo mana kay mo reset sha to starting na maxmana
     gituyo ni sha?
     - Test Run Game0
-    -fix distance and spacing [ongoing for world 3 - k]
-    player.resetCooldowns();
+
 
 ------------------------------------------------------------------
 
@@ -56,7 +55,8 @@ public class NOTES_HERE {
     -display barya every reward event [done - a]
     - minus barya after player agrees to give sir khai money [done - a]
     - HP recovery [done - a]
-
+    -fix distance and spacing [ongoing for world 3 - k]
+    - player.resetCooldowns() [-k]
     -implement try-catch in decision moment in world2, mission 2 [-ef]
     -world1 mission3 missing some story parts, need to recover [-ef]
     -Implement the choices in World 3: Mission 3 (sacrifice barya or armor) [-ef]
