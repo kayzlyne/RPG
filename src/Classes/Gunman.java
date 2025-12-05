@@ -14,7 +14,7 @@ public class Gunman implements ClassArchetype {
     public String getClassName() {
         return "Gunman";
     }
-
+    private int specialBonusDamage = 0;
     public void useSkill(String playerName, Enemy target) {
         System.out.println(playerName + " throws Smoke Grenade!");
         int dmg = new Random().nextInt(11) + 15;
@@ -25,7 +25,7 @@ public class Gunman implements ClassArchetype {
 
     public void useSpecial(String playerName, Enemy target) {
         System.out.println(playerName + " shoots Steam Canon!");
-        int dmg = new Random().nextInt(31) + 25;
+        int dmg = new Random().nextInt(31) + 25  + specialBonusDamage;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " thermal damage to " + target.name + "!");
@@ -34,5 +34,8 @@ public class Gunman implements ClassArchetype {
     public int getSpecialManaCost() { return 40; }
     public int getSkillCooldown() { return 2; }
     public int getSpecialCooldown() { return 3; }
-
+    @Override
+    public void increaseSpecialDamage(int amount) {
+        specialBonusDamage += amount;
+    }
 }

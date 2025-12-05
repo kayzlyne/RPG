@@ -10,5 +10,6 @@ public interface ClassArchetype {
     int getSpecialManaCost();
     int getSkillCooldown();
     int getSpecialCooldown();
+    void increaseSpecialDamage(int amount);
 }
 

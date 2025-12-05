@@ -14,7 +14,7 @@ public class Druid implements ClassArchetype {
     public String getClassName() {
         return "Druid";
     }
-
+    private int specialBonusDamage = 0;
     public void useSkill(String playerName, Enemy target) {
         System.out.println(playerName + " casts Constricting Ivy!");
         int dmg = new Random().nextInt(11) + 15;
@@ -25,7 +25,7 @@ public class Druid implements ClassArchetype {
 
     public void useSpecial(String playerName, Enemy target) {
         System.out.println(playerName + " casts Wildshape!");
-        int dmg = new Random().nextInt(31) + 25;
+        int dmg = new Random().nextInt(31) + 25  + specialBonusDamage;
         int netDmg = Math.max(1, dmg - target.defense);
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " critical damage to " + target.name + "!");
@@ -34,6 +34,9 @@ public class Druid implements ClassArchetype {
     public int getSpecialManaCost() { return 40; }
     public int getSkillCooldown() { return 2; }
     public int getSpecialCooldown() { return 3; }
-
+    @Override
+    public void increaseSpecialDamage(int amount) {
+        specialBonusDamage += amount;
+    }
 
 }

@@ -38,11 +38,11 @@ public class W3Mission1 {
 
         System.out.println("You breathe deeply, and for a fleeting moment, the pain, exhaustion, and fear of Mogul seem to melt away.");
         sc.nextLine();
-        System.out.println("But then, beneath the floral sweetness, something unsettles your senses.\n A faint metallic tang of blood, sharp and intrusive, mingles with the thick syrupy scent of venom.\n The paradise shimmers, but the air carries a quiet warning- Mt. Kanatuan may shine like heaven, but even paradise can wear the mask of hell.");
+        System.out.println("But then, beneath the floral sweetness, something unsettles your senses.\nA faint metallic tang of blood, sharp and intrusive, mingles with the thick syrupy scent of venom.\nThe paradise shimmers, but the air carries a quiet warning- Mt. Kanatuan may shine like heaven, but even paradise can wear the mask of hell.");
         sc.nextLine();
         System.out.println("Andrea: We should search our surroundings for clues and any signs of life.");
         sc.nextLine();
-        System.out.println("You nod and begin to search for any clues and materials that could be of help.\n As you walk down the mountain, you notice claw marks on the trees.\nYou and Andrea begin to cautiously follow the trail and eventually end up with a small clearing with a fallen tree in the middle.\nYou scan the area and see a small, ragged satchel beside the tree trunk. You inspect it and find Recovery potions and a pack of pet feed.");
+        System.out.println("You nod and begin to search for any clues and materials that could be of help.\nAs you walk down the mountain, you notice claw marks on the trees.\nYou and Andrea begin to cautiously follow the trail and eventually end up with a small clearing with a fallen tree in the middle.\nYou scan the area and see a small, ragged satchel beside the tree trunk. You inspect it and find Recovery potions and a pack of pet feed.");
         sc.nextLine();
 
         Item hpPotion = new Item("Health Potion", 0, "Restores HP to full", ItemType.HEALTH);

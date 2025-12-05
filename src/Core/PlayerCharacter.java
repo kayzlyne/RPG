@@ -152,7 +152,7 @@ public class PlayerCharacter {
         switch (item.getName()) {
 
             case "Health Potion":
-                hp = maxHp;
+                setHp(maxHp);
                 inventory.remove(item);
                 System.out.println("\n🧪 You used a Health Potion -- the elixir of life! HP fully restored.\n");
                 break;
@@ -203,7 +203,7 @@ public class PlayerCharacter {
     }
 
     public void setHp(int hp){
-        this.hp = Math.max(0, Math.min(hp, maxHp));
+        if (hp > maxHp) this.hp = maxHp;
     }
 
     public int getHp(){
@@ -235,10 +235,6 @@ public class PlayerCharacter {
             petHealCounter++;
             if (petHealCounter >= 2) {
                 setHp(hp + pet.getHealingPower());
-
-                int maxHp = raceType.getBaseHp() + classType.getBonusHp();
-                if (hp >= maxHp) hp = maxHp;
-
                 System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
                 petHealCounter = 0;
             }
@@ -290,7 +286,8 @@ public class PlayerCharacter {
     public void levelUp() {
         level++;
 
-        hp = maxHp = (int) Math.round(maxHp * Math.pow(1.10, 1));
+        maxHp = (int) Math.round(maxHp * Math.pow(1.10, 1));
+        hp = maxHp;
         mana = maxMana = (int) Math.round(maxMana * Math.pow(1.10, 1));
     }
 }

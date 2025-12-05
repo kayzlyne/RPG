@@ -136,11 +136,13 @@ public class W3Mission5 {
                 choice = sc.nextInt();
                 if (choice == 1) {
                     player.setHp(player.getHp() / 2);
+                    player.classType.increaseSpecialDamage(20);
                     System.out.println("White Lady: Your life-force narrows to a fragile thread… yet the moon often favors the desperate.");
                     break;
                 } else if (choice == 2) {
                     player.setMana(player.getMana() / 2);
-                    System.out.println(" White Lady: Power wanes, but resolve sharpens. The moon tests those who rely not on spells, but on will.");
+                    player.classType.increaseSpecialDamage(20);
+                    System.out.println("White Lady: Power wanes, but resolve sharpens. The moon tests those who rely not on spells, but on will.");
                     break;
                 } else {
                     System.out.println("❌ Invalid choice. Please enter 1 or 2.\n");
