@@ -30,7 +30,6 @@ public class Assassin implements ClassArchetype {
         target.hp -= netDmg;
         System.out.println(playerName + " deals " + netDmg + " critical damage to " + target.name + "!");
     }
-
     public int getSkillManaCost() { return 20; }
     public int getSpecialManaCost() { return 40; }
     public int getSkillCooldown() { return 2; }

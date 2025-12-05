@@ -14,29 +14,29 @@ Main {
         Opening.opening();
         PlayerCharacter player = PlayerSelection.createPlayer();
 
-        Intro1.intro1(player);
-        Mission1.mission1(player);
-        Mission2.mission2(player);
-        Shop.enterShop(player);
-        InventoryMenu.open(player);
-
-        if (!Mission3.mission3(player)) return;
-
-        Shop.enterShop(player);
-
-
-        currentWorld = 2;
-        Intro2.intro2(player);
-        W2Mission1.w2mission1(player);
-        Shop.enterShop(player);
-        if (!W2Mission2.w2mission2(player)) return;
-        Shop.enterShop(player);
-        if (!W2Mission3.w2mission3(player)) return;
-        Shop.enterShop(player);
-        W2Mission4.w2mission4(player);
-        Shop.enterShop(player);
-        if (!W2Mission5.w2mission5(player)) return;
-        Shop.enterShop(player);
+//        Intro1.intro1(player);
+//        Mission1.mission1(player);
+//        Mission2.mission2(player);
+//        Shop.enterShop(player);
+//        InventoryMenu.open(player);
+//
+//        if (!Mission3.mission3(player)) return;
+//
+//        Shop.enterShop(player);
+//
+//
+//        currentWorld = 2;
+//        Intro2.intro2(player);
+//        W2Mission1.w2mission1(player);
+//        Shop.enterShop(player);
+//        if (!W2Mission2.w2mission2(player)) return;
+//        Shop.enterShop(player);
+//        if (!W2Mission3.w2mission3(player)) return;
+//        Shop.enterShop(player);
+//        W2Mission4.w2mission4(player);
+//        Shop.enterShop(player);
+//        if (!W2Mission5.w2mission5(player)) return;
+//        Shop.enterShop(player);
 
 
         currentWorld = 3;

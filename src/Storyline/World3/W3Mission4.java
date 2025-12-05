@@ -32,10 +32,10 @@ public class W3Mission4 {
         sc.nextLine();
         System.out.println(player.name + ": There it is. The goddess’s weapon.");
         sc.nextLine();
-        System.out.println("But before you can move closer, shadows stir at the edges of the chamber and Babaylan Sentinels emerge.\nTwisted humanoid figures cloaked in bone charms, their eyes glowing red with witchfire.");
+        System.out.println("But before you can move closer, shadows stir at the edges of the chamber and a pair of Babaylan Sentinels emerge.\nTwisted humanoid figures cloaked in bone charms, their eyes glowing red with witchfire.");
         DialogueUtils.pause();
 
-        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 3);
+        List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS2, 2);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 3, false);
         if (!survived) {

@@ -90,7 +90,7 @@ public class PlayerCharacter {
         specialCooldown = classType.getSpecialCooldown();
     }
 
-//    public void regenerateMana() {
+//    public int void regenerateMana() {
 //        int before = mana;
 //        mana = Math.min(mana + manaRegen, raceType.getBaseMana() + classType.getBonusMana());
 //        System.out.println(name + " regenerates " + (mana - before) + " mana.");
@@ -98,7 +98,6 @@ public class PlayerCharacter {
 
     public void regenerateMana() {
         int before = mana;
-        int maxMana = raceType.getBaseMana() + classType.getBonusMana();
 
         if (mana < maxMana) {
             mana = Math.min(mana + 10, maxMana);

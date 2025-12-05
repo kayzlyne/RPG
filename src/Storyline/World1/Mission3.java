@@ -59,6 +59,7 @@ public class Mission3 {
         DialogueUtils.pause();
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.TIYANAK, 3);
+        List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 1, false);
 
@@ -72,9 +73,7 @@ public class Mission3 {
         System.out.println(player.name + ": I'm " + player.name + ", let’s take this laughing monster down, Andrea.");
         scan.nextLine();
 
-        List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BUNGISNGIS, 1);
-        BattleManager battle2 = new BattleManager();
-        survived = battle2.startBattle(player, enemies2, 1, false);
+        survived = battle.startBattle(player, enemies2, 1, false);
 
         if (!survived) {
             return false;

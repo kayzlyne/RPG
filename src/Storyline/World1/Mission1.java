@@ -31,10 +31,7 @@ public class Mission1 {
         BattleManager battle = new BattleManager();
         boolean survived = battle.startBattle(player, enemies, 1, false);
         scan.nextLine();
-
         player.resetCooldowns();
-        player.levelUp();
-
         System.out.println("\n\nSean: Thank you so much. I owe you my livelihood. I wouldn’t have made it through the end of this month without that merchandise.");
         scan.nextLine();
         System.out.println("Sean: Especially with the darkening atmosphere of the city– oop! Ishouldn’thavesaidthat.");

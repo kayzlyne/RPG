@@ -11,7 +11,7 @@ public class Shop {
     static {
         items.add(new Item("Mana Potion", 75, "Regenerates mana to full", ItemType.MANA));
         items.add(new Item("Health Potion", 75, "Regenerates HP to full", ItemType.HEALTH));
-        items.add(new Item("Armor Upgrade", 125, "Increases defense by 2/3/5", ItemType.ARMOR_UPGRADE));
+        items.add(new Item("Armor Upgrade", 125, "Increases defense by 2/4/7", ItemType.ARMOR_UPGRADE));
         items.add(new Item("Pet", 100, "A loyal companion who heals after battle.", ItemType.PET));
         items.add(new Item("Pet Food", 50, "Increases pet's healing power", ItemType.PET_FOOD));
 

@@ -77,9 +77,9 @@ public class W3Mission3 {
                     } else if (armor == 1){
                         player.setDefense(player.getDefense() - 2);
                     } else if (armor == 2){
-                        player.setDefense(player.getDefense() - 5);
+                        player.setDefense(player.getDefense() - 3);
                     } else if (armor == 3){
-                        player.setDefense(player.getDefense() - 10);
+                        player.setDefense(player.getDefense() - 4);
                     } else {
                         player.setDefense(3);
                     }
