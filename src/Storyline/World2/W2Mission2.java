@@ -102,6 +102,8 @@ public class W2Mission2 {
         if (!survived) {
             return false;
         }
+
+        player.resetCooldowns();
         scan.nextLine();
 
         System.out.println("With one final strike, you drive the creature back. The Aswang lets out a keening howl before collapsing.\nIts body twists and contorts one last time, then dissolves into the black waters of the marsh.");
