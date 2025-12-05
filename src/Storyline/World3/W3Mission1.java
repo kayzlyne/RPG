@@ -13,9 +13,11 @@ public class W3Mission1 {
     public static boolean w3mission1 (PlayerCharacter player){
         Scanner sc = new Scanner(System.in);
         System.out.println();
-        System.out.println("================================================");
-        System.out.println("       MISSION 1:  KNOWING THE MOUNTAIN ");
-        System.out.println("================================================");
+        System.out.println("         ============================================================================================================================================");
+        System.out.println("         ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░▀█░░░░░░░░░░█░█░█▀█░█▀█░█░█░▀█▀░█▀█░█▀▀░░░▀█▀░█░█░█▀▀░░░█▄█░█▀█░█░█░█▀█░▀█▀░█▀█░▀█▀░█▀█░░░░░░▄▀░░▄▀");
+        System.out.println("         ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░░█░░░▀░░░░░░█▀▄░█░█░█░█░█▄█░░█░░█░█░█░█░░░░█░░█▀█░█▀▀░░░█░█░█░█░█░█░█░█░░█░░█▀█░░█░░█░█░░░░░▀▄░░▀▄░");
+        System.out.println("         ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀▀░░▀░░░░░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░▀░▀▀▀░░░░▀░░▀░▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░░▀░░▀░▀░▀▀▀░▀░▀░░░░░░░▀░░░▀");
+        System.out.println("         ============================================================================================================================================");
         System.out.println();
 
         System.out.println("After persevering through Mogul’s suffocating darkness for days on end, Mt. Kanatuan’s gentle sunrise leaves you nearly blinded.");

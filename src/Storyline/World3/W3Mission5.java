@@ -11,9 +11,12 @@ public class W3Mission5 {
         Scanner sc = new Scanner(System.in);
 
         int choice;
-        System.out.println("================================================");
-        System.out.println("       MISSION 5: THE MAZE OF ECLIPSE  ");
-        System.out.println("================================================");
+
+        System.out.println("             ==================================================================================================================================");
+        System.out.println("             ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░█▀▀░░░░░░░▀█▀░█░█░█▀▀░░░█▄█░█▀█░▀▀█░█▀▀░░░█▀█░█▀▀░░░█▀▀░█▀▀░█░░░▀█▀░█▀█░█▀▀░█▀▀░░░░▄▀░░▄▀");
+        System.out.println("             ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░▀▀▄░░▀░░░░░█░░█▀█░█▀▀░░░█░█░█▀█░▄▀░░█▀▀░░░█░█░█▀▀░░░█▀▀░█░░░█░░░░█░░█▀▀░▀▀█░█▀▀░░░▀▄░░▀▄░");
+        System.out.println("             ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀░░░▀░░░░░▀░░▀░▀░▀▀▀░░░▀░▀░▀░▀░▀▀▀░▀▀▀░░░▀▀▀░▀░░░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░░░▀▀▀░▀▀▀░░░░░▀░░░▀");
+        System.out.println("             ==================================================================================================================================");
         System.out.println();
         System.out.println("The moonlight filters through cracks in the roots above, painting silver streaks across the cave floor.\n" +
                            "The air feels alive. It is breathing, whispering, remembering.\n");

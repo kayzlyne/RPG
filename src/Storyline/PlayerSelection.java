@@ -10,7 +10,7 @@ public class PlayerSelection {
         String name = "";
 
         // Race selection
-        System.out.println("\n                                                                       Tikbalang");
+        System.out.println("\n                                                         ▌║█║▌│║▌│║▌║▌█║ 𝐓𝐢𝐤𝐛𝐚𝐥𝐚𝐧𝐠 ▌│║▌║▌│║║▌█║▌║█");
         System.out.println("                   A tikbalang is a mythical, half-human, half-horse creature, known for its horse-like head and hooves, long limbs," +
                 "\n                 and gifted with the ability to lead travelers astray in forests and mountains. Though often portrayed as a deceptive" +
                 "\n                                        prankster or trickster, it can also be seen as a guardian of nature.\n");

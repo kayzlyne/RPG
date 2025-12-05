@@ -9,9 +9,13 @@ public class W3Mission6 {
     public static boolean w3mission6(PlayerCharacter player) {
         Scanner sc = new Scanner(System.in);
         //UNEDITED
-        System.out.println("===============================================");
-        System.out.println("      MISSION 6: THE MISTRESS OF DARKNESS  ");
-        System.out.println("===============================================");
+        System.out.println("   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ");
+
+        System.out.println("    ======================================================================================================================================================");
+        System.out.println("    ░▀▄░░▀▄░░░░█▄█░▀█▀░█▀▀░█▀▀░▀█▀░█▀█░█▀█░░░▄▀▀░░░░░░░▀█▀░█░█░█▀▀░░░█▄█░▀█▀░█▀▀░▀█▀░█▀▄░█▀▀░█▀▀░█▀▀░░░█▀█░█▀▀░░░█▀▄░█▀█░█▀▄░█░█░█▀█░█▀▀░█▀▀░█▀▀░░░░▄▀░░▄▀ ");
+        System.out.println("    ░░▄▀░░▄▀░░░█░█░░█░░▀▀█░▀▀█░░█░░█░█░█░█░░░█▀▄░░▀░░░░░█░░█▀█░█▀▀░░░█░█░░█░░▀▀█░░█░░█▀▄░█▀▀░▀▀█░▀▀█░░░█░█░█▀▀░░░█░█░█▀█░█▀▄░█▀▄░█░█░█▀▀░▀▀█░▀▀█░░░▀▄░░▀▄░");
+        System.out.println("    ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░░▀░░░▀░░░░░▀░░▀░▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░░▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀░░░░░▀▀░░▀░▀░▀░▀░▀░▀░▀░▀░▀▀▀░▀▀▀░▀▀▀░░░░░▀░░░▀");
+        System.out.println("    ======================================================================================================================================================");
         System.out.println("Your party descends the stairs, alert and vigilant of any ambushes. You reached another floor,\n" +
                 "dark and empty. Only the light on the stairs brightens the place. Your party prepares in your attack\n" +
                 "stances as you feel that you’re surrounded in the shadows. You turn to Kheila with a knowing look, she\n" +
