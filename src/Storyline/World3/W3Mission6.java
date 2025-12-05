@@ -93,8 +93,10 @@ public class W3Mission6 {
         if (!survived) {
             return false;
         }
+        player.resetCooldowns();
+
         System.out.println();
-        System.out.println("I REFUSE TO FALL LIKE THIS! MY CLONES, HELP ME!\n");
+        System.out.println("I REFUSE TO FALL LIKE THIS! MY CLONES, HELP ME!");
         sc.nextLine();
 
 
@@ -104,20 +106,21 @@ public class W3Mission6 {
             return false;
         }
 
-        System.out.println("The Blade of Bulan glows fiercely, resonating with your heart. You strike, each blow cutting through\n" +
-                           "layers of darkness.\n");
+        player.resetCooldowns();
+
+        System.out.println("The Blade of Bulan glows fiercely, resonating with your heart. You strike, each blow cutting through layers of darkness.");
         sc.nextLine();
-        System.out.println("As Erika collapses, the corruption begins to peel away. Her voice trembles.\n");
+        System.out.println("As Erika collapses, the corruption begins to peel away. Her voice trembles.");
         sc.nextLine();
-        System.out.println("Erika: I… was supposed to rule everything…\n");
+        System.out.println("Erika: I… was supposed to rule everything…");
         sc.nextLine();
-        System.out.println("Her body turns to silver dust, scattering into the air like moonlight.\n");
+        System.out.println("Her body turns to silver dust, scattering into the air like moonlight.");
         sc.nextLine();
-        System.out.println("A sudden voice echoes from above. Cold, mechanical, and human.\n");
+        System.out.println("A sudden voice echoes from above. Cold, mechanical, and human.");
         sc.nextLine();
-        System.out.println("???: The operation is complete. Terminate all surviving Babaylans and invading mythical creatures. Begin Phase Two.\n");
+        System.out.println("???: The operation is complete. Terminate all surviving Babaylans and invading mythical creatures. Begin Phase Two.");
         sc.nextLine();
-        System.out.println("The runes flare. From the walls emerge armored silhouettes. Human soldiers wielding weapons that glow with stolen magic.\n");
+        System.out.println("The runes flare. From the walls emerge armored silhouettes. Human soldiers wielding weapons that glow with stolen magic.");
         sc.nextLine();
 
         survived = battle.startBattle(player, enemies1, 3, false);
@@ -126,19 +129,19 @@ public class W3Mission6 {
             return false;
         }
 
+        player.resetCooldowns();
         sc.nextLine();
 
         System.out.println("After defeating the last of the wretched human soldiers, Kheila sways on weak legs and falls to her knees\n" +
-                           "on the ground, tears running like a violent downpour from her eyes.\n");
+                           "on the ground, tears running like a violent downpour from her eyes.");
         sc.nextLine();
-        System.out.println("Kheila: The humans played us all. The Babaylans, the creatures of Mogul, even the goddess’s light.\n");
+        System.out.println("Kheila: The humans played us all. The Babaylans, the creatures of Mogul, even the goddess’s light.");
         sc.nextLine();
-        System.out.println("Andrea: Then our war isn’t over. We stopped the Mistress, but the real enemy is still out there.\n");
+        System.out.println("Andrea: Then our war isn’t over. We stopped the Mistress, but the real enemy is still out there.");
         sc.nextLine();
-        System.out.println(player.name + ": Then we fight them next. For Mogul. For Biringan. For all of us.\n");
+        System.out.println(player.name + ": Then we fight them next. For Mogul. For Biringan. For all of us.");
         sc.nextLine();
-        System.out.println("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war\n" +
-                           "machines rising over the horizon.\n");
+        System.out.println("The Sanctum crumbles. The moonlight above dims and is soon replaced by the red glow of human war machines rising over the horizon.");
         DialogueUtils.pause();
 
         return true;
