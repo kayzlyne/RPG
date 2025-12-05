@@ -115,7 +115,7 @@ public class PlayerCharacter {
     }
 
     public void resetCooldowns() {
-        specialCooldown = 0;
+        specialCooldown = 2;
         skillCooldown = 0;
     }
 
