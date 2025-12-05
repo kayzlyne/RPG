@@ -14,37 +14,39 @@ public class W3Mission2 {
         System.out.println("              ░▀░░░▀░░░░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░░▀▀▀░░▀░░░░░▀░░▀░▀░▀▀▀░░░▀▀░░▀░▀░▀▀░░▀░▀░░▀░░▀▀▀░▀░▀░▀░▀░▀▀▀░░░▀▀░░▀░▀░▀░▀░▀▀▀░░░░░▀░░░▀");
         System.out.println("              ================================================================================================================================");
         System.out.println();
+        sc.nextLine();
         System.out.println(player.name + ": Can I see it?");
         sc.nextLine();
-        System.out.println("Kheila hands the scroll to you. You gently open the scroll, mindful of causing tears. Unfortunately, however careful you were, the scroll’s state was for the worse. The ink has faded, the surface marred by age and moisture. Most of the writing is smeared and lost in oblivion.\n" +
-                           "But near the bottom, a single line remains legible, written in bold, deliberate strokes:\n" +
-                           "“Seek the Origin of the Babaylans.”\n");
+        System.out.println("Kheila hands the scroll to you. You gently open the scroll, mindful of causing tears. Unfortunately, however careful you were, the scroll’s state was for the worse.\n The ink has faded, the surface marred by age and moisture. Most of the writing is smeared and lost in oblivion. " +
+                           "But near the bottom, a single line remains legible, written in bold, deliberate strokes-\n" +
+                           "“Seek the Origin of the Babaylans.”");
         sc.nextLine();
-        System.out.println("Kheila: I’m sorry. The ink must have run when I crossed the river while running from my kin. It’s the only part I could save.\n");
+        System.out.println("Kheila: I’m sorry. The ink must have run when I crossed the river while running from my kin. It’s the only part I could save.");
         sc.nextLine();
-        System.out.println("Andrea: You did what you had to. Surviving came first.\n");
+        System.out.println("Andrea: You did what you had to. Surviving came first.");
         sc.nextLine();
-        System.out.println(player.name + ": “Origin of the Babaylans…” What could it mean? Are we supposed to find where their power began?\n");
+        System.out.println(player.name + ": “Origin of the Babaylans…” What could it mean? Are we supposed to find where their power began?");
         sc.nextLine();
-        System.out.println("Kheila: Impossible. Babaylans are not made, they are born. And the Mistress was born more powerful than any before her. Worse still, her strength continues to grow.\n");
+        System.out.println("Kheila: Impossible. Babaylans are not made, they are born. And the Mistress was born more powerful than any before her. Worse still, her strength continues to grow.");
         sc.nextLine();
-        System.out.println("Andrea: What? Then how are we supposed to defeat her?\n");
+        System.out.println("Andrea: What? Then how are we supposed to defeat her?");
         sc.nextLine();
-        System.out.println(player.name + ": The weapon. We must find it at all costs.\n");
+        System.out.println(player.name + ": The weapon. We must find it at all costs.");
         sc.nextLine();
-        System.out.println("Andrea: Right, we must figure out what this “Origin of Babaylans” means.\n");
+        System.out.println("Andrea: Right, we must figure out what this “Origin of Babaylans” means.");
         sc.nextLine();
-        System.out.println("Kheila: There might be something at my hideout. I gathered evidence before I was captured: old tomes, relics, things the Babaylans tried to erase from history. If we can find something there, maybe we can decipher what the scroll means. I was supposed to gather more evidence today, but I got caught, and that’s how you found me.\n");
+        System.out.println("Kheila: There might be something at my hideout. I gathered evidence before I was captured- old tomes, relics, things the Babaylans tried to erase from history. ");
         sc.nextLine();
-        System.out.println(player.name + ": Alright. Lead the way, Kheila.\n");
+        System.out.println("Kheila: If we can find something there, maybe we can decipher what the scroll means. I was supposed to gather more evidence today, but I got caught, and that’s how you found me.");
         sc.nextLine();
-        System.out.println("[\tCongratulations! You’ve gained another friend! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]"); //EMOTICON UNSURE IF IT WORKS
+        System.out.println(player.name + ": Alright. Lead the way, Kheila.");
+        sc.nextLine();
+        System.out.println("[\tCongratulations! You’ve gained another friend! (\u2060 \u2060ꈍ\u2060ᴗ\u2060ꈍ\u2060)\t]");
         System.out.println("[\t\tKheila joins you on your adventure!\t\t\t\t\t]");
-        //removed 1 /t
         sc.nextLine();
-        System.out.println("The three of you make your way through the forest as dusk deepens into night. The moon hangs pale and hollow over the canopy, its light bending through the mist like silk. After a long trek, you reach a secluded waterfall, its sound masking the outside world. Behind the veil of water lies a cave.");
+        System.out.println("The three of you make your way through the forest as dusk deepens into night.\n The moon hangs pale and hollow over the canopy, its light bending through the mist like silk.\n After a long trek, you reach a secluded waterfall, its sound masking the outside world. Behind the veil of water lies a cave.");
         sc.nextLine();
-        System.out.println("Inside, the hideout feels more like a hermit’s study than a fugitive’s den. Stacks of parchment cover every surface, their ink-stained edges curling with age. An oil lamp flickers faintly in the corner, painting the cavern walls in shades of amber and shadow.");
+        System.out.println("Inside, the hideout feels more like a hermit’s study than a fugitive’s den. Stacks of parchment cover every surface, their ink-stained edges curling with age.\n An oil lamp flickers faintly in the corner, painting the cavern walls in shades of amber and shadow.");
         sc.nextLine();
         System.out.println("Kheila immediately heads to the bed and falls as if collapsing. You can see that she was fatigued and wounded.");
         sc.nextLine();
@@ -60,7 +62,7 @@ public class W3Mission2 {
         DialogueUtils.pause();
         System.out.println("Soft morning light filters through the waterfall curtain of the hideout. The sound of rushing water blends with the rustle of parchment as you and Andrea sift through Kheila’s notes.");
         sc.nextLine();
-        System.out.println("Kheila, pale but awake, notices you looking for clues about the “Origin of Babaylans”. After a while of searching, you find a parchment that resembles the ancient scroll you had. Something inside you clicked into place. This is it, the clue you’ve been searching for.");
+        System.out.println("Kheila, pale but awake, notices you looking for clues about the “Origin of Babaylans”. After a while of searching, you find a parchment that resembles the ancient scroll you had.\n Something inside you clicked into place. This is it, the clue you’ve been searching for.");
         sc.nextLine();
         System.out.println("Kheila: The scroll is not just a clue, it’s also a key. With the right seal, it can reveal the resting place of the Blade of Bulan. The weapon forged by the moon goddess to cut through corruption itself.");
         sc.nextLine();

@@ -9,7 +9,8 @@ public class NOTES_HERE {
     - ehrm ga sige ug plus ang max hp ug max mana when u level up but during battle if mo dako na kayo mana kay mo reset sha to starting na maxmana
     gituyo ni sha?
     - Test Run Game0
-    -fix distance and spacing [ongoing for world 1 - k]
+    -fix distance and spacing [ongoing for world 3 - k]
+    player.resetCooldowns();
 
 ------------------------------------------------------------------
 

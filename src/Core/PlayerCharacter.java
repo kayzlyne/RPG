@@ -28,7 +28,7 @@ public class PlayerCharacter {
 
     // Cooldown counters
     private int skillCooldown = 0;
-    private int specialCooldown = 0;
+    private int specialCooldown = 3;
 
     public PlayerCharacter(String name, Race raceType, ClassArchetype classType) {
         this.name = name;
@@ -99,7 +99,7 @@ public class PlayerCharacter {
     }
 
     public void resetCooldowns() {
-        specialCooldown = 0;
+        specialCooldown = 3;
         skillCooldown = 0;
     }
 
