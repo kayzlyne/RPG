@@ -94,7 +94,9 @@ public class BattleManager {
             }
 
             player.reduceCooldowns();
-            player.regenerateMana();
+            if (!enemies.isEmpty()) {
+                player.regenerateMana();
+            }
 
             if (!player.isAlive()) {
                 System.out.println("💀 You were defeated...");
