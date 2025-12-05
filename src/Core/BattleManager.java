@@ -13,7 +13,7 @@ public class BattleManager {
 
         while (player.isAlive() && !enemies.isEmpty()) {
             System.out.println("\n                                                       ┏━PLAYER STATUS───────────────────────────━┓");
-            System.out.println("                                                            >> 🧍 Your HP: " + player.hp + " | Mana: " + player.mana +" <<");;
+            System.out.println("                                                            >> 🧍 Your HP: " + player.getHp() + " | Mana: " + player.getMana() +" <<");;
             System.out.println("                                                       ┗━────────────────────────────────────────━┛");
             System.out.println("\n👹 ENEMIES");
             for (int i = 0; i < enemies.size(); i++) {
@@ -107,11 +107,9 @@ public class BattleManager {
 
                 if (rescueType == 1) {
                     System.out.println("\n✨ Sir Khai has saved you for the first time!");
-                    continue;
                 }
                 if (rescueType == 2) {
                     System.out.println("\n✨ Sir Khai drags your unconscious body to safety again!!");
-                    continue;
                 }
 
                 if (rescueType == 0) {
@@ -119,6 +117,8 @@ public class BattleManager {
                     System.out.println("🔚 Game Over");
                     return false;
                 }
+
+                continue;
             }
         }
 

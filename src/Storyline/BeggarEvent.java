@@ -21,6 +21,7 @@ public class BeggarEvent {
             return 0;
         }
 
+
         int dialogType;
         if (!introducedBefore) {
 
@@ -60,10 +61,13 @@ public class BeggarEvent {
 
         int lostBarya = Math.min(player.getBarya(), new Random().nextInt(26)); // loses up to 25 pesos
         player.setBarya(player.getBarya() - lostBarya);
-        player.hp += player.maxHp / 2; //restore hp
-        if (player.hp > player.maxHp) {
-            player.hp = player.maxHp; // prevent overheal
+        //player.hp += player.maxHp / 2; //restore hp
+        player.setHp(player.maxHp / 2);
+        if (player.getHp() > player.maxHp) {
+            player.setHp(player.maxHp);// prevent overheal
         }
+
+        player.setAlive(true);
 
         System.out.println("\nSir Khai: You dropped some coins, so I kept " + lostBarya + " pesos for ‘finding you’. ");
         System.out.println("Sir Khai: Try not to get yourself killed next time, alright?");

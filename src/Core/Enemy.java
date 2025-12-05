@@ -21,8 +21,9 @@ public class Enemy {
     public int dealDamage(PlayerCharacter target) {
         System.out.println(name + " " + type.attackDescription + "!");
         int rawDamage = new Random().nextInt(type.maxDamage - type.minDamage + 1) + type.minDamage;
-        int netDamage = Math.max(1, rawDamage - target.defense);
-        target.hp -= netDamage;
+        int netDamage = Math.max(1, rawDamage - target.getDefense());
+       // target.hp -= netDamage;
+        target.modifyHp(netDamage);
         System.out.println("Deals " + netDamage + " damage to " + target.name + "!");
         return netDamage;
     }

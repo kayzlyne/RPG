@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PlayerCharacter {
     public String name, race, charClass;
-    public int hp, mana, defense = 5;
+    private int hp, mana, defense = 5;
     private Race raceType;
     public ClassArchetype classType;
     private final int manaRegen = 10;
@@ -115,7 +115,7 @@ public class PlayerCharacter {
     }
 
     public void resetCooldowns() {
-        specialCooldown = 0;
+        specialCooldown = 2;
         skillCooldown = 0;
     }
 
@@ -187,6 +187,11 @@ public class PlayerCharacter {
         if (hp < 0) hp = 0;
         if (hp > maxHp) hp = maxHp;
     }
+
+    public boolean isAlive;
+    public void setAlive(boolean alive) {
+        this.isAlive = alive;
+    }
     // ----- Barya -----
 
     public int getBarya() {
@@ -216,7 +221,11 @@ public class PlayerCharacter {
     }
 
     public void setHp(int hp){
-        if (hp > maxHp) this.hp = maxHp;
+        if (hp > maxHp) {
+            this.hp = maxHp;
+        } else {
+            this.hp = hp;
+        }
     }
 
     public int getHp(){
