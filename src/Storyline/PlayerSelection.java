@@ -7,6 +7,7 @@ public class PlayerSelection {
     public static PlayerCharacter createPlayer() {
         Scanner scanner = new Scanner(System.in);
         int raceChoice = -1, classChoice = -1, choice;
+
         String name = "";
 
         // Race selection
@@ -15,12 +16,11 @@ public class PlayerSelection {
                 "\n                 and gifted with the ability to lead travelers astray in forests and mountains. Though often portrayed as a deceptive" +
                 "\n                                        prankster or trickster, it can also be seen as a guardian of nature.\n");
 
-        System.out.println("\n                                                                         Kapre");
+        System.out.println("\n                                                          ▌║█║▌│║▌│║▌║▌█║ 𝐊𝐚𝐩𝐫𝐞 ▌│║▌║▌│║║▌█║▌║█");
         System.out.println("                   A kapre is a towering, tree-dwelling mythical creature. It is a tall, hairy, and muscular giant with dark skin and" +
                 "\n               a strong smell, who enjoys smoking large cigars and getting drunk. Often portrayed as playful tricksters, they are known for " +
                 "\n                 playing harmless pranks on people and causing them to get lost. Beware, though, for they can become dangerous if angered.\n");
-
-        System.out.println("\n                                                                       Manananggal");
+        System.out.println("\n                                                       ▌║█║▌│║▌│║▌║▌█║ 𝐌𝐚𝐧𝐚𝐧𝐚𝐧𝐠𝐠𝐚𝐥 ▌│║▌║▌│║║▌█║▌║█");
         System.out.println("                         A manananggal is a vampire-like mythical creature. During the day, the manananggal disguises itself as a" +
                 "\n                beautiful woman, while at night it separates its upper torso from the lower half of its body, sprouts wings, and prowls the" +
                 "\n                  darkened skies in search of pregnant women so that it may feed on the unborn fetus growing inside the poor soul’s belly.\n\n");
@@ -51,34 +51,34 @@ public class PlayerSelection {
         }
 
         if (raceChoice == 1){
-            System.out.println("\n                                                                        Archer");
+            System.out.println("\n                                                                       ++ Archer ++");
             System.out.println("                    Archers are the silent wind on the battlefield—swift, elusive, and deadly from afar. Trained in the art of trajectory " +
                     "\n              and terrain, they rain down judgment with feathered fury. Whether perched in the treetops or shadowing prey through the underbrush," +
                     "\n                                               the Archer is a master of distance, vision, and timing.\n");
 
-            System.out.println("\n                                                                       Spearman");
+            System.out.println("\n                                                                      ++ Spearman ++");
             System.out.println("                    Spearmen are the iron wall and piercing fang of any disciplined force. With unmatched reach and formation control, " +
                     "\n                 they hold lines, break ranks, and strike with relentless precision. Whether defending a fortress or charging into chaos, " +
                     "\n                                       the Spearman is the embodiment of martial order and battlefield dominance.\n");
 
 
         } else if (raceChoice == 2){
-            System.out.println("\n                                                                        Gunman");
+            System.out.println("\n                                                                       ++ Gunman ++");
             System.out.println("                  Gunmen are lone tacticians of the battlefield, wielding precision and firepower with deadly grace. Born from the fusion " +
                     "\n              of alchemy and engineering, their weapons speak louder than words. Whether dueling at dawn or sniping from shadowed rooftops, the" +
                     "\n                                                 Gunman thrives on accuracy, timing, and nerves of steel.\n");
 
-            System.out.println("\n                                                                         Druid");
+            System.out.println("\n                                                                        ++ Druid ++");
             System.out.println("                   Druids are the living bridge between the mortal realm and the wild forces that shape it. Guardians of balance, they channel " +
                     "\n             the primal essence of forests, storms, and beasts. Whether healing allies with dew-born magic or unleashing vines to entangle foes, the " +
                     "\n                                                         Druid is the wrath of nature incarnate.\n");
         } else if (raceChoice == 3){
-            System.out.println("\n                                                                        Mage");
+            System.out.println("\n                                                                       ++ Mage ++");
             System.out.println("                 Mages are scholars of the unseen, architects of reality’s threads. Through rigorous study and innate talent, they can bend " +
                     "\n             the laws of nature to their will. Whether hurling fireballs or rewriting fate with runes, the Mage is a master of raw magical power " +
                     "\n                                                              and strategic devastation.\n");
 
-            System.out.println("\n                                                                       Assassin");
+            System.out.println("\n                                                                      ++ Assassin ++");
             System.out.println("                      Assassins are the whisper before the scream, the blade in the dark. Masters of infiltration and precision, " +
                     "\n              they strike where it hurts most—then vanish without a trace. Whether hired by guilds or driven by vengeance, the Assassin is " +
                     "\n                                                    a ghost on the battlefield, feared and unseen.\n");
