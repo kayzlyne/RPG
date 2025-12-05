@@ -28,7 +28,7 @@ public class PlayerCharacter {
 
     // Cooldown counters
     private int skillCooldown = 0;
-    private int specialCooldown = 3;
+    private int specialCooldown = 0;
 
     public PlayerCharacter(String name, Race raceType, ClassArchetype classType) {
         this.name = name;
@@ -60,6 +60,7 @@ public class PlayerCharacter {
     }
 
     public void useSkill(Enemy target) {
+
         if (skillCooldown > 0) {
             System.out.println("Skill is on cooldown for " + skillCooldown + " more turn(s).");
             return;
@@ -69,6 +70,7 @@ public class PlayerCharacter {
             return;
         }
         mana -= classType.getSkillManaCost();
+        if (mana < 0) mana = 0;
         classType.useSkill(name, target);
         skillCooldown = classType.getSkillCooldown();
     }
@@ -83,6 +85,7 @@ public class PlayerCharacter {
             return;
         }
         mana -= classType.getSpecialManaCost();
+        if (mana < 0) mana = 0;
         classType.useSpecial(name, target);
         specialCooldown = classType.getSpecialCooldown();
     }
@@ -99,7 +102,7 @@ public class PlayerCharacter {
     }
 
     public void resetCooldowns() {
-        specialCooldown = 3;
+        specialCooldown = 0;
         skillCooldown = 0;
     }
 
@@ -124,7 +127,7 @@ public class PlayerCharacter {
             }
             System.out.println();
         }
-           System.out.printf("                                                             >> Barya     : %d\n", barya);
+        System.out.printf("                                                             >> Barya     : %d\n", barya);
         System.out.println("                                                           ────────────────────────────────\n");
     }
 
@@ -165,10 +168,12 @@ public class PlayerCharacter {
         }
     }
 
-    public void modifyHp(int hp) {
-        this.hp -= hp;
-    }
+    public void modifyHp(int amount) {
+        hp -= amount;
 
+        if (hp < 0) hp = 0;
+        if (hp > maxHp) hp = maxHp;
+    }
     // ----- Barya -----
 
     public int getBarya() {
@@ -190,7 +195,7 @@ public class PlayerCharacter {
     }*/
 
     public void setMana(int mana) {
-        this.mana = mana;
+        this.mana = Math.max(0, Math.min(mana, maxMana));
     }
 
     public int getMana(){
@@ -198,7 +203,7 @@ public class PlayerCharacter {
     }
 
     public void setHp(int hp){
-        this.hp = hp;
+        this.hp = Math.max(0, Math.min(hp, maxHp));
     }
 
     public int getHp(){
@@ -229,10 +234,10 @@ public class PlayerCharacter {
 
             petHealCounter++;
             if (petHealCounter >= 2) {
-                hp += pet.getHealingPower();
+                setHp(hp + pet.getHealingPower());
 
                 int maxHp = raceType.getBaseHp() + classType.getBonusHp();
-                if (hp > maxHp) hp = maxHp;
+                if (hp >= maxHp) hp = maxHp;
 
                 System.out.println("🐾 Your pet heals you for " + pet.getHealingPower() + " HP!\n");
                 petHealCounter = 0;
@@ -273,8 +278,8 @@ public class PlayerCharacter {
     }
 
     public void rest() {
-        hp = maxHp;
-        mana = maxMana;
+        setHp(maxHp);
+        setMana(maxMana);
         //reset cooldowns
 
         System.out.println(name + " was able to get some rest.");

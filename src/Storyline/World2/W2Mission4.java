@@ -69,7 +69,7 @@ public class W2Mission4 {
         System.out.println(player.name + ": “The blessed bolo will lead the way.” Come on, let's get going.");
         sc.nextLine();
 
-        System.out.println("A pit forms in your stomach when you realize that all the skittering laughter in the distance has skidded to an unnatural stillness.\nYou look up to see a towering structure made of bones, sinew, and dried blood coagulated like thick globs of syrup.\nAll around you, there are hundreds of these same structures,\n festooned with glistening entrails like a perverted shrine created to worship everything unholy that ever walked this land. \n");
+        System.out.println("A pit forms in your stomach when you realize that all the skittering laughter in the distance has skidded to an unnatural stillness.\nYou look up to see a towering structure made of bones, sinew, and dried blood coagulated like thick globs of syrup.\nAll around you, there are hundreds of these same structures,\nfestooned with glistening entrails like a perverted shrine created to worship everything unholy that ever walked this land. \n");
         sc.nextLine();
 
         System.out.println("A sick feeling washes over you as you and Andrea come to the same conclusion- you've made it to the Aswang’s lair.");

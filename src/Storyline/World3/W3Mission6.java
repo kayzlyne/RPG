@@ -22,8 +22,8 @@ public class W3Mission6 {
                 "You turn to Kheila with a knowing look, she nods in understanding and raises her staff.\n" +
                 "She casts a spell of light and the Babaylans hiding in the shadows are revealed.");
         sc.nextLine();
-        System.out.println("[You have encountered 3 Babaylans. Please choose a target and an attack.]");
-        List<Enemy> bosses = EnemyFactory.spawnEnemies(EnemyType.ERIKA, 1);
+        System.out.println("[You have encountered 2 Babaylans. Please choose a target and an attack.]");
+        List<Enemy> bosses = EnemyFactory.spawnBosses(EnemyType.ERIKA, 1);
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.ERIKA2, 2);
         List<Enemy> enemies1 = EnemyFactory.spawnEnemies(EnemyType.HUMANS, 2);
         List<Enemy> enemies2 = EnemyFactory.spawnEnemies(EnemyType.BABAYLANS, 3);
