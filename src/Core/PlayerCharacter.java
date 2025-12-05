@@ -8,7 +8,7 @@ public class PlayerCharacter {
     public int hp, mana, defense = 5;
     private Race raceType;
     public ClassArchetype classType;
-    private final int manaRegen = 9;
+    private final int manaRegen = 10;
     private int armorLevel = 0;
     public int maxHp;
     public int maxMana;
@@ -90,11 +90,24 @@ public class PlayerCharacter {
         specialCooldown = classType.getSpecialCooldown();
     }
 
+//    public void regenerateMana() {
+//        int before = mana;
+//        mana = Math.min(mana + manaRegen, raceType.getBaseMana() + classType.getBonusMana());
+//        System.out.println(name + " regenerates " + (mana - before) + " mana.");
+//    }
+
     public void regenerateMana() {
         int before = mana;
-        mana = Math.min(mana + manaRegen, raceType.getBaseMana() + classType.getBonusMana());
-        System.out.println(name + " regenerates " + (mana - before) + " mana.");
+        int maxMana = raceType.getBaseMana() + classType.getBonusMana();
+
+        if (mana < maxMana) {
+            mana = Math.min(mana + 10, maxMana);
+            System.out.println(name + " regenerates " + (mana - before) + " mana.");
+        } else {
+            System.out.println(name + " is already at full mana.");
+        }
     }
+
 
     public void reduceCooldowns() {
         if (skillCooldown > 0) skillCooldown--;
