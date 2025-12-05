@@ -84,8 +84,9 @@ public class BattleManager {
                 enemies.remove(targetIndex);
             }
 
-            player.petHeal();
-
+            if(!enemies.isEmpty()){
+                player.petHeal();
+            }
 
             for (Enemy enemy : enemies) {
                 if (enemy.isAlive()) {
@@ -94,7 +95,9 @@ public class BattleManager {
             }
 
             player.reduceCooldowns();
-            player.regenerateMana();
+            if (!enemies.isEmpty()) {
+                player.regenerateMana();
+            }
 
             if (!player.isAlive()) {
                 System.out.println("💀 You were defeated...");

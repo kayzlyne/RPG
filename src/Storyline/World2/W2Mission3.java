@@ -25,7 +25,7 @@ public class W2Mission3 {
         System.out.println("At the center of the ruins, you see it.\nA faint glow inside a crumbling forge, fire still alive where no fire should exist.");
         sc.nextLine();
         System.out.println("An old man steps out from the shadows of the forge. His hair is silver, his arms corded with muscle, his leather apron smeared with soot and blood.");
-        System.out.println("His gaze is sharp, unwavering.Before you can voice out your intent, the Pandai beats you to it.");
+        System.out.println("His gaze is sharp, unwavering. Before you can voice out your intent, the Pandai beats you to it.");
         sc.nextLine();
         System.out.println("Pandai: I know why you've come.");
         sc.nextLine();
@@ -34,7 +34,7 @@ public class W2Mission3 {
         System.out.println("Pandai: The flames whisper to me. They told me that the Tambalan sent you.");
         sc.nextLine();
         System.out.println("Pandai: He wants me to part with the weapon. But it will not be yours—or hers—without proof.");
-
+        sc.nextLine();
         System.out.println("He produces a hammer and strikes the ground with it, the sound echoing like thunder through the silent ruins.");
         System.out.println("From the shadows, three figures crawl forth.");
         System.out.println("Viciously deformed werebeasts frothing at the mouth, their skin covered in sores that leak with pus and corrosive acid.");
@@ -42,6 +42,7 @@ public class W2Mission3 {
         sc.nextLine();
 
         System.out.println("Pandai: Defeat them, and prove you are worthy. Only then will the weapon be forged anew.");
+        System.out.println();
         DialogueUtils.pause();
 
         List<Enemy> enemies = EnemyFactory.spawnEnemies(EnemyType.SIGBIN, 3);
@@ -72,14 +73,14 @@ public class W2Mission3 {
         sc.nextLine();
         System.out.println(player.name + ": Yes. I must find the Aswang’s lair so that I can talk to their leader.");
         sc.nextLine();
-        System.out.println("I need to know what they plan to do with the Diwatas and Encantos they’ve had abducted.");
+        System.out.println(player.name + ": I need to know what they plan to do with the Diwatas and Encantos they’ve had abducted.");
         sc.nextLine();
-        System.out.println("I must get to the bottom of this wretched scheme.");
+        System.out.println(player.name + ": I must get to the bottom of this wretched scheme.");
         sc.nextLine();
         System.out.println("Pandai: Very good. Mogul is a place that cannot be navigated, but the tambalan can point you to the right direction,");
         sc.nextLine();
         System.out.println("Pandai: and the blessed bolo will lead the way. Good luck, young hero.");
-
+        System.out.println();
         DialogueUtils.pause();
         return true;
     }

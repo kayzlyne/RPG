@@ -23,8 +23,8 @@ public class W2Mission2 {
         System.out.println("You immediately go near and inspect the mushrooms.");
         DialogueUtils.pause();
 
-        System.out.println("1: Take the mushrooms. It could be the cure.\n" +
-                "2: Avoid the mushrooms and look for something else. It looks poisonous. \n");
+        System.out.println("[1] Take the mushrooms. It could be the cure.\n" +
+                "[2] Avoid the mushrooms and look for something else. It looks poisonous. \n");
 
         while (true){
             try {

@@ -94,7 +94,6 @@ public class Mission2 {
                     System.out.println("That is when you remember that you had some suman tucked away in your pocket for lunch.");
                     System.out.println("You think of the beggar and decide that he needs it more than you do.");
                     System.out.println("But when you reach into your pocket, what greets your hand is not just the decadent suman, but the feeling of cold, hard coins as well.");
-                    System.out.println();
                     scan.nextLine();
                     System.out.println("Taking it out, you find coins worth " + (player.getBarya() * 2) + " barya — ");
                     System.out.println("when before you were certain all your money was given away to the beggar.");
@@ -144,12 +143,12 @@ public class Mission2 {
         scan.nextLine();
         System.out.println("Scribe: Oh, you know Sean?");
         scan.nextLine();
-        System.out.println(player.name + ": I kinda saved him from being robbed in broad daylight just before coming here.");
+        System.out.println(player.name + ": I kind of saved him from being robbed in broad daylight just before coming here.");
         scan.nextLine();
         System.out.println("Scribe: Thank you! Sean is a valued member of our guild. Here, have this as a small token of our gratitude.");
         scan.nextLine();
-        player.addBarya(25);
-        System.out.println("💰 You received 25 barya!");
+        player.addBarya(35);
+        System.out.println("💰 You received 35 barya!");
         System.out.println("🏦 Total barya: " + player.getBarya());
 
         scan.nextLine();
